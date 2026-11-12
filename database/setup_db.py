@@ -52,6 +52,7 @@ def create_tables():
         jenis_waktu_makan TEXT,
         skor_similarity REAL,
         waktu_rekomendasi DATETIME DEFAULT CURRENT_TIMESTAMP,
+        porsi_gram REAL,
         FOREIGN KEY(id_sesi) REFERENCES sesi_pengguna(id_sesi),
         FOREIGN KEY(id_makanan) REFERENCES makanan(id_makanan)
     )
