@@ -52,6 +52,21 @@ SQL_SIMPAN_RIWAYAT = (
     "VALUES (?, ?, ?, ?, ?)"
 )
 
+# Kolom wajib pada data sesi. waktu_input tidak diminta karena diisi otomatis oleh
+# basis data (DEFAULT CURRENT_TIMESTAMP pada setup_db.py).
+KOLOM_SESI_WAJIB: Tuple[str, ...] = (
+    "usia", "jenis_kelamin", "berat_badan", "tinggi_badan", "tingkat_aktivitas",
+    "imt", "bmr", "target_energi", "target_protein", "target_lemak", "target_karbohidrat",
+)
+KOLOM_SESI_ANGKA: Tuple[str, ...] = (
+    "berat_badan", "tinggi_badan", "imt", "bmr",
+    "target_energi", "target_protein", "target_lemak", "target_karbohidrat",
+)
+SQL_SIMPAN_SESI = (
+    f"INSERT INTO sesi_pengguna ({', '.join(KOLOM_SESI_WAJIB)}) "
+    f"VALUES ({', '.join('?' for _ in KOLOM_SESI_WAJIB)})"
+)
+
 DataRiwayat = Union[pd.DataFrame, Iterable[Mapping]]
 
 
@@ -65,6 +80,7 @@ class RepositoriMakanan:
         get_all_makanan()                      -> DataFrame
         get_makanan_by_peran(peran_menu)       -> DataFrame
         simpan_riwayat_rekomendasi(data)       -> None
+        simpan_sesi_pengguna(data)             -> int
     """
 
     def __init__(self, koneksi: KoneksiDatabase) -> None:
@@ -115,6 +131,34 @@ class RepositoriMakanan:
         # Blok `with` melakukan commit bila berhasil dan rollback bila gagal.
         with koneksi:
             koneksi.executemany(SQL_SIMPAN_RIWAYAT, baris)
+
+    def simpan_sesi_pengguna(self, data: Mapping) -> int:
+        """Menyimpan satu baris sesi_pengguna dan mengembalikan id_sesi barunya.
+
+        Args:
+            data: dict dengan kolom KOLOM_SESI_WAJIB (data diri, IMT, BMR, dan target
+                gizi harian). id_sesi dan waktu_input dibuat otomatis oleh basis data.
+
+        Raises:
+            ValueError: kolom wajib kurang atau nilai numerik bukan angka berhingga.
+        """
+        kurang = [k for k in KOLOM_SESI_WAJIB if k not in data]
+        if kurang:
+            raise ValueError(f"Kolom sesi wajib tidak ada: {', '.join(kurang)}.")
+        angka = {k: float(data[k]) for k in KOLOM_SESI_ANGKA}
+        if not all(math.isfinite(v) for v in angka.values()):
+            raise ValueError("Nilai numerik sesi harus angka berhingga.")
+
+        baris = (
+            int(data["usia"]), str(data["jenis_kelamin"]),
+            angka["berat_badan"], angka["tinggi_badan"], str(data["tingkat_aktivitas"]),
+            angka["imt"], angka["bmr"], angka["target_energi"],
+            angka["target_protein"], angka["target_lemak"], angka["target_karbohidrat"],
+        )
+        koneksi = self.koneksi.connect()
+        with koneksi:
+            kursor = koneksi.execute(SQL_SIMPAN_SESI, baris)
+        return int(kursor.lastrowid)
 
     @staticmethod
     def _susun_baris(data: DataRiwayat) -> List[tuple]:

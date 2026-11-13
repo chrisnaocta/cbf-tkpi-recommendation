@@ -101,6 +101,7 @@ class KalkulatorGizi:
     Metode (sesuai Class Diagram):
         hitung_imt()               -> float   rumus (1)
         hitung_bmr()               -> float   rumus (2) atau (3)
+        hitung_tee()               -> float   rumus (4)
         hitung_target_gizi()       -> dict    rumus (4)-(8), target harian
         klasifikasi_imt()          -> str     Tabel 2.1
         hitung_target_waktu_makan()-> dict    rumus (9)
@@ -190,9 +191,13 @@ class KalkulatorGizi:
     # ------------------------------------------------------------------
     # Rumus (4)
     # ------------------------------------------------------------------
-    def _hitung_tee(self) -> float:
+    def hitung_tee(self) -> float:
         """Rumus (4): TEE = BMR x FA (kkal/hari)."""
         return self.hitung_bmr() * FAKTOR_AKTIVITAS[self.tingkat_aktivitas]
+
+    def _hitung_tee(self) -> float:
+        """Nama lama untuk hitung_tee(); dipertahankan agar tes tahap 2 tetap berlaku."""
+        return self.hitung_tee()
 
     # ------------------------------------------------------------------
     # Rumus (5)-(8)
@@ -205,7 +210,7 @@ class KalkulatorGizi:
         Pengurangan 500 kkal hanya berlaku pada Target Energi; target makro
         dihitung dari Target Energi tersebut (bukan dari TEE).
         """
-        tee = self._hitung_tee()
+        tee = self.hitung_tee()
         if self.hitung_imt() > BATAS_IMT_LEBIH:
             target_energi = tee - DEFISIT_ENERGI
         else:
