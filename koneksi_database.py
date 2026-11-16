@@ -75,7 +75,10 @@ class KoneksiDatabase:
                 "Jalankan setup_db.py terlebih dahulu."
             )
 
-        koneksi = sqlite3.connect(self.db_path)
+        # check_same_thread=False: Streamlit menjalankan setiap interaksi pengguna pada
+        # thread yang berbeda. Koneksi hanya dipakai bergantian (tidak bersamaan),
+        # sehingga aman dibagikan antarthread dalam satu sesi.
+        koneksi = sqlite3.connect(self.db_path, check_same_thread=False)
         koneksi.execute(PERINTAH_AKTIFKAN_FK)
         self._koneksi = koneksi
         return self._koneksi
