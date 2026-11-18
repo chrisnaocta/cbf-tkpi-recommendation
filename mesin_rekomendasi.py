@@ -88,7 +88,7 @@ class MesinRekomendasi:
     """Mesin Content-Based Filtering (KNN + Cosine Similarity).
 
     Atribut (sesuai Class Diagram):
-        data_makanan (DataFrame): seluruh bahan (790 baris) dengan kolom KOLOM_MAKANAN.
+        data_makanan (DataFrame): seluruh bahan (256 baris) dengan kolom KOLOM_MAKANAN.
         target_gizi (dict): target tiap waktu makan hasil rumus (9), berbentuk
             {"sarapan": {"energi","protein","lemak","karbohidrat"}, "siang": {...}, "malam": {...}}.
         k (int): jumlah tetangga terdekat per peran.

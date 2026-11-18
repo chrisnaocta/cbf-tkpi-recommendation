@@ -19,7 +19,7 @@ from koneksi_database import KoneksiDatabase
 # KONSTANTA
 # ---------------------------------------------------------------------------
 # Peran menu yang masuk basis data (ketetapan perancangan: pokok, lauk, sayur;
-# 790 bahan, sesuai CHECK pada spesifikasi dan filter pada setup_db.py).
+# 256 bahan, sesuai CHECK pada spesifikasi dan filter pada setup_db.py).
 PERAN_VALID: Tuple[str, ...] = ("pokok", "lauk", "sayur")
 
 # Jenis waktu makan (ketetapan perancangan; kunci yang sama dengan
@@ -87,7 +87,7 @@ class RepositoriMakanan:
         self.koneksi: KoneksiDatabase = koneksi
 
     def get_all_makanan(self) -> pd.DataFrame:
-        """Mengambil seluruh bahan pada tabel `makanan` (790 baris), urut id_makanan."""
+        """Mengambil seluruh bahan pada tabel `makanan` (256 baris), urut id_makanan."""
         return self.koneksi.execute_query(SQL_SEMUA_MAKANAN)
 
     def get_makanan_by_peran(self, peran_menu: str) -> pd.DataFrame:
