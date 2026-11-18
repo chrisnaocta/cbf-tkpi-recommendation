@@ -1,5 +1,7 @@
 """Tes MesinRekomendasi bagian 1: rumus (10), normalisasi, rumus (11), KNN K=5."""
 
+import os
+
 import numpy as np
 import pandas as pd
 import pytest
@@ -10,7 +12,10 @@ from mesin_rekomendasi import (
 )
 from repositori_makanan import PERAN_VALID
 
-# Angka acuan Bab 3 (Subbab 3.3.3 butir 6), dalam persen
+CSV_MAKANAN = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "database", "data_makanan.csv")
+
+# Pool lama 790 bahan (sebelum kurasi). Angka acuan Bab 3 (Subbab 3.3.3 butir 6), dalam persen.
+# Dipakai untuk membuktikan bahwa rumus (10) pada kelas benar terhadap angka yang sudah terbit.
 KONTRIBUSI_BAB3 = {
     "pokok": {"protein": 24.65, "lemak": 24.80, "karbohidrat": 77.55},
     "lauk": {"protein": 53.94, "lemak": 54.37, "karbohidrat": 8.50},
@@ -21,6 +26,19 @@ RATA_RATA_BAB3 = {
     "pokok": {"protein": 3.54, "lemak": 1.75, "karbohidrat": 50.12},
     "lauk": {"protein": 19.34, "lemak": 9.59, "karbohidrat": 13.73},
     "sayur": {"protein": 3.07, "lemak": 1.47, "karbohidrat": 9.02},
+}
+# Pool siap makan hasil kurasi (257 bahan: pokok 44, lauk 155, sayur 58), dalam persen.
+# Dihitung terpisah dengan pandas dari data_makanan.csv + kurasi_makanan.py.
+JUMLAH_POOL_KURASI = {"pokok": 44, "lauk": 155, "sayur": 58}
+KONTRIBUSI_POOL_KURASI = {
+    "pokok": {"protein": 25.66, "lemak": 23.00, "karbohidrat": 71.19},
+    "lauk": {"protein": 50.52, "lemak": 41.91, "karbohidrat": 10.71},
+    "sayur": {"protein": 23.82, "lemak": 35.09, "karbohidrat": 18.10},
+}
+RATA_RATA_POOL_KURASI = {
+    "pokok": {"protein": 3.35, "lemak": 2.56, "karbohidrat": 29.59},
+    "lauk": {"protein": 16.49, "lemak": 11.67, "karbohidrat": 11.13},
+    "sayur": {"protein": 3.11, "lemak": 3.91, "karbohidrat": 7.53},
 }
 ZAT = ("energi", "protein", "lemak", "karbohidrat")
 
@@ -41,19 +59,47 @@ def mesin(data_makanan, target_gizi):
     return MesinRekomendasi(data_makanan, target_gizi)
 
 
+@pytest.fixture
+def mesin_790(target_gizi):
+    """Mesin dengan pool lama 790 bahan (tanpa kurasi), langsung dari CSV."""
+    csv = pd.read_csv(CSV_MAKANAN)
+    csv = csv[csv["peran_menu"].isin(PERAN_VALID)].reset_index(drop=True)
+    csv.insert(0, "id_makanan", range(1, len(csv) + 1))
+    assert len(csv) == 790
+    return MesinRekomendasi(csv, target_gizi)
+
+
 # ---------------------------------------------------------------------------
 # Rumus (10)
 # ---------------------------------------------------------------------------
-def test_kontribusi_sama_dengan_bab_3(mesin):
-    c = mesin.hitung_kontribusi_peran()
+def test_kontribusi_pool_790_sama_dengan_bab_3_lama(mesin_790):
+    """Rumus (10) pada pool lama 790 bahan menghasilkan angka Bab 3 yang sudah terbit."""
+    c = mesin_790.hitung_kontribusi_peran()
     for peran in PERAN_VALID:
         for zat, persen in KONTRIBUSI_BAB3[peran].items():
             assert round(c[peran][zat] * 100, 2) == persen, (peran, zat)
 
 
-def test_rata_rata_sama_dengan_hasil_kontribusi_txt(mesin):
+def test_rata_rata_pool_790_sama_dengan_hasil_kontribusi_txt(mesin_790):
     for peran in PERAN_VALID:
         for zat, nilai in RATA_RATA_BAB3[peran].items():
+            assert round(mesin_790._rata_rata[peran][zat], 2) == nilai, (peran, zat)
+
+
+def test_jumlah_pool_kurasi(data_makanan):
+    assert data_makanan["peran_menu"].value_counts().to_dict() == JUMLAH_POOL_KURASI
+
+
+def test_kontribusi_pool_kurasi(mesin):
+    c = mesin.hitung_kontribusi_peran()
+    for peran in PERAN_VALID:
+        for zat, persen in KONTRIBUSI_POOL_KURASI[peran].items():
+            assert round(c[peran][zat] * 100, 2) == persen, (peran, zat)
+
+
+def test_rata_rata_pool_kurasi(mesin):
+    for peran in PERAN_VALID:
+        for zat, nilai in RATA_RATA_POOL_KURASI[peran].items():
             assert round(mesin._rata_rata[peran][zat], 2) == nilai, (peran, zat)
 
 
@@ -98,7 +144,7 @@ def test_energi_peran_memakai_atwater(mesin):
 def test_normalisasi_membagi_dengan_target_peran(mesin):
     hasil = mesin.normalisasi_data("siang", "pokok")
     target = mesin._hitung_target_peran("siang", "pokok")
-    assert len(hasil) == 133
+    assert len(hasil) == JUMLAH_POOL_KURASI["pokok"]
     assert set(hasil["peran_menu"]) == {"pokok"}
     for zat in ZAT:
         np.testing.assert_allclose(hasil["norm_" + zat], hasil[zat] / target[zat])
@@ -111,10 +157,11 @@ def test_normalisasi_vektor_target_menjadi_satu(mesin):
     np.testing.assert_allclose((contoh / pd.Series(target)).to_numpy(), np.ones((1, 4)))
 
 
-def test_normalisasi_mengecualikan_id(mesin):
-    hasil = mesin.normalisasi_data("siang", "sayur", dikecualikan=[248, 249])
-    assert len(hasil) == 222
-    assert not hasil["id_makanan"].isin([248, 249]).any()
+def test_normalisasi_mengecualikan_id(mesin, data_makanan):
+    dua_id = data_makanan.loc[data_makanan["peran_menu"] == "sayur", "id_makanan"].tolist()[:2]
+    hasil = mesin.normalisasi_data("siang", "sayur", dikecualikan=dua_id)
+    assert len(hasil) == JUMLAH_POOL_KURASI["sayur"] - 2
+    assert not hasil["id_makanan"].isin(dua_id).any()
 
 
 # ---------------------------------------------------------------------------

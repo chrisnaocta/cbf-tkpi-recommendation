@@ -17,4 +17,4 @@ def test_koneksi_dapat_dipakai_dari_thread_lain(koneksi):
     t.start()
     t.join()
     assert "galat" not in hasil, hasil.get("galat")
-    assert hasil["n"] == 790
+    assert hasil["n"] == 257   # bahan siap makan hasil kurasi

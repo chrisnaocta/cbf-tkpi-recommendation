@@ -26,10 +26,10 @@ def test_berkas_tidak_ada_memicu_error_dan_tidak_membuat_berkas(tmp_path):
 
 def test_execute_query_mengembalikan_dataframe_dengan_parameter(koneksi):
     df = koneksi.execute_query(
-        "SELECT nama_bahan FROM makanan WHERE kode_tkpi = ?", ("AR001",)
+        "SELECT nama_bahan FROM makanan WHERE kode_tkpi = ?", ("AP001",)
     )
     assert isinstance(df, pd.DataFrame)
-    assert df["nama_bahan"].tolist() == ["Beras giling, mentah"]
+    assert df["nama_bahan"].tolist() == ["Nasi"]
 
 
 def test_close_aman_dipanggil_berulang_dan_koneksi_bisa_dibuka_lagi(koneksi):

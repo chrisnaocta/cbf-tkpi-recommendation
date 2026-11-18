@@ -2,9 +2,9 @@
 Tes untuk RepositoriMakanan: get_all_makanan, get_makanan_by_peran,
 simpan_riwayat_rekomendasi.
 
-Angka acuan (790 bahan; pokok 133, lauk 433, sayur 224) berasal dari data
-TKPI 2020 yang tersimpan di data_makanan.csv dan rentang id pada dump
-rekomendasi_makanan.db.
+Angka acuan (257 bahan siap makan; pokok 44, lauk 155, sayur 58) berasal dari
+data TKPI 2020 di data_makanan.csv setelah kurasi oleh kurasi_makanan.py
+(dari 790 bahan berperan pokok/lauk/sayur). Id berurutan 1-257 mengikuti urutan CSV.
 """
 
 import sqlite3
@@ -16,11 +16,11 @@ import pytest
 from repositori_makanan import KOLOM_MAKANAN, PERAN_VALID
 
 # ---------------------------------------------------------------------------
-# KONSTANTA ACUAN TES (hasil pencacahan data_makanan.csv)
+# KONSTANTA ACUAN TES (hasil kurasi data_makanan.csv oleh kurasi_makanan.py)
 # ---------------------------------------------------------------------------
-JUMLAH_TOTAL = 790
-JUMLAH_PER_PERAN = {"pokok": 133, "lauk": 433, "sayur": 224}
-RENTANG_ID_PER_PERAN = {"pokok": (1, 133), "sayur": (248, 471)}  # lauk terpisah dua blok
+JUMLAH_TOTAL = 257
+JUMLAH_PER_PERAN = {"pokok": 44, "lauk": 155, "sayur": 58}
+RENTANG_ID_PER_PERAN = {"pokok": (1, 44), "sayur": (67, 124)}  # lauk terpisah dua blok (45-66 dan 125-257)
 
 SQL_HITUNG_RIWAYAT = "SELECT COUNT(*) FROM riwayat_rekomendasi"
 
@@ -29,7 +29,7 @@ def _baris_riwayat(id_sesi, **ubah):
     """Satu baris riwayat contoh yang sah; nilai dapat diubah per tes."""
     baris = {
         "id_sesi": id_sesi,
-        "id_makanan": 22,  # Nasi
+        "id_makanan": 1,  # Nasi
         "jenis_waktu_makan": "sarapan",
         "skor_similarity": 0.9731,
         "porsi_gram": 150.0,
@@ -46,7 +46,7 @@ def _jumlah_riwayat(koneksi):
 # get_all_makanan
 # ---------------------------------------------------------------------------
 class TestGetAllMakanan:
-    def test_mengembalikan_dataframe_790_baris_dengan_kolom_sesuai_erd(self, repositori):
+    def test_mengembalikan_dataframe_257_baris_dengan_kolom_sesuai_erd(self, repositori):
         df = repositori.get_all_makanan()
         assert isinstance(df, pd.DataFrame)
         assert len(df) == JUMLAH_TOTAL
@@ -64,8 +64,9 @@ class TestGetAllMakanan:
     def test_baris_pertama_dan_terakhir_sesuai_dump(self, repositori):
         df = repositori.get_all_makanan()
         pertama, terakhir = df.iloc[0], df.iloc[-1]
-        assert (pertama["kode_tkpi"], pertama["nama_bahan"]) == ("AR001", "Beras giling, mentah")
-        assert pertama["energi"] == 357 and pertama["karbohidrat"] == 77.1
+        assert (pertama["kode_tkpi"], pertama["nama_bahan"]) == ("AP001", "Nasi")
+        assert pertama["energi"] == 180 and pertama["karbohidrat"] == 39.8
+        assert pertama["peran_menu"] == "pokok"
         assert (terakhir["kode_tkpi"], terakhir["nama_bahan"]) == ("HP007", "Kalio telur, masakan")
         assert terakhir["peran_menu"] == "lauk"
 
@@ -114,9 +115,9 @@ class TestSimpanRiwayatRekomendasi:
     def test_simpan_dataframe_tiga_item_dan_baca_kembali(self, repositori, koneksi, id_sesi):
         # satu waktu makan = 1 pokok + 1 lauk + 1 sayur
         data = pd.DataFrame([
-            _baris_riwayat(id_sesi, id_makanan=22, skor_similarity=0.95, porsi_gram=150),
-            _baris_riwayat(id_sesi, id_makanan=134, skor_similarity=0.88, porsi_gram=60),
-            _baris_riwayat(id_sesi, id_makanan=248, skor_similarity=0.91, porsi_gram=100),
+            _baris_riwayat(id_sesi, id_makanan=1, skor_similarity=0.95, porsi_gram=150),    # Nasi (pokok)
+            _baris_riwayat(id_sesi, id_makanan=45, skor_similarity=0.88, porsi_gram=60),    # lauk
+            _baris_riwayat(id_sesi, id_makanan=67, skor_similarity=0.91, porsi_gram=100),   # sayur
         ])
         assert repositori.simpan_riwayat_rekomendasi(data) is None
 
@@ -125,7 +126,7 @@ class TestSimpanRiwayatRekomendasi:
         )
         assert len(df) == 3
         assert df["id_sesi"].tolist() == [id_sesi] * 3
-        assert df["id_makanan"].tolist() == [22, 134, 248]
+        assert df["id_makanan"].tolist() == [1, 45, 67]
         assert df["jenis_waktu_makan"].tolist() == ["sarapan"] * 3
         assert df["skor_similarity"].tolist() == [0.95, 0.88, 0.91]
         assert df["porsi_gram"].tolist() == [150.0, 60.0, 100.0]
@@ -138,7 +139,7 @@ class TestSimpanRiwayatRekomendasi:
     def test_menerima_daftar_dict_dan_tipe_numpy(self, repositori, koneksi, id_sesi):
         baris = _baris_riwayat(
             id_sesi,
-            id_makanan=np.int64(22),
+            id_makanan=np.int64(1),
             skor_similarity=np.float64(0.5),
             porsi_gram=np.float64(125.0),
         )
@@ -147,12 +148,12 @@ class TestSimpanRiwayatRekomendasi:
 
     def test_simpan_berulang_menambah_baris_dan_tidak_menimpa(self, repositori, koneksi, id_sesi):
         """Perilaku 'Minta Ulang': semua hasil disimpan sebagai bahan uji Bab 4."""
-        repositori.simpan_riwayat_rekomendasi([_baris_riwayat(id_sesi, id_makanan=22)])
-        repositori.simpan_riwayat_rekomendasi([_baris_riwayat(id_sesi, id_makanan=23)])
+        repositori.simpan_riwayat_rekomendasi([_baris_riwayat(id_sesi, id_makanan=1)])
+        repositori.simpan_riwayat_rekomendasi([_baris_riwayat(id_sesi, id_makanan=2)])
         df = koneksi.execute_query(
             "SELECT id_rekomendasi, id_makanan FROM riwayat_rekomendasi ORDER BY id_rekomendasi"
         )
-        assert df["id_makanan"].tolist() == [22, 23]
+        assert df["id_makanan"].tolist() == [1, 2]
         assert df["id_rekomendasi"].is_unique
 
     @pytest.mark.parametrize("waktu", ["sarapan", "siang", "malam"])
@@ -178,8 +179,8 @@ class TestSimpanRiwayatRekomendasi:
     def test_satu_baris_gagal_membatalkan_seluruh_penyimpanan(self, repositori, koneksi, id_sesi):
         """Transaksi atomik: 2 baris sah + 1 baris dengan id_makanan tidak ada -> 0 tersimpan."""
         data = [
-            _baris_riwayat(id_sesi, id_makanan=22),
-            _baris_riwayat(id_sesi, id_makanan=134),
+            _baris_riwayat(id_sesi, id_makanan=1),
+            _baris_riwayat(id_sesi, id_makanan=45),
             _baris_riwayat(id_sesi, id_makanan=JUMLAH_TOTAL + 1),
         ]
         with pytest.raises(sqlite3.IntegrityError):

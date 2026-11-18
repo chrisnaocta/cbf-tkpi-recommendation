@@ -1,15 +1,15 @@
 import pandas as pd
 
+import kurasi_makanan  # kurasi bahan siap makan (K0-K6), satu folder dengan berkas ini
+
 # Berat hidangan acuan satu porsi (gram) menurut pedoman
 BERAT_ACUAN = {'pokok': 100, 'lauk': 40, 'sayur': 100}
 PERAN = ['pokok', 'lauk', 'sayur']
 ZAT = ['protein', 'lemak', 'karbohidrat']
 
-# 1. Baca data TKPI 
-data_makanan = pd.read_csv('data_makanan.csv')
-
-# Filter data hanya untuk bahan yang memiliki peran pokok, lauk, dan sayur
-data = data_makanan[data_makanan['peran_menu'].isin(PERAN)]
+# 1. Baca data TKPI dan terapkan kurasi: hanya bahan pokok/lauk/sayur yang siap makan
+#    (sama persis dengan isi tabel makanan pada rekomendasi_makanan.db)
+data = kurasi_makanan.ambil_siap_makan('data_makanan.csv')
 
 # 2. Rata-rata kandungan gizi per 100 g pada setiap peran (x bar)
 rata = data.groupby('peran_menu')[ZAT].mean().loc[PERAN]
@@ -34,14 +34,9 @@ tabel = pd.DataFrame({
     'Kontribusi Karbohidrat (%)': kontribusi['karbohidrat'],
 }).round(2)
 
-# Mengubah baris menjadi kolom (transpose)
 tabel_transpose = tabel.T
-
-# 6. Simpan output ke dalam file
-# Opsi A: Simpan sebagai file CSV agar mudah dirapikan/dikopi di Excel atau Google Sheets
 tabel_transpose.to_csv('hasil_kontribusi.csv')
 
-# Opsi B: Simpan sebagai file TXT agar format spasinya persis seperti di terminal
 with open('hasil_kontribusi.txt', 'w') as f:
     f.write("=== TABEL RATA-RATA DAN KONTRIBUSI ===\n\n")
     f.write(tabel_transpose.to_string())

@@ -12,7 +12,7 @@ import sqlite3
 import pytest
 from streamlit.testing.v1 import AppTest
 
-JALUR_APP = os.path.join(os.path.dirname(os.path.abspath(__file__)), "app.py")
+JALUR_APP = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "app.py")
 TIMEOUT = 90
 
 
