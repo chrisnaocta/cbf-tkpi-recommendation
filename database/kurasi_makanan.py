@@ -71,6 +71,7 @@ KODE_DIKECUALIKAN_PENELITI = {
     "FP035": "babi",       # Babi hutan masak rica, masakan
     "FP053": "babi",       # Lawar babi, masakan
     "FP005": "babi",       # Ham (produk olahan daging babi)
+    "FP020": "ulat",       # Ulat sagu, panggang
 }
 
 # ---------------------------------------------------------------------------

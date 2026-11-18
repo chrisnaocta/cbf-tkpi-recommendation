@@ -136,128 +136,127 @@ id_makanan,kode_tkpi,nama_bahan,kategori,energi,protein,lemak,karbohidrat,peran_
 133,FP016,"Sapi, daging, sosis (Worst)",Daging,448,14.5,42.3,2.3,lauk
 134,FP017,"Sapi, hati, sosis (liverworst)",Daging,274,16,22,3,lauk
 135,FP019,"Sapi, paru, goreng",Daging,268,23.9,12.7,14.5,lauk
-136,FP020,"Ulat sagu, panggang",Daging,380,11.9,30.3,14.9,lauk
-137,FP021,"Ayam goreng church texas, dada",Daging,338,35.2,20.6,0.4,lauk
-138,FP022,"Ayam goreng church,texas paha",Daging,287,31,15.7,1.7,lauk
-139,FP023,"Ayam goreng church texas, sayap",Daging,295,34,16,1.5,lauk
-140,FP024,"Ayam goreng kalasan, paha",Daging,275,37.4,12.2,1.3,lauk
-141,FP025,"Ayam goreng kentucky, dada",Daging,298,34.2,16.8,0.1,lauk
-142,FP026,"Ayam goreng kentucky, paha",Daging,286,32.1,16.1,1.1,lauk
-143,FP027,"Ayam goreng kentucky,sayap",Daging,297,35.9,15.2,1.6,lauk
-144,FP028,Ayam goreng mbok berek dada,Daging,295,39.2,13.6,1,lauk
-145,FP029,"Ayam goreng pasundan, dada",Daging,246,37.9,9,0.7,lauk
-146,FP030,"Ayam goreng pasundan, paha",Daging,245,33.1,11.4,0.3,lauk
-147,FP031,"Ayam goreng pioneer, dada",Daging,295,37.4,14.7,0.6,lauk
-148,FP032,"Ayam goreng sukabumi, dada",Daging,244,36.7,9.2,1,lauk
-149,FP033,"Ayam goreng sukabumi, paha",Daging,283,35.7,14.3,0.5,lauk
-150,FP034,"Ayam taliwang, masakan",Daging,264,18.2,20.1,2.7,lauk
-151,FP036,Beef burger,Daging,258,10.6,9.5,32.5,lauk
-152,FP037,"Beef teriyaki, masakan",Daging,151,8.6,3.1,22.3,lauk
-153,FP038,"Beef yakiniku, masakan",Daging,132,9.8,1.1,20.7,lauk
-154,FP039,Brongkos,Daging,141,15.3,3.3,12.6,lauk
-155,FP040,"Bulgogi, masakan",Daging,72,11.4,4.9,1.4,lauk
-156,FP041,"Chicken teriyaki, masakan",Daging,168,13,9.6,7.5,lauk
-157,FP042,"Chikiniku, masakan",Daging,143,9.8,1.4,22.8,lauk
-158,FP043,"Coto mangkasara, kuda, masakan",Daging,96,6.8,5.9,3.8,lauk
-159,FP044,"Coto mangkasara, sapi, masakan",Daging,84,6,6,1.4,lauk
-160,FP045,"Djibokum, masakan",Daging,248,10,2.3,40.9,lauk
-161,FP046,"Empal (daging) Goreng, masakan",Daging,248,36.2,6.9,10.1,lauk
-162,FP047,Gulai kambing,Daging,126,4.2,9.4,6.2,lauk
-163,FP048,"Jangang bintatoeng, masakan",Daging,107,5.3,2.2,16.5,lauk
-164,FP049,"Kalio ayam, masakan",Daging,203,16,13.5,4.4,lauk
-165,FP050,"Kalio jeroan, masakan",Daging,163,16.5,9,4.1,lauk
-166,FP051,"Kalio kikil (tunjang), masakan",Daging,122,13.8,5.7,3.9,lauk
-167,FP052,"Kalio otak, masakan",Daging,157,8.1,8.8,11.4,lauk
-168,FP055,"Lawara jangang, masakan",Daging,159,5,10.9,10.1,lauk
-169,FP056,"Naan maran sapi, masakan",Daging,478,38.3,33.9,5.1,lauk
-170,FP057,"Nasu likku, masakan",Daging,196,14.5,8.3,15.9,lauk
-171,FP058,"Oramu ninahu ndawa olaho, masakan",Daging,117,13.7,5,4.3,lauk
-172,FP060,"Pelolah manuk, masakan",Daging,219,19.7,13.6,4.4,lauk
-173,FP061,"Rawon, masakan",Daging,60,5.4,2.5,4,lauk
-174,FP062,"Rendang sapi, masakan",Daging,193,22.6,7.9,7.8,lauk
-175,FP065,"Sate pusut, masakan",Daging,274,12.9,18.6,13.6,lauk
-176,FP067,"Sie reuboh, masakan",Daging,474,11.2,42.5,11.7,lauk
-177,FP068,"Sop buntut, masakan",Daging,71,7.5,3.6,2.2,lauk
-178,FP069,"Sop daging sapi, masakan",Daging,49,5.8,0.5,5.3,lauk
-179,FP070,"Sop kaki sapi, masakan",Daging,68,9,1.9,3.7,lauk
-180,FP071,"Sop kambing, masakan",Daging,34,5.5,0.8,1.1,lauk
-181,FP072,"Sop konro, masakan",Daging,71,7.4,2.6,4.5,lauk
-182,FP073,"Sop saudara, masakan",Daging,89,7.2,5,3.9,lauk
-183,FP074,"Soto bandung, masakan",Daging,42,3.9,1.7,2.8,lauk
-184,FP075,"Soto banjar, masakan",Daging,110,2.9,9.5,3.2,lauk
-185,FP076,"Soto betawi, masakan",Daging,135,2.5,8.8,11.5,lauk
-186,FP077,"Soto jeroan, masakan",Daging,92,11.8,4.3,1.4,lauk
-187,FP078,"Soto kudus, masakan",Daging,38,2.6,2.3,1.8,lauk
-188,FP079,"Soto madura, masakan",Daging,60,3.5,4.5,1.3,lauk
-189,FP080,"Soto padang, masakan",Daging,127,5.9,6.6,11,lauk
-190,FP081,"Soto pekalongan, masakan",Daging,94,3,6.8,5.1,lauk
-191,FP082,"Soto pemalang, masakan",Daging,75,3.6,5.2,3.5,lauk
-192,FP083,"Soto sukaraja, masakan",Daging,80,3.2,3.5,9,lauk
-193,FP084,"Soto sulung, masakan",Daging,86,2.3,8.5,0,lauk
-194,FP085,"Sukiyaki, masakan",Daging,75,5.6,0.4,12.2,lauk
-195,FP086,"Tedong pallu basa, masakan",Daging,83,10.4,3.4,2.8,lauk
-196,FP088,"Tinoransa, masakan",Daging,516,17.7,49.5,0,lauk
-197,GP002,"Belut, goreng",Ikan Kerang Udang,417,25.9,19.4,32,lauk
-198,GP003,"Cumi-cumi, goreng",Ikan Kerang Udang,265,40.6,10.1,0,lauk
-199,GP005,"Ikan bandeng presto, masakan",Ikan Kerang Udang,296,17.1,20.3,11.3,lauk
-200,GP006,Ikan baung bakar,Ikan Kerang Udang,144,17.8,5.8,5.2,lauk
-201,GP007,Ikan belida bakar,Ikan Kerang Udang,128,18,3,7.2,lauk
-202,GP013,"Ikan gete, goreng",Ikan Kerang Udang,267,23.1,19.4,0.2,lauk
-203,GP017,Ikan Lais bakar,Ikan Kerang Udang,147,17.5,6.5,5.4,lauk
-204,GP019,Ikan Mas pepes,Ikan Kerang Udang,209,15.2,11.3,11.8,lauk
-205,GP020,Ikan mujahir goreng,Ikan Kerang Udang,416,46.9,23.9,0,lauk
-206,GP021,Ikan mujahir pepes,Ikan Kerang Udang,121,21.7,2.8,0.8,lauk
-207,GP023,"Ikan papuyu, bakar",Ikan Kerang Udang,152,17.6,6.1,6.7,lauk
-208,GP024,"Ikan patin, bakar",Ikan Kerang Udang,144,17.5,6.3,4.3,lauk
-209,GP034,"Ikan sanggang, masakan",Ikan Kerang Udang,240,21.7,7.7,20.7,lauk
-210,GP049,Sardines dalam kaleng,Ikan Kerang Udang,338,21.1,27,1,lauk
-211,GP053,Abon haruwan,Ikan Kerang Udang,513,23.7,37,21.3,lauk
-212,GP054,Abon ikan,Ikan Kerang Udang,435,27.2,20.2,36.1,lauk
-213,GP055,"Betok wadi, masakan",Ikan Kerang Udang,145,16.3,7,4.1,lauk
-214,GP056,"Bou ninahu ndamate, masakan",Ikan Kerang Udang,79,16.3,1,1.1,lauk
-215,GP057,"Bouiki ninahu nggaluku, masakan",Ikan Kerang Udang,94,7.8,2.2,10.8,lauk
-216,GP058,Cakalang asar (asap),Ikan Kerang Udang,155,20.1,3.8,10.2,lauk
-217,GP059,"Dendeng belut, goreng, masakan",Ikan Kerang Udang,382,55.7,14.1,8,lauk
-218,GP060,"Dendeng mujahir, goreng, masakan",Ikan Kerang Udang,598,74.3,26.9,9.2,lauk
-219,GP061,Fillet o-fish,Ikan Kerang Udang,270,12.3,15.9,19.3,lauk
-220,GP062,"Gete kuah asam, masakan",Ikan Kerang Udang,75,8.2,2,6,lauk
-221,GP063,"Gulai asam keueung, masakan",Ikan Kerang Udang,52,10,0.5,1.8,lauk
-222,GP064,"Gulai ikan paya, masakan",Ikan Kerang Udang,148,10,9.8,5,lauk
-223,GP065,"Gulai ikan, masakan",Ikan Kerang Udang,106,16.5,3.3,2.5,lauk
-224,GP066,"Gulai keumamah, masakan",Ikan Kerang Udang,110,5.9,8.2,3.2,lauk
-225,GP067,"Gulai tiram, masakan",Ikan Kerang Udang,132,9,7.2,7.8,lauk
-226,GP068,"Gurame asem manis, masakan",Ikan Kerang Udang,192,12.7,10.1,12.7,lauk
-227,GP069,"Ikan asar merah, masakan",Ikan Kerang Udang,146,17.7,5.9,5.6,lauk
-228,GP070,"Jambal goreng, masakan",Ikan Kerang Udang,286,48.5,9.2,2.3,lauk
-229,GP071,"Jukku pallu kaloa, masakan",Ikan Kerang Udang,15,15.2,4.3,8.8,lauk
-230,GP072,"Kaholeo, masakan",Ikan Kerang Udang,413,28.7,19.8,29.8,lauk
-231,GP073,Lawara penjah,Ikan Kerang Udang,207,7.4,15.4,9.6,lauk
-232,GP074,"Model, masakan",Ikan Kerang Udang,79,2.2,4,8.6,lauk
-233,GP075,"Mujahir acar kuning, masakan",Ikan Kerang Udang,330,17.8,23.4,12.1,lauk
-234,GP076,"Parede baleh, masakan",Ikan Kerang Udang,87,10.5,2.5,5.5,lauk
-235,GP077,"Pempek adaan, masakan",Ikan Kerang Udang,162,4.9,3,27.8,lauk
-236,GP078,"Pempek belida, masakan",Ikan Kerang Udang,156,4.2,1.4,31.6,lauk
-237,GP079,"Pempek kapal selam, masakan",Ikan Kerang Udang,152,4.5,2.3,28.2,lauk
-238,GP080,"Pempek kelesan, masakan",Ikan Kerang Udang,211,12.3,6.1,26.6,lauk
-239,GP081,"Pempek kulit, masakan",Ikan Kerang Udang,243,5.2,7.3,39.1,lauk
-240,GP082,"Pempek telur, masakan",Ikan Kerang Udang,156,4.7,2.7,28.3,lauk
-241,GP083,"Pempek tenggiri, masakan",Ikan Kerang Udang,173,7.2,1.2,33.4,lauk
-242,GP084,"Pencok lele, masakan",Ikan Kerang Udang,372,7.8,36.3,3.5,lauk
-243,GP086,"Pindang kenari, masakan",Ikan Kerang Udang,124,9.5,9.6,0,lauk
-244,GP087,"Saboko gurita, masakan",Ikan Kerang Udang,87,15.7,1.5,2.6,lauk
-245,GP088,"Saboko saltan, masakan",Ikan Kerang Udang,113,17.1,3.6,3,lauk
-246,GP089,"Saboko sardin, masakan",Ikan Kerang Udang,110,12.9,4.3,4.9,lauk
-247,GP090,Sate bandeng,Ikan Kerang Udang,283,12.1,16.8,20.9,lauk
-248,GP091,"Sepi, masakan",Ikan Kerang Udang,88,7.9,1.6,10.6,lauk
-249,GP092,"Tekwan, masakan",Ikan Kerang Udang,53,1.9,0.9,9.4,lauk
-250,GP093,"Teri belado, masakan",Ikan Kerang Udang,365,23.7,22.3,17.5,lauk
-251,GP094,"Tumis bandeng, masakan",Ikan Kerang Udang,189,11.3,15.7,0.6,lauk
-252,GP095,Tumis keumamah,Ikan Kerang Udang,300,14.5,20,15.5,lauk
-253,HP001,"Telur ayam, dadar, masakan",Telur,251,16.3,19.4,1.4,lauk
-254,HP003,"Telur bebek, dadar, masakan",Telur,301,20,23.7,0,lauk
-255,HP005,"Bayau mi balu, masakan",Telur,313,6,12.2,44.8,lauk
-256,HP006,"Cucuru bayau, masakan",Telur,349,6.8,18.7,38.3,lauk
-257,HP007,"Kalio telur, masakan",Telur,193,10.6,12.4,9.7,lauk
+136,FP021,"Ayam goreng church texas, dada",Daging,338,35.2,20.6,0.4,lauk
+137,FP022,"Ayam goreng church,texas paha",Daging,287,31,15.7,1.7,lauk
+138,FP023,"Ayam goreng church texas, sayap",Daging,295,34,16,1.5,lauk
+139,FP024,"Ayam goreng kalasan, paha",Daging,275,37.4,12.2,1.3,lauk
+140,FP025,"Ayam goreng kentucky, dada",Daging,298,34.2,16.8,0.1,lauk
+141,FP026,"Ayam goreng kentucky, paha",Daging,286,32.1,16.1,1.1,lauk
+142,FP027,"Ayam goreng kentucky,sayap",Daging,297,35.9,15.2,1.6,lauk
+143,FP028,Ayam goreng mbok berek dada,Daging,295,39.2,13.6,1,lauk
+144,FP029,"Ayam goreng pasundan, dada",Daging,246,37.9,9,0.7,lauk
+145,FP030,"Ayam goreng pasundan, paha",Daging,245,33.1,11.4,0.3,lauk
+146,FP031,"Ayam goreng pioneer, dada",Daging,295,37.4,14.7,0.6,lauk
+147,FP032,"Ayam goreng sukabumi, dada",Daging,244,36.7,9.2,1,lauk
+148,FP033,"Ayam goreng sukabumi, paha",Daging,283,35.7,14.3,0.5,lauk
+149,FP034,"Ayam taliwang, masakan",Daging,264,18.2,20.1,2.7,lauk
+150,FP036,Beef burger,Daging,258,10.6,9.5,32.5,lauk
+151,FP037,"Beef teriyaki, masakan",Daging,151,8.6,3.1,22.3,lauk
+152,FP038,"Beef yakiniku, masakan",Daging,132,9.8,1.1,20.7,lauk
+153,FP039,Brongkos,Daging,141,15.3,3.3,12.6,lauk
+154,FP040,"Bulgogi, masakan",Daging,72,11.4,4.9,1.4,lauk
+155,FP041,"Chicken teriyaki, masakan",Daging,168,13,9.6,7.5,lauk
+156,FP042,"Chikiniku, masakan",Daging,143,9.8,1.4,22.8,lauk
+157,FP043,"Coto mangkasara, kuda, masakan",Daging,96,6.8,5.9,3.8,lauk
+158,FP044,"Coto mangkasara, sapi, masakan",Daging,84,6,6,1.4,lauk
+159,FP045,"Djibokum, masakan",Daging,248,10,2.3,40.9,lauk
+160,FP046,"Empal (daging) Goreng, masakan",Daging,248,36.2,6.9,10.1,lauk
+161,FP047,Gulai kambing,Daging,126,4.2,9.4,6.2,lauk
+162,FP048,"Jangang bintatoeng, masakan",Daging,107,5.3,2.2,16.5,lauk
+163,FP049,"Kalio ayam, masakan",Daging,203,16,13.5,4.4,lauk
+164,FP050,"Kalio jeroan, masakan",Daging,163,16.5,9,4.1,lauk
+165,FP051,"Kalio kikil (tunjang), masakan",Daging,122,13.8,5.7,3.9,lauk
+166,FP052,"Kalio otak, masakan",Daging,157,8.1,8.8,11.4,lauk
+167,FP055,"Lawara jangang, masakan",Daging,159,5,10.9,10.1,lauk
+168,FP056,"Naan maran sapi, masakan",Daging,478,38.3,33.9,5.1,lauk
+169,FP057,"Nasu likku, masakan",Daging,196,14.5,8.3,15.9,lauk
+170,FP058,"Oramu ninahu ndawa olaho, masakan",Daging,117,13.7,5,4.3,lauk
+171,FP060,"Pelolah manuk, masakan",Daging,219,19.7,13.6,4.4,lauk
+172,FP061,"Rawon, masakan",Daging,60,5.4,2.5,4,lauk
+173,FP062,"Rendang sapi, masakan",Daging,193,22.6,7.9,7.8,lauk
+174,FP065,"Sate pusut, masakan",Daging,274,12.9,18.6,13.6,lauk
+175,FP067,"Sie reuboh, masakan",Daging,474,11.2,42.5,11.7,lauk
+176,FP068,"Sop buntut, masakan",Daging,71,7.5,3.6,2.2,lauk
+177,FP069,"Sop daging sapi, masakan",Daging,49,5.8,0.5,5.3,lauk
+178,FP070,"Sop kaki sapi, masakan",Daging,68,9,1.9,3.7,lauk
+179,FP071,"Sop kambing, masakan",Daging,34,5.5,0.8,1.1,lauk
+180,FP072,"Sop konro, masakan",Daging,71,7.4,2.6,4.5,lauk
+181,FP073,"Sop saudara, masakan",Daging,89,7.2,5,3.9,lauk
+182,FP074,"Soto bandung, masakan",Daging,42,3.9,1.7,2.8,lauk
+183,FP075,"Soto banjar, masakan",Daging,110,2.9,9.5,3.2,lauk
+184,FP076,"Soto betawi, masakan",Daging,135,2.5,8.8,11.5,lauk
+185,FP077,"Soto jeroan, masakan",Daging,92,11.8,4.3,1.4,lauk
+186,FP078,"Soto kudus, masakan",Daging,38,2.6,2.3,1.8,lauk
+187,FP079,"Soto madura, masakan",Daging,60,3.5,4.5,1.3,lauk
+188,FP080,"Soto padang, masakan",Daging,127,5.9,6.6,11,lauk
+189,FP081,"Soto pekalongan, masakan",Daging,94,3,6.8,5.1,lauk
+190,FP082,"Soto pemalang, masakan",Daging,75,3.6,5.2,3.5,lauk
+191,FP083,"Soto sukaraja, masakan",Daging,80,3.2,3.5,9,lauk
+192,FP084,"Soto sulung, masakan",Daging,86,2.3,8.5,0,lauk
+193,FP085,"Sukiyaki, masakan",Daging,75,5.6,0.4,12.2,lauk
+194,FP086,"Tedong pallu basa, masakan",Daging,83,10.4,3.4,2.8,lauk
+195,FP088,"Tinoransa, masakan",Daging,516,17.7,49.5,0,lauk
+196,GP002,"Belut, goreng",Ikan Kerang Udang,417,25.9,19.4,32,lauk
+197,GP003,"Cumi-cumi, goreng",Ikan Kerang Udang,265,40.6,10.1,0,lauk
+198,GP005,"Ikan bandeng presto, masakan",Ikan Kerang Udang,296,17.1,20.3,11.3,lauk
+199,GP006,Ikan baung bakar,Ikan Kerang Udang,144,17.8,5.8,5.2,lauk
+200,GP007,Ikan belida bakar,Ikan Kerang Udang,128,18,3,7.2,lauk
+201,GP013,"Ikan gete, goreng",Ikan Kerang Udang,267,23.1,19.4,0.2,lauk
+202,GP017,Ikan Lais bakar,Ikan Kerang Udang,147,17.5,6.5,5.4,lauk
+203,GP019,Ikan Mas pepes,Ikan Kerang Udang,209,15.2,11.3,11.8,lauk
+204,GP020,Ikan mujahir goreng,Ikan Kerang Udang,416,46.9,23.9,0,lauk
+205,GP021,Ikan mujahir pepes,Ikan Kerang Udang,121,21.7,2.8,0.8,lauk
+206,GP023,"Ikan papuyu, bakar",Ikan Kerang Udang,152,17.6,6.1,6.7,lauk
+207,GP024,"Ikan patin, bakar",Ikan Kerang Udang,144,17.5,6.3,4.3,lauk
+208,GP034,"Ikan sanggang, masakan",Ikan Kerang Udang,240,21.7,7.7,20.7,lauk
+209,GP049,Sardines dalam kaleng,Ikan Kerang Udang,338,21.1,27,1,lauk
+210,GP053,Abon haruwan,Ikan Kerang Udang,513,23.7,37,21.3,lauk
+211,GP054,Abon ikan,Ikan Kerang Udang,435,27.2,20.2,36.1,lauk
+212,GP055,"Betok wadi, masakan",Ikan Kerang Udang,145,16.3,7,4.1,lauk
+213,GP056,"Bou ninahu ndamate, masakan",Ikan Kerang Udang,79,16.3,1,1.1,lauk
+214,GP057,"Bouiki ninahu nggaluku, masakan",Ikan Kerang Udang,94,7.8,2.2,10.8,lauk
+215,GP058,Cakalang asar (asap),Ikan Kerang Udang,155,20.1,3.8,10.2,lauk
+216,GP059,"Dendeng belut, goreng, masakan",Ikan Kerang Udang,382,55.7,14.1,8,lauk
+217,GP060,"Dendeng mujahir, goreng, masakan",Ikan Kerang Udang,598,74.3,26.9,9.2,lauk
+218,GP061,Fillet o-fish,Ikan Kerang Udang,270,12.3,15.9,19.3,lauk
+219,GP062,"Gete kuah asam, masakan",Ikan Kerang Udang,75,8.2,2,6,lauk
+220,GP063,"Gulai asam keueung, masakan",Ikan Kerang Udang,52,10,0.5,1.8,lauk
+221,GP064,"Gulai ikan paya, masakan",Ikan Kerang Udang,148,10,9.8,5,lauk
+222,GP065,"Gulai ikan, masakan",Ikan Kerang Udang,106,16.5,3.3,2.5,lauk
+223,GP066,"Gulai keumamah, masakan",Ikan Kerang Udang,110,5.9,8.2,3.2,lauk
+224,GP067,"Gulai tiram, masakan",Ikan Kerang Udang,132,9,7.2,7.8,lauk
+225,GP068,"Gurame asem manis, masakan",Ikan Kerang Udang,192,12.7,10.1,12.7,lauk
+226,GP069,"Ikan asar merah, masakan",Ikan Kerang Udang,146,17.7,5.9,5.6,lauk
+227,GP070,"Jambal goreng, masakan",Ikan Kerang Udang,286,48.5,9.2,2.3,lauk
+228,GP071,"Jukku pallu kaloa, masakan",Ikan Kerang Udang,15,15.2,4.3,8.8,lauk
+229,GP072,"Kaholeo, masakan",Ikan Kerang Udang,413,28.7,19.8,29.8,lauk
+230,GP073,Lawara penjah,Ikan Kerang Udang,207,7.4,15.4,9.6,lauk
+231,GP074,"Model, masakan",Ikan Kerang Udang,79,2.2,4,8.6,lauk
+232,GP075,"Mujahir acar kuning, masakan",Ikan Kerang Udang,330,17.8,23.4,12.1,lauk
+233,GP076,"Parede baleh, masakan",Ikan Kerang Udang,87,10.5,2.5,5.5,lauk
+234,GP077,"Pempek adaan, masakan",Ikan Kerang Udang,162,4.9,3,27.8,lauk
+235,GP078,"Pempek belida, masakan",Ikan Kerang Udang,156,4.2,1.4,31.6,lauk
+236,GP079,"Pempek kapal selam, masakan",Ikan Kerang Udang,152,4.5,2.3,28.2,lauk
+237,GP080,"Pempek kelesan, masakan",Ikan Kerang Udang,211,12.3,6.1,26.6,lauk
+238,GP081,"Pempek kulit, masakan",Ikan Kerang Udang,243,5.2,7.3,39.1,lauk
+239,GP082,"Pempek telur, masakan",Ikan Kerang Udang,156,4.7,2.7,28.3,lauk
+240,GP083,"Pempek tenggiri, masakan",Ikan Kerang Udang,173,7.2,1.2,33.4,lauk
+241,GP084,"Pencok lele, masakan",Ikan Kerang Udang,372,7.8,36.3,3.5,lauk
+242,GP086,"Pindang kenari, masakan",Ikan Kerang Udang,124,9.5,9.6,0,lauk
+243,GP087,"Saboko gurita, masakan",Ikan Kerang Udang,87,15.7,1.5,2.6,lauk
+244,GP088,"Saboko saltan, masakan",Ikan Kerang Udang,113,17.1,3.6,3,lauk
+245,GP089,"Saboko sardin, masakan",Ikan Kerang Udang,110,12.9,4.3,4.9,lauk
+246,GP090,Sate bandeng,Ikan Kerang Udang,283,12.1,16.8,20.9,lauk
+247,GP091,"Sepi, masakan",Ikan Kerang Udang,88,7.9,1.6,10.6,lauk
+248,GP092,"Tekwan, masakan",Ikan Kerang Udang,53,1.9,0.9,9.4,lauk
+249,GP093,"Teri belado, masakan",Ikan Kerang Udang,365,23.7,22.3,17.5,lauk
+250,GP094,"Tumis bandeng, masakan",Ikan Kerang Udang,189,11.3,15.7,0.6,lauk
+251,GP095,Tumis keumamah,Ikan Kerang Udang,300,14.5,20,15.5,lauk
+252,HP001,"Telur ayam, dadar, masakan",Telur,251,16.3,19.4,1.4,lauk
+253,HP003,"Telur bebek, dadar, masakan",Telur,301,20,23.7,0,lauk
+254,HP005,"Bayau mi balu, masakan",Telur,313,6,12.2,44.8,lauk
+255,HP006,"Cucuru bayau, masakan",Telur,349,6.8,18.7,38.3,lauk
+256,HP007,"Kalio telur, masakan",Telur,193,10.6,12.4,9.7,lauk
 
 tabel 'riwayat_rekomendasi':
 id_rekomendasi,id_sesi,id_makanan,jenis_waktu_makan,skor_similarity,waktu_rekomendasi,porsi_gram
