@@ -18,7 +18,7 @@ bukan dari penilaian penulis:
       per satu; keputusan dan alasannya dicatat pada KEPUTUSAN_TINJAUAN di bawah.
 
   K6  Pengecualian oleh peneliti: bahan berasal dari anjing, tikus, penyu,
-      kelelawar, atau babi (termasuk produk olahannya) -> keluar. Ini keputusan
+      kelelawar, babi, atau ulat (termasuk produk olahannya) -> keluar. Ini keputusan
       peneliti dan BUKAN berasal dari TKPI; daftar kodenya ada pada
       KODE_DIKECUALIKAN_PENELITI di bawah.
 
