@@ -6,13 +6,30 @@ import kurasi_makanan
 # Nama file database SQLite yang akan dibuat secara otomatis (lokal)
 DB_NAME = 'rekomendasi_makanan.db'
 
+# Peran menu yang boleh tersimpan pada tabel makanan (ketetapan perancangan:
+# setiap waktu makan = 1 pokok + 1 lauk + 1 sayur). Nilai ini dipakai pada
+# batasan CHECK di bawah dan harus sama dengan PERAN_VALID di repositori_makanan.py.
+PERAN_MENU_VALID = ('pokok', 'lauk', 'sayur')
+
 def create_tables():
+    """
+    Membuat tiga tabel (makanan, sesi_pengguna, riwayat_rekomendasi) bila belum ada.
+
+    Tabel makanan memiliki batasan CHECK pada kolom peran_menu sehingga SQLite
+    menolak baris dengan peran di luar pokok, lauk, atau sayur. Perintah
+    CREATE TABLE IF NOT EXISTS tidak mengubah tabel yang sudah ada; bila berkas
+    basis data lama dibuat sebelum batasan ini ditambahkan, hapus berkas tersebut
+    lalu jalankan setup_db.py lagi.
+    """
     # Membuka koneksi ke SQLite (file akan dibuat jika belum ada)
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
 
+    # Daftar peran untuk batasan CHECK, berbentuk 'pokok', 'lauk', 'sayur'
+    daftar_peran = ', '.join(f"'{peran}'" for peran in PERAN_MENU_VALID)
+
     # 1. Membuat Tabel MAKANAN (Telah disesuaikan dengan kolom peran_menu)
-    cursor.execute('''
+    cursor.execute(f'''
     CREATE TABLE IF NOT EXISTS makanan (
         id_makanan INTEGER PRIMARY KEY AUTOINCREMENT,
         kode_tkpi TEXT,
@@ -22,7 +39,7 @@ def create_tables():
         protein REAL,
         lemak REAL,
         karbohidrat REAL,
-        peran_menu TEXT
+        peran_menu TEXT CHECK (peran_menu IN ({daftar_peran}))
     )
     ''')
 
