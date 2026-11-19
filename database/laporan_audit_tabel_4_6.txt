@@ -1,0 +1,49 @@
+LAPORAN AUDIT TABEL 4.6
+KOMPOSISI BAHAN MENURUT PERAN DAN KELOMPOK PANGAN
+=================================================================
+
+Database: rekomendasi_makanan.db
+Tabel database: makanan
+
+A. PEMERIKSAAN KELOMPOK PANGAN
+-----------------------------------------------------------------
+Peran menu   Kelompok pangan                  Target   Aktual   Status
+-----------------------------------------------------------------
+pokok        Serealia                             29       29     PASS
+pokok        Umbi Berpati                         15       15     PASS
+lauk         Daging                               71       71     PASS
+lauk         Ikan Kerang Udang                    56       56     PASS
+lauk         Kacang dan Biji                      22       22     PASS
+lauk         Telur                                 5        5     PASS
+sayur        Sayuran                              58       58     PASS
+
+B. PEMERIKSAAN SUBTOTAL PERAN MENU
+-----------------------------------------------------------------
+Peran menu               Target     Aktual     Status
+-----------------------------------------------------------------
+pokok                        44         44       PASS
+lauk                        154        154       PASS
+sayur                        58         58       PASS
+
+C. PEMERIKSAAN TOTAL BAHAN
+-----------------------------------------------------------------
+Target total bahan : 256
+Total aktual       : 256
+Status             : PASS
+
+D. PEMERIKSAAN KONSISTENSI SUBTOTAL
+-----------------------------------------------------------------
+Jumlah subtotal : 256
+Total database : 256
+Status         : PASS
+
+E. PEMERIKSAAN KATEGORI TAMBAHAN
+-----------------------------------------------------------------
+Tidak ditemukan kategori/peran tambahan.
+
+=================================================================
+STATUS AUDIT KESELURUHAN: PASS
+
+Audit memeriksa jumlah bahan berdasarkan peran menu,
+kelompok pangan, subtotal, total, dan kategori tambahan.
+Audit tidak mengubah isi database.
