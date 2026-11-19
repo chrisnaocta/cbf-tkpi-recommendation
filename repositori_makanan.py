@@ -33,7 +33,7 @@ KOLOM_MAKANAN: Tuple[str, ...] = (
 )
 
 # Kolom wajib pada data riwayat. Kolom waktu_rekomendasi tidak diminta karena
-# diisi otomatis oleh basis data (DEFAULT CURRENT_TIMESTAMP pada setup_db.py).
+# diisi otomatis oleh basis data (datetime('now','localtime') pada setup_db.py).
 KOLOM_RIWAYAT_WAJIB: Tuple[str, ...] = (
     "id_sesi", "id_makanan", "jenis_waktu_makan", "skor_similarity", "porsi_gram",
 )
@@ -53,7 +53,7 @@ SQL_SIMPAN_RIWAYAT = (
 )
 
 # Kolom wajib pada data sesi. waktu_input tidak diminta karena diisi otomatis oleh
-# basis data (DEFAULT CURRENT_TIMESTAMP pada setup_db.py).
+# basis data (datetime('now','localtime') pada setup_db.py).
 KOLOM_SESI_WAJIB: Tuple[str, ...] = (
     "usia", "jenis_kelamin", "berat_badan", "tinggi_badan", "tingkat_aktivitas",
     "imt", "bmr", "target_energi", "target_protein", "target_lemak", "target_karbohidrat",
