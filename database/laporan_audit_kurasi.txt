@@ -1,0 +1,59 @@
+LAPORAN AUDIT KURASI BAHAN MAKANAN - TABEL 4.5
+=======================================================
+
+Sumber: data_makanan.csv
+Hasil kurasi: kurasi_makanan.csv
+
+A. PEMERIKSAAN TARGET TABEL
+-------------------------------------------------------
+Pemeriksaan                Target     Aktual     Status
+-------------------------------------------------------
+Jumlah awal                 1.146      1.146       PASS
+K0 keluar                     356        356       PASS
+K6 keluar                      10         10       PASS
+K1 keluar                     401        401       PASS
+K2 keluar                      48         48       PASS
+K3 masuk                      179        179       PASS
+K4 keluar                      23         23       PASS
+K5 keluar                      52         52       PASS
+K5 masuk                       77         77       PASS
+Hasil akhir keluar            890        890       PASS
+Hasil akhir masuk             256        256       PASS
+
+B. PEMERIKSAAN ARITMETIKA
+-------------------------------------------------------
+Pemeriksaan                                Target     Aktual     Status
+-------------------------------------------------------
+Sisa setelah K0, K6, K1, K2                   331        331       PASS
+Sisa setelah K3                               152        152       PASS
+Sisa setelah K4                               129        129       PASS
+Sisa setelah K5                                 0          0       PASS
+Keluar + masuk sama dengan jumlah awal      1.146      1.146       PASS
+Jumlah baris output sama dengan sumber      1.146      1.146       PASS
+
+C. PEMERIKSAAN KODE K6
+-------------------------------------------------------
+Jumlah kode K6 aktual: 10
+Daftar kode K6 cocok dengan 10 kode pengecualian: PASS
+
+D. PEMERIKSAAN KODE DATA
+-------------------------------------------------------
+Kode sumber tidak ada di output: 0
+Kode output tidak ada di sumber: 0
+Kode sumber dan output sama: PASS
+
+E. RINGKASAN DASAR DAN KEPUTUSAN
+-------------------------------------------------------
+K0 - keluar: 356
+K1 - keluar: 401
+K2 - keluar: 48
+K3 - masuk: 179
+K4 - keluar: 23
+K5 - keluar: 52
+K5 - masuk: 77
+K6 - keluar: 10
+
+=======================================================
+STATUS AUDIT KESELURUHAN: PASS
+Audit ini memeriksa angka tabel, konsistensi aritmetika, kode, dan dasar/keputusan yang tercatat.
+Audit tidak menggantikan tinjauan manual atas keputusan K5.

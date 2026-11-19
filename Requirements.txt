@@ -1,0 +1,11 @@
+# Pustaka yang dibutuhkan sistem. Versi mengikuti lingkungan pengembangan pada skripsi
+# (Python 3.15). Tanda ~= berarti versi minor yang sama (mis. ~=1.66.0 menerima 1.66.x).
+# Modul sqlite3 sudah bawaan Python sehingga tidak dicantumkan.
+streamlit~=1.66.0
+pandas~=3.1.0
+numpy~=2.5.0
+scikit-learn~=1.9.0
+scipy~=1.18.0
+
+# Hanya untuk menjalankan pengujian unit pada folder tests/
+pytest~=9.2.0

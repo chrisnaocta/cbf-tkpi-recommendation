@@ -1,0 +1,16 @@
+HASIL PERHITUNGAN PERAN_MENU
+================================
+Jumlah jenis peran_menu: 9
+Jumlah total baris data: 1146
+
+Jumlah baris per peran_menu:
+--------------------------------
+lauk: 433 baris
+sayur: 224 baris
+camilan: 150 baris
+pokok: 133 baris
+buah: 116 baris
+bumbu: 37 baris
+minuman: 25 baris
+lemak_minyak: 18 baris
+pelengkap: 10 baris

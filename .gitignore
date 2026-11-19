@@ -1,0 +1,27 @@
+# Berkas hasil kompilasi dan cache Python (dibuat otomatis, tidak perlu disimpan di repositori)
+__pycache__/
+*.py[cod]
+
+# Cache pytest
+.pytest_cache/
+
+# Lingkungan virtual Python
+venv/
+.venv/
+env/
+venv_web_skripsi/
+
+# Pengaturan editor dan sistem operasi
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Berkas log
+*.log
+
+# Catatan: database/rekomendasi_makanan.db sengaja tetap disimpan di repositori agar
+# aplikasi dapat langsung dijalankan. Bila ingin repositori tidak berubah setiap kali
+# aplikasi dipakai (aplikasi menulis riwayat ke berkas ini), hapus tanda # pada baris
+# di bawah, lalu jalankan setup_db.py untuk membuat basis data di komputer masing-masing.
+# database/*.db
