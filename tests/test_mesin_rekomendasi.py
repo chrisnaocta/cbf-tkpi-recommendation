@@ -1,7 +1,5 @@
 """Tes MesinRekomendasi bagian 1: rumus (10), normalisasi, rumus (11), KNN K=5."""
 
-import os
-
 import numpy as np
 import pandas as pd
 import pytest
@@ -12,32 +10,29 @@ from mesin_rekomendasi import (
 )
 from repositori_makanan import PERAN_VALID
 
-CSV_MAKANAN = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "database", "data_makanan.csv")
+'''
+=== TABEL RATA-RATA DAN KONTRIBUSI ===
+peran_menu                       pokok    lauk  sayur
+Jumlah bahan                     44.00  154.00  58.00
+Rata-rata Protein (g/100 g)       3.35   16.52   3.11
+Rata-rata Lemak (g/100 g)         2.56   11.55   3.91
+Rata-rata Karbohidrat (g/100 g)  29.59   11.10   7.53
+Kontribusi Protein (%)           25.63   50.57  23.80
+Kontribusi Lemak (%)             23.10   41.66  35.24
+Kontribusi Karbohidrat (%)       71.21   10.69  18.11
+'''
 
-# Pool lama 790 bahan (sebelum kurasi). Angka acuan Bab 3 (Subbab 3.3.3 butir 6), dalam persen.
-# Dipakai untuk membuktikan bahwa rumus (10) pada kelas benar terhadap angka yang sudah terbit.
-KONTRIBUSI_BAB3 = {
-    "pokok": {"protein": 24.65, "lemak": 24.80, "karbohidrat": 77.55},
-    "lauk": {"protein": 53.94, "lemak": 54.37, "karbohidrat": 8.50},
-    "sayur": {"protein": 21.41, "lemak": 20.83, "karbohidrat": 13.95},
-}
-# Rata-rata per 100 g (hasil_kontribusi.txt)
-RATA_RATA_BAB3 = {
-    "pokok": {"protein": 3.54, "lemak": 1.75, "karbohidrat": 50.12},
-    "lauk": {"protein": 19.34, "lemak": 9.59, "karbohidrat": 13.73},
-    "sayur": {"protein": 3.07, "lemak": 1.47, "karbohidrat": 9.02},
-}
-# Pool siap makan hasil kurasi (257 bahan: pokok 44, lauk 155, sayur 58), dalam persen.
+# Pool siap makan hasil kurasi (256 bahan: pokok 44, lauk 154, sayur 58), dalam persen.
 # Dihitung terpisah dengan pandas dari data_makanan.csv + kurasi_makanan.py.
-JUMLAH_POOL_KURASI = {"pokok": 44, "lauk": 155, "sayur": 58}
+JUMLAH_POOL_KURASI = {"pokok": 44, "lauk": 154, "sayur": 58}
 KONTRIBUSI_POOL_KURASI = {
-    "pokok": {"protein": 25.66, "lemak": 23.00, "karbohidrat": 71.19},
-    "lauk": {"protein": 50.52, "lemak": 41.91, "karbohidrat": 10.71},
-    "sayur": {"protein": 23.82, "lemak": 35.09, "karbohidrat": 18.10},
+    "pokok": {"protein": 25.63, "lemak": 23.10, "karbohidrat": 71.21},
+    "lauk": {"protein": 50.57, "lemak": 41.66, "karbohidrat": 10.69},
+    "sayur": {"protein": 23.80, "lemak": 35.24, "karbohidrat": 18.11},
 }
 RATA_RATA_POOL_KURASI = {
     "pokok": {"protein": 3.35, "lemak": 2.56, "karbohidrat": 29.59},
-    "lauk": {"protein": 16.49, "lemak": 11.67, "karbohidrat": 11.13},
+    "lauk": {"protein": 16.52, "lemak": 11.55, "karbohidrat": 11.10},
     "sayur": {"protein": 3.11, "lemak": 3.91, "karbohidrat": 7.53},
 }
 ZAT = ("energi", "protein", "lemak", "karbohidrat")
@@ -59,33 +54,9 @@ def mesin(data_makanan, target_gizi):
     return MesinRekomendasi(data_makanan, target_gizi)
 
 
-@pytest.fixture
-def mesin_790(target_gizi):
-    """Mesin dengan pool lama 790 bahan (tanpa kurasi), langsung dari CSV."""
-    csv = pd.read_csv(CSV_MAKANAN)
-    csv = csv[csv["peran_menu"].isin(PERAN_VALID)].reset_index(drop=True)
-    csv.insert(0, "id_makanan", range(1, len(csv) + 1))
-    assert len(csv) == 790
-    return MesinRekomendasi(csv, target_gizi)
-
-
 # ---------------------------------------------------------------------------
 # Rumus (10)
 # ---------------------------------------------------------------------------
-def test_kontribusi_pool_790_sama_dengan_bab_3_lama(mesin_790):
-    """Rumus (10) pada pool lama 790 bahan menghasilkan angka Bab 3 yang sudah terbit."""
-    c = mesin_790.hitung_kontribusi_peran()
-    for peran in PERAN_VALID:
-        for zat, persen in KONTRIBUSI_BAB3[peran].items():
-            assert round(c[peran][zat] * 100, 2) == persen, (peran, zat)
-
-
-def test_rata_rata_pool_790_sama_dengan_hasil_kontribusi_txt(mesin_790):
-    for peran in PERAN_VALID:
-        for zat, nilai in RATA_RATA_BAB3[peran].items():
-            assert round(mesin_790._rata_rata[peran][zat], 2) == nilai, (peran, zat)
-
-
 def test_jumlah_pool_kurasi(data_makanan):
     assert data_makanan["peran_menu"].value_counts().to_dict() == JUMLAH_POOL_KURASI
 

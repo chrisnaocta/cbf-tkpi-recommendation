@@ -31,16 +31,16 @@ def _baris(nama, kode, peran="lauk"):
 def test_ringkasan_jumlah_baris(hasil):
     assert len(hasil) == 1146
     masuk = hasil[hasil["keputusan"] == "masuk"]
-    assert masuk["peran_menu"].value_counts().to_dict() == {"lauk": 155, "sayur": 58, "pokok": 44}
-    assert len(masuk) == 257
+    assert masuk["peran_menu"].value_counts().to_dict() == {"lauk": 154, "sayur": 58, "pokok": 44}
+    assert len(masuk) == 256
 
 
 def test_jumlah_per_dasar(hasil):
     h = hasil.groupby(["keputusan", "dasar"]).size().to_dict()
     assert h == {
         ("keluar", "K0"): 356, ("keluar", "K1"): 401, ("keluar", "K2"): 48,
-        ("keluar", "K4"): 23, ("keluar", "K5"): 52, ("keluar", "K6"): 9,
-        ("masuk", "K3"): 180, ("masuk", "K5"): 77,
+        ("keluar", "K4"): 23, ("keluar", "K5"): 52, ("keluar", "K6"): 10,
+        ("masuk", "K3"): 179, ("masuk", "K5"): 77,
     }
 
 
@@ -100,9 +100,9 @@ def test_bahan_pengecualian_peneliti_keluar_dengan_dasar_k6(hasil, nama):
 
 def test_pool_tidak_memuat_hewan_yang_dikecualikan(hasil):
     masuk = hasil[hasil["keputusan"] == "masuk"]["nama_bahan"].str.lower()
-    for kata in ("anjing", "tikus", "penyu", "paniki", "babi"):
+    for kata in ("anjing", "tikus", "penyu", "paniki", "babi", "ulat"):
         assert not masuk.str.contains(kata).any(), kata
-    assert len(K.KODE_DIKECUALIKAN_PENELITI) == 9
+    assert len(K.KODE_DIKECUALIKAN_PENELITI) == 10
 
 
 def test_kode_pengecualian_tidak_ada_pada_data_ditolak(monkeypatch):
@@ -122,8 +122,8 @@ def test_impor_hanya_memasukkan_bahan_siap_makan(db_uji):
     n = c.execute("SELECT COUNT(*) FROM makanan").fetchone()[0]
     ids = [r[0] for r in c.execute("SELECT id_makanan FROM makanan ORDER BY id_makanan")]
     c.close()
-    assert n == 257
-    assert ids == list(range(1, 258))
+    assert n == 256
+    assert ids == list(range(1, 257))
 
 
 def test_impor_dua_kali_tidak_menggandakan_data(db_uji, capsys):
@@ -131,7 +131,7 @@ def test_impor_dua_kali_tidak_menggandakan_data(db_uji, capsys):
     c = sqlite3.connect(db_uji)
     n = c.execute("SELECT COUNT(*) FROM makanan").fetchone()[0]
     c.close()
-    assert n == 257
+    assert n == 256
     assert "impor dibatalkan" in capsys.readouterr().out
 
 

@@ -18,9 +18,9 @@ from repositori_makanan import KOLOM_MAKANAN, PERAN_VALID
 # ---------------------------------------------------------------------------
 # KONSTANTA ACUAN TES (hasil kurasi data_makanan.csv oleh kurasi_makanan.py)
 # ---------------------------------------------------------------------------
-JUMLAH_TOTAL = 257
-JUMLAH_PER_PERAN = {"pokok": 44, "lauk": 155, "sayur": 58}
-RENTANG_ID_PER_PERAN = {"pokok": (1, 44), "sayur": (67, 124)}  # lauk terpisah dua blok (45-66 dan 125-257)
+JUMLAH_TOTAL = 256
+JUMLAH_PER_PERAN = {"pokok": 44, "lauk": 154, "sayur": 58}
+RENTANG_ID_PER_PERAN = {"pokok": (1, 44), "sayur": (67, 124)}  # lauk terpisah dua blok (45-66 dan 125-256)
 
 SQL_HITUNG_RIWAYAT = "SELECT COUNT(*) FROM riwayat_rekomendasi"
 
