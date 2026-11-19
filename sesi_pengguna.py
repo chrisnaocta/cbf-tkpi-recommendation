@@ -4,9 +4,10 @@ sesi_pengguna.py
 Kelas SesiPengguna (Class Diagram, Gambar 3.4).
 
 Tugas kelas: menyimpan status satu sesi penggunaan di memori, yaitu profil,
-hasil perhitungan gizi, rekomendasi yang sedang tampil, dan item dari
-rekomendasi sebelumnya (untuk "Minta Ulang"). Kelas ini tidak mengakses basis
-data; penyimpanan ke SQLite dilakukan AplikasiUtama melalui RepositoriMakanan.
+hasil perhitungan gizi, rekomendasi yang sedang tampil, item dari rekomendasi
+sebelumnya, dan seluruh item yang pernah ditampilkan pada sesi (untuk
+"Minta Ulang"). Kelas ini tidak mengakses basis data; penyimpanan ke SQLite
+dilakukan AplikasiUtama melalui RepositoriMakanan.
 """
 
 from copy import deepcopy
@@ -37,6 +38,8 @@ class SesiPengguna:
         hasil_gizi (dict): IMT, BMR, TEE, target gizi harian dan per waktu makan.
         rekomendasi_saat_ini (dict): hasil susun_menu_harian() yang sedang tampil.
         item_sebelumnya (list[int]): id_makanan dari rekomendasi sebelum yang sekarang.
+        item_terpakai (list[int]): seluruh id_makanan yang pernah ditampilkan pada
+            sesi ini. Dipakai "Minta Ulang" agar menu yang sama tidak kembali muncul.
 
     Metode (sesuai Class Diagram):
         simpan_profil()       -> None
@@ -49,6 +52,7 @@ class SesiPengguna:
         self.hasil_gizi: Dict[str, Any] = {}
         self.rekomendasi_saat_ini: Dict[str, Any] = {}
         self.item_sebelumnya: List[int] = []
+        self.item_terpakai: List[int] = []
 
     @property
     def aktif(self) -> bool:
@@ -61,7 +65,7 @@ class SesiPengguna:
         """Menyimpan profil dan hasil gizi pada sesi, dan mengosongkan rekomendasi lama.
 
         Dipanggil setiap kali pengguna mengirim data diri baru, sehingga sesi
-        dimulai dari awal (rekomendasi dan item sebelumnya dikosongkan).
+        dimulai dari awal (rekomendasi, item sebelumnya, dan item terpakai dikosongkan).
         """
         if isinstance(id_sesi, bool) or not isinstance(id_sesi, int):
             raise ValueError("id_sesi harus bilangan bulat.")
@@ -70,13 +74,18 @@ class SesiPengguna:
         self.hasil_gizi = deepcopy(dict(hasil_gizi))
         self.rekomendasi_saat_ini = {}
         self.item_sebelumnya = []
+        self.item_terpakai = []
 
     def update_rekomendasi(self, rekomendasi: Mapping[str, Any]) -> None:
         """Mengganti rekomendasi yang tampil.
 
-        Item pada rekomendasi yang digantikan disimpan di `item_sebelumnya`
-        (Subbab 3.3.3 butir 8: pada permintaan ulang, item dari rekomendasi
-        sebelumnya dikecualikan). Pada rekomendasi pertama daftar ini kosong.
+        Item pada rekomendasi yang digantikan disimpan di `item_sebelumnya`.
+        Item rekomendasi baru ditambahkan ke `item_terpakai` (tanpa duplikat,
+        urutan kemunculan dipertahankan), sehingga daftar itu memuat seluruh
+        item yang pernah tampil pada sesi ini.
         """
         self.item_sebelumnya = kumpulkan_id_makanan(self.rekomendasi_saat_ini)
         self.rekomendasi_saat_ini = deepcopy(dict(rekomendasi))
+        for id_makanan in kumpulkan_id_makanan(self.rekomendasi_saat_ini):
+            if id_makanan not in self.item_terpakai:
+                self.item_terpakai.append(id_makanan)

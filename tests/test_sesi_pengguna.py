@@ -110,3 +110,13 @@ def test_nilai_tidak_berhingga_ditolak(repositori, koneksi, kolom, nilai):
     with pytest.raises(ValueError):
         repositori.simpan_sesi_pengguna({**SESI_CONTOH, kolom: nilai})
     assert koneksi.execute_query("SELECT COUNT(*) AS n FROM sesi_pengguna")["n"][0] == 0
+
+def test_item_terpakai_menumpuk_dan_direset_profil_baru():
+    s = SesiPengguna()
+    s.simpan_profil({}, {}, 1)
+    for awal in (1, 10, 19):
+        s.update_rekomendasi(rekomendasi_palsu(range(awal, awal + 9)))
+    assert s.item_terpakai == list(range(1, 28))
+    assert s.item_sebelumnya == list(range(10, 19))      # tetap hanya satu rekomendasi sebelumnya
+    s.simpan_profil({}, {}, 2)
+    assert s.item_terpakai == []

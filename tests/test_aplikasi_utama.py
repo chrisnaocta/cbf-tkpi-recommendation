@@ -270,3 +270,22 @@ def test_detail_nutrisi_mengikuti_rekomendasi_terbaru(aplikasi):
     aplikasi.refresh_rekomendasi()
     with pytest.raises(ValueError):
         aplikasi.tampilkan_detail_nutrisi(lama)
+
+def test_minta_ulang_tidak_mengulang_item_dari_seluruh_rekomendasi_sebelumnya(aplikasi):
+    aplikasi.proses_input_pengguna(*PROFIL_A)
+    tampil = [kumpulkan_id_makanan(aplikasi.sesi.rekomendasi_saat_ini)]
+    for _ in range(5):
+        tampil.append(kumpulkan_id_makanan(aplikasi.refresh_rekomendasi()))
+    semua = [i for t in tampil for i in t]
+    assert len(semua) == len(set(semua)) == 54      # 6 rekomendasi x 9 item, tanpa pengulangan
+
+
+def test_minta_ulang_memulai_siklus_baru_saat_kandidat_habis(aplikasi, koneksi):
+    """Pokok hanya 44 bahan, habis sekitar Minta Ulang ke-14; tombol tidak boleh error."""
+    aplikasi.proses_input_pengguna(*PROFIL_A)
+    sebelumnya = kumpulkan_id_makanan(aplikasi.sesi.rekomendasi_saat_ini)
+    for _ in range(16):
+        baru = kumpulkan_id_makanan(aplikasi.refresh_rekomendasi())
+        assert len(set(baru)) == 9 and set(baru).isdisjoint(sebelumnya)
+        sebelumnya = baru
+    assert jumlah(koneksi, "riwayat_rekomendasi") == 9 * 17

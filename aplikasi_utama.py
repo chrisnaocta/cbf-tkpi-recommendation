@@ -271,19 +271,30 @@ class AplikasiUtama:
     def refresh_rekomendasi(self) -> Dict[str, Any]:
         """"Minta Ulang": menu alternatif dengan target gizi yang sama.
 
-        Item dari rekomendasi yang sedang tampil dikecualikan (Subbab 3.3.3 butir 8).
+        Seluruh item yang pernah ditampilkan pada sesi ini dikecualikan
+        (SesiPengguna.item_terpakai), sehingga menu yang sama tidak kembali
+        muncul. Bila kandidat suatu peran habis, siklus baru dimulai: yang
+        dikecualikan hanya item pada rekomendasi yang sedang tampil, sehingga
+        menu baru tetap berbeda dari menu yang sedang tampil.
         Hasil baru disimpan sebagai baris riwayat tambahan pada sesi yang sama.
 
         Raises:
             RuntimeError: bila belum ada data diri.
-            ValueError: bila kandidat habis setelah pengecualian.
+            ValueError: bila kandidat tetap tidak cukup walau siklus baru dimulai.
         """
         self._periksa_sesi_aktif()
-        dikecualikan = kumpulkan_id_makanan(self.sesi.rekomendasi_saat_ini)
-        rekomendasi = self.mesin.susun_menu_harian(dikecualikan=dikecualikan)
+        terpakai = list(self.sesi.item_terpakai)
+        try:
+            rekomendasi = self.mesin.susun_menu_harian(dikecualikan=terpakai)
+        except ValueError:
+            # Kandidat habis pada salah satu peran: mulai siklus baru.
+            terpakai = kumpulkan_id_makanan(self.sesi.rekomendasi_saat_ini)
+            rekomendasi = self.mesin.susun_menu_harian(dikecualikan=terpakai)
         self.repositori.simpan_riwayat_rekomendasi(
             self._baris_riwayat(self.sesi.id_sesi, rekomendasi)
         )
+        # Disetel setelah penyimpanan berhasil; update_rekomendasi menambahkan item baru.
+        self.sesi.item_terpakai = terpakai
         self.sesi.update_rekomendasi(rekomendasi)
         return deepcopy(rekomendasi)
 
