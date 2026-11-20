@@ -1,0 +1,54 @@
+RINGKASAN UJI (responden saja, kecuali dinyatakan lain)
+============================================================
+
+Jumlah responden: 40
+
+Jenis kelamin:
+  pria: 23
+  wanita: 17
+
+Kelompok usia:
+  19-29 tahun: 20
+  30-49 tahun: 20
+
+Tingkat aktivitas:
+  menetap: 26
+  aktif: 14
+
+Kategori IMT:
+  Berat badan normal: 24
+  Kelebihan berat badan tingkat berat: 11
+  Kelebihan berat badan tingkat ringan: 5
+
+Verifikasi (responden dan sintetis):
+  Cocok dengan hitung manual (IMT, BMR, TEE, target harian): 47 dari 47
+  Hasil identik pada dua kali pemrosesan: 47 dari 47
+  Waktu proses (detik): rata-rata 1.21, maksimum 1.56
+
+Kesesuaian gizi (rentang 90-110% pada keempat zat gizi):
+  sarapan: 40 dari 40 memenuhi (100.0%)
+      energi: min 98.29  rata-rata 101.02  maks 104.72
+      protein: min 98.70  rata-rata 102.17  maks 106.14
+      lemak: min 91.49  rata-rata 97.08  maks 100.15
+      karbohidrat: min 98.24  rata-rata 102.13  maks 109.64
+  siang: 40 dari 40 memenuhi (100.0%)
+      energi: min 97.32  rata-rata 100.02  maks 103.22
+      protein: min 92.15  rata-rata 98.35  maks 100.96
+      lemak: min 94.95  rata-rata 99.99  maks 102.76
+      karbohidrat: min 99.18  rata-rata 100.50  maks 105.73
+  malam: 40 dari 40 memenuhi (100.0%)
+      energi: min 95.58  rata-rata 99.06  maks 100.57
+      protein: min 90.27  rata-rata 92.86  maks 98.70
+      lemak: min 101.48  rata-rata 106.60  maks 109.46
+      karbohidrat: min 92.55  rata-rata 99.56  maks 102.82
+  harian: 40 dari 40 memenuhi (100.0%)
+      energi: min 97.67  rata-rata 100.03  maks 101.45
+      protein: min 95.72  rata-rata 97.85  maks 99.52
+      lemak: min 98.80  rata-rata 101.10  maks 102.49
+      karbohidrat: min 97.58  rata-rata 100.71  maks 103.25
+
+Responden dan cakupan yang belum memenuhi:
+  (tidak ada)
+
+Data sintetis yang belum memenuhi:
+  (tidak ada)

@@ -1,0 +1,424 @@
+﻿kode;kelompok;waktu_makan;peran;id_makanan;kode_tkpi;nama_bahan;porsi_gram;energi;protein;lemak;karbohidrat;skor_similarity
+R01;responden;sarapan;pokok;16;AP051;Jagung gerontol;170,0;265,2;4,6;2,2;56,6;0,9883
+R01;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;45,0;185,8;12,9;8,9;13,4;0,9974
+R01;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R01;responden;siang;pokok;4;AP007;Bihun goreng instan;105,0;400,1;6,4;4,1;84,3;0,9961
+R01;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;145,0;278,4;18,4;14,6;18,4;0,9957
+R01;responden;siang;sayur;108;DP044;Pelecing kangkung;50,0;37,5;1,2;1,4;5,0;0,9938
+R01;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;220,0;242,0;3,1;2,4;51,5;0,9876
+R01;responden;malam;lauk;172;FP061;Rawon, masakan;200,0;120,0;10,8;5,0;8,0;0,9952
+R01;responden;malam;sayur;120;DP057;Semur jengkol;80,0;169,6;4,8;8,0;23,3;0,9863
+R02;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R02;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R02;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;115,0;38,0;1,4;1,5;4,7;0,9987
+R02;responden;siang;pokok;16;AP051;Jagung gerontol;310,0;483,6;8,4;4,0;103,2;0,9883
+R02;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;185,0;355,2;23,5;18,7;23,5;0,9957
+R02;responden;siang;sayur;108;DP044;Pelecing kangkung;95,0;71,2;2,4;2,7;9,5;0,9938
+R02;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;320,0;352,0;4,5;3,5;74,9;0,9876
+R02;responden;malam;lauk;203;GP019;Ikan Mas pepes;105,0;219,4;16,0;11,9;12,4;0,9946
+R02;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R03;responden;sarapan;pokok;4;AP007;Bihun goreng instan;115,0;438,1;7,0;4,5;92,3;0,9961
+R03;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;75,0;309,8;21,5;14,8;22,4;0,9974
+R03;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R03;responden;siang;pokok;16;AP051;Jagung gerontol;355,0;553,8;9,6;4,6;118,2;0,9883
+R03;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+R03;responden;siang;sayur;108;DP044;Pelecing kangkung;215,0;161,2;5,4;6,0;21,5;0,9938
+R03;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;400,0;440,0;5,6;4,4;93,6;0,9876
+R03;responden;malam;lauk;203;GP019;Ikan Mas pepes;135,0;282,1;20,5;15,3;15,9;0,9946
+R03;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R04;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R04;responden;sarapan;lauk;203;GP019;Ikan Mas pepes;95,0;198,6;14,4;10,7;11,2;0,9946
+R04;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;50,0;16,5;0,6;0,7;2,0;0,9987
+R04;responden;siang;pokok;16;AP051;Jagung gerontol;215,0;335,4;5,8;2,8;71,6;0,9883
+R04;responden;siang;lauk;229;GP072;Kaholeo, masakan;55,0;227,2;15,8;10,9;16,4;0,9974
+R04;responden;siang;sayur;108;DP044;Pelecing kangkung;250,0;187,5;6,2;7,0;25,0;0,9938
+R04;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;250,0;275,0;3,5;2,8;58,5;0,9876
+R04;responden;malam;lauk;225;GP068;Gurame asem manis, masakan;95,0;182,4;12,1;9,6;12,1;0,9957
+R04;responden;malam;sayur;103;DP039;Kotiu hinela tawang nggole;250,0;115,0;5,5;3,8;15,0;0,9862
+R05;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R05;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R05;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;225,0;74,2;2,7;2,9;9,2;0,9987
+R05;responden;siang;pokok;16;AP051;Jagung gerontol;325,0;507,0;8,8;4,2;108,2;0,9883
+R05;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;190,0;364,8;24,1;19,2;24,1;0,9957
+R05;responden;siang;sayur;108;DP044;Pelecing kangkung;100,0;75,0;2,5;2,8;10,0;0,9938
+R05;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;340,0;374,0;4,8;3,7;79,6;0,9876
+R05;responden;malam;lauk;203;GP019;Ikan Mas pepes;110,0;229,9;16,7;12,4;13,0;0,9946
+R05;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R06;responden;sarapan;pokok;16;AP051;Jagung gerontol;160,0;249,6;4,3;2,1;53,3;0,9883
+R06;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;45,0;185,8;12,9;8,9;13,4;0,9974
+R06;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R06;responden;siang;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R06;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;140,0;268,8;17,8;14,1;17,8;0,9957
+R06;responden;siang;sayur;108;DP044;Pelecing kangkung;50,0;37,5;1,2;1,4;5,0;0,9938
+R06;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;210,0;231,0;2,9;2,3;49,1;0,9876
+R06;responden;malam;lauk;172;FP061;Rawon, masakan;200,0;120,0;10,8;5,0;8,0;0,9952
+R06;responden;malam;sayur;120;DP057;Semur jengkol;75,0;159,0;4,5;7,5;21,8;0,9863
+R07;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R07;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;55,0;227,2;15,8;10,9;16,4;0,9974
+R07;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;50,0;16,5;0,6;0,7;2,0;0,9987
+R07;responden;siang;pokok;16;AP051;Jagung gerontol;275,0;429,0;7,4;3,6;91,6;0,9883
+R07;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;160,0;307,2;20,3;16,2;20,3;0,9957
+R07;responden;siang;sayur;108;DP044;Pelecing kangkung;85,0;63,8;2,1;2,4;8,5;0,9938
+R07;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;280,0;308,0;3,9;3,1;65,5;0,9876
+R07;responden;malam;lauk;203;GP019;Ikan Mas pepes;90,0;188,1;13,7;10,2;10,6;0,9946
+R07;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R08;responden;sarapan;pokok;4;AP007;Bihun goreng instan;130,0;495,3;7,9;5,1;104,4;0,9961
+R08;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;85,0;351,1;24,4;16,8;25,3;0,9974
+R08;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R08;responden;siang;pokok;16;AP051;Jagung gerontol;400,0;624,0;10,8;5,2;133,2;0,9883
+R08;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+R08;responden;siang;sayur;108;DP044;Pelecing kangkung;250,0;187,5;6,2;7,0;25,0;0,9938
+R08;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;400,0;440,0;5,6;4,4;93,6;0,9876
+R08;responden;malam;lauk;203;GP019;Ikan Mas pepes;155,0;323,9;23,6;17,5;18,3;0,9946
+R08;responden;malam;sayur;120;DP057;Semur jengkol;55,0;116,6;3,3;5,5;16,0;0,9863
+R09;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R09;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R09;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;55,0;18,1;0,7;0,7;2,3;0,9987
+R09;responden;siang;pokok;16;AP051;Jagung gerontol;300,0;468,0;8,1;3,9;99,9;0,9883
+R09;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;180,0;345,6;22,9;18,2;22,9;0,9957
+R09;responden;siang;sayur;108;DP044;Pelecing kangkung;90,0;67,5;2,2;2,5;9,0;0,9938
+R09;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;310,0;341,0;4,3;3,4;72,5;0,9876
+R09;responden;malam;lauk;203;GP019;Ikan Mas pepes;100,0;209,0;15,2;11,3;11,8;0,9946
+R09;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R10;responden;sarapan;pokok;16;AP051;Jagung gerontol;175,0;273,0;4,7;2,3;58,3;0,9883
+R10;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;45,0;185,8;12,9;8,9;13,4;0,9974
+R10;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R10;responden;siang;pokok;4;AP007;Bihun goreng instan;105,0;400,1;6,4;4,1;84,3;0,9961
+R10;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;150,0;288,0;19,1;15,2;19,1;0,9957
+R10;responden;siang;sayur;108;DP044;Pelecing kangkung;50,0;37,5;1,2;1,4;5,0;0,9938
+R10;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;220,0;242,0;3,1;2,4;51,5;0,9876
+R10;responden;malam;lauk;172;FP061;Rawon, masakan;200,0;120,0;10,8;5,0;8,0;0,9952
+R10;responden;malam;sayur;120;DP057;Semur jengkol;80,0;169,6;4,8;8,0;23,3;0,9863
+R11;responden;sarapan;pokok;4;AP007;Bihun goreng instan;125,0;476,2;7,6;4,9;100,4;0,9961
+R11;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;85,0;351,1;24,4;16,8;25,3;0,9974
+R11;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R11;responden;siang;pokok;16;AP051;Jagung gerontol;400,0;624,0;10,8;5,2;133,2;0,9883
+R11;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+R11;responden;siang;sayur;108;DP044;Pelecing kangkung;250,0;187,5;6,2;7,0;25,0;0,9938
+R11;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;400,0;440,0;5,6;4,4;93,6;0,9876
+R11;responden;malam;lauk;203;GP019;Ikan Mas pepes;155,0;323,9;23,6;17,5;18,3;0,9946
+R11;responden;malam;sayur;120;DP057;Semur jengkol;55,0;116,6;3,3;5,5;16,0;0,9863
+R12;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R12;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;55,0;227,2;15,8;10,9;16,4;0,9974
+R12;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;50,0;16,5;0,6;0,7;2,0;0,9987
+R12;responden;siang;pokok;16;AP051;Jagung gerontol;275,0;429,0;7,4;3,6;91,6;0,9883
+R12;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;165,0;316,8;21,0;16,7;21,0;0,9957
+R12;responden;siang;sayur;108;DP044;Pelecing kangkung;85,0;63,8;2,1;2,4;8,5;0,9938
+R12;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;280,0;308,0;3,9;3,1;65,5;0,9876
+R12;responden;malam;lauk;203;GP019;Ikan Mas pepes;90,0;188,1;13,7;10,2;10,6;0,9946
+R12;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R13;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R13;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R13;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;120,0;39,6;1,4;1,6;4,9;0,9987
+R13;responden;siang;pokok;16;AP051;Jagung gerontol;310,0;483,6;8,4;4,0;103,2;0,9883
+R13;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;185,0;355,2;23,5;18,7;23,5;0,9957
+R13;responden;siang;sayur;108;DP044;Pelecing kangkung;95,0;71,2;2,4;2,7;9,5;0,9938
+R13;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;320,0;352,0;4,5;3,5;74,9;0,9876
+R13;responden;malam;lauk;203;GP019;Ikan Mas pepes;105,0;219,4;16,0;11,9;12,4;0,9946
+R13;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R14;responden;sarapan;pokok;4;AP007;Bihun goreng instan;125,0;476,2;7,6;4,9;100,4;0,9961
+R14;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;85,0;351,1;24,4;16,8;25,3;0,9974
+R14;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R14;responden;siang;pokok;16;AP051;Jagung gerontol;400,0;624,0;10,8;5,2;133,2;0,9883
+R14;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+R14;responden;siang;sayur;108;DP044;Pelecing kangkung;250,0;187,5;6,2;7,0;25,0;0,9938
+R14;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;400,0;440,0;5,6;4,4;93,6;0,9876
+R14;responden;malam;lauk;203;GP019;Ikan Mas pepes;155,0;323,9;23,6;17,5;18,3;0,9946
+R14;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R15;responden;sarapan;pokok;4;AP007;Bihun goreng instan;120,0;457,2;7,3;4,7;96,4;0,9961
+R15;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;80,0;330,4;23,0;15,8;23,8;0,9974
+R15;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R15;responden;siang;pokok;16;AP051;Jagung gerontol;380,0;592,8;10,3;4,9;126,5;0,9883
+R15;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+R15;responden;siang;sayur;108;DP044;Pelecing kangkung;250,0;187,5;6,2;7,0;25,0;0,9938
+R15;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;400,0;440,0;5,6;4,4;93,6;0,9876
+R15;responden;malam;lauk;203;GP019;Ikan Mas pepes;145,0;303,1;22,0;16,4;17,1;0,9946
+R15;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R16;responden;sarapan;pokok;4;AP007;Bihun goreng instan;115,0;438,1;7,0;4,5;92,3;0,9961
+R16;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;75,0;309,8;21,5;14,8;22,4;0,9974
+R16;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R16;responden;siang;pokok;16;AP051;Jagung gerontol;355,0;553,8;9,6;4,6;118,2;0,9883
+R16;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+R16;responden;siang;sayur;108;DP044;Pelecing kangkung;210,0;157,5;5,2;5,9;21,0;0,9938
+R16;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;395,0;434,5;5,5;4,3;92,4;0,9876
+R16;responden;malam;lauk;203;GP019;Ikan Mas pepes;135,0;282,1;20,5;15,3;15,9;0,9946
+R16;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R17;responden;sarapan;pokok;16;AP051;Jagung gerontol;180,0;280,8;4,9;2,3;59,9;0,9883
+R17;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;50,0;206,5;14,3;9,9;14,9;0,9974
+R17;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R17;responden;siang;pokok;4;AP007;Bihun goreng instan;110,0;419,1;6,7;4,3;88,3;0,9961
+R17;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;155,0;297,6;19,7;15,7;19,7;0,9957
+R17;responden;siang;sayur;108;DP044;Pelecing kangkung;50,0;37,5;1,2;1,4;5,0;0,9938
+R17;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;225,0;247,5;3,1;2,5;52,6;0,9876
+R17;responden;malam;lauk;172;FP061;Rawon, masakan;200,0;120,0;10,8;5,0;8,0;0,9952
+R17;responden;malam;sayur;120;DP057;Semur jengkol;85,0;180,2;5,1;8,5;24,7;0,9863
+R18;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R18;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R18;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;50,0;16,5;0,6;0,7;2,0;0,9987
+R18;responden;siang;pokok;16;AP051;Jagung gerontol;295,0;460,2;8,0;3,8;98,2;0,9883
+R18;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;175,0;336,0;22,2;17,7;22,2;0,9957
+R18;responden;siang;sayur;108;DP044;Pelecing kangkung;90,0;67,5;2,2;2,5;9,0;0,9938
+R18;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;300,0;330,0;4,2;3,3;70,2;0,9876
+R18;responden;malam;lauk;203;GP019;Ikan Mas pepes;100,0;209,0;15,2;11,3;11,8;0,9946
+R18;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R19;responden;sarapan;pokok;4;AP007;Bihun goreng instan;125,0;476,2;7,6;4,9;100,4;0,9961
+R19;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;80,0;330,4;23,0;15,8;23,8;0,9974
+R19;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R19;responden;siang;pokok;16;AP051;Jagung gerontol;400,0;624,0;10,8;5,2;133,2;0,9883
+R19;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+R19;responden;siang;sayur;108;DP044;Pelecing kangkung;250,0;187,5;6,2;7,0;25,0;0,9938
+R19;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;400,0;440,0;5,6;4,4;93,6;0,9876
+R19;responden;malam;lauk;203;GP019;Ikan Mas pepes;155,0;323,9;23,6;17,5;18,3;0,9946
+R19;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R20;responden;sarapan;pokok;4;AP007;Bihun goreng instan;110,0;419,1;6,7;4,3;88,3;0,9961
+R20;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;70,0;289,1;20,1;13,9;20,9;0,9974
+R20;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R20;responden;siang;pokok;16;AP051;Jagung gerontol;350,0;546,0;9,5;4,5;116,5;0,9883
+R20;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+R20;responden;siang;sayur;108;DP044;Pelecing kangkung;160,0;120,0;4,0;4,5;16,0;0,9938
+R20;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;380,0;418,0;5,3;4,2;88,9;0,9876
+R20;responden;malam;lauk;203;GP019;Ikan Mas pepes;125,0;261,2;19,0;14,1;14,8;0,9946
+R20;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R21;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R21;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R21;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;215,0;71,0;2,6;2,8;8,8;0,9987
+R21;responden;siang;pokok;16;AP051;Jagung gerontol;325,0;507,0;8,8;4,2;108,2;0,9883
+R21;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;190,0;364,8;24,1;19,2;24,1;0,9957
+R21;responden;siang;sayur;108;DP044;Pelecing kangkung;100,0;75,0;2,5;2,8;10,0;0,9938
+R21;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;335,0;368,5;4,7;3,7;78,4;0,9876
+R21;responden;malam;lauk;203;GP019;Ikan Mas pepes;110,0;229,9;16,7;12,4;13,0;0,9946
+R21;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R22;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R22;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R22;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;110,0;36,3;1,3;1,4;4,5;0,9987
+R22;responden;siang;pokok;16;AP051;Jagung gerontol;310,0;483,6;8,4;4,0;103,2;0,9883
+R22;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;180,0;345,6;22,9;18,2;22,9;0,9957
+R22;responden;siang;sayur;108;DP044;Pelecing kangkung;95,0;71,2;2,4;2,7;9,5;0,9938
+R22;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;320,0;352,0;4,5;3,5;74,9;0,9876
+R22;responden;malam;lauk;203;GP019;Ikan Mas pepes;105,0;219,4;16,0;11,9;12,4;0,9946
+R22;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R23;responden;sarapan;pokok;16;AP051;Jagung gerontol;175,0;273,0;4,7;2,3;58,3;0,9883
+R23;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;50,0;206,5;14,3;9,9;14,9;0,9974
+R23;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R23;responden;siang;pokok;4;AP007;Bihun goreng instan;110,0;419,1;6,7;4,3;88,3;0,9961
+R23;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;150,0;288,0;19,1;15,2;19,1;0,9957
+R23;responden;siang;sayur;108;DP044;Pelecing kangkung;50,0;37,5;1,2;1,4;5,0;0,9938
+R23;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;225,0;247,5;3,1;2,5;52,6;0,9876
+R23;responden;malam;lauk;172;FP061;Rawon, masakan;200,0;120,0;10,8;5,0;8,0;0,9952
+R23;responden;malam;sayur;120;DP057;Semur jengkol;85,0;180,2;5,1;8,5;24,7;0,9863
+R24;responden;sarapan;pokok;4;AP007;Bihun goreng instan;120,0;457,2;7,3;4,7;96,4;0,9961
+R24;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;80,0;330,4;23,0;15,8;23,8;0,9974
+R24;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R24;responden;siang;pokok;16;AP051;Jagung gerontol;390,0;608,4;10,5;5,1;129,9;0,9883
+R24;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+R24;responden;siang;sayur;108;DP044;Pelecing kangkung;250,0;187,5;6,2;7,0;25,0;0,9938
+R24;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;400,0;440,0;5,6;4,4;93,6;0,9876
+R24;responden;malam;lauk;203;GP019;Ikan Mas pepes;150,0;313,5;22,8;16,9;17,7;0,9946
+R24;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R25;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R25;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R25;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R25;responden;siang;pokok;16;AP051;Jagung gerontol;330,0;514,8;8,9;4,3;109,9;0,9883
+R25;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;195,0;374,4;24,8;19,7;24,8;0,9957
+R25;responden;siang;sayur;108;DP044;Pelecing kangkung;100,0;75,0;2,5;2,8;10,0;0,9938
+R25;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;345,0;379,5;4,8;3,8;80,7;0,9876
+R25;responden;malam;lauk;203;GP019;Ikan Mas pepes;115,0;240,3;17,5;13,0;13,6;0,9946
+R25;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R26;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R26;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;55,0;227,2;15,8;10,9;16,4;0,9974
+R26;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;50,0;16,5;0,6;0,7;2,0;0,9987
+R26;responden;siang;pokok;16;AP051;Jagung gerontol;275,0;429,0;7,4;3,6;91,6;0,9883
+R26;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;165,0;316,8;21,0;16,7;21,0;0,9957
+R26;responden;siang;sayur;108;DP044;Pelecing kangkung;85,0;63,8;2,1;2,4;8,5;0,9938
+R26;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;280,0;308,0;3,9;3,1;65,5;0,9876
+R26;responden;malam;lauk;203;GP019;Ikan Mas pepes;90,0;188,1;13,7;10,2;10,6;0,9946
+R26;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R27;responden;sarapan;pokok;16;AP051;Jagung gerontol;180,0;280,8;4,9;2,3;59,9;0,9883
+R27;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;50,0;206,5;14,3;9,9;14,9;0,9974
+R27;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R27;responden;siang;pokok;4;AP007;Bihun goreng instan;110,0;419,1;6,7;4,3;88,3;0,9961
+R27;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;155,0;297,6;19,7;15,7;19,7;0,9957
+R27;responden;siang;sayur;108;DP044;Pelecing kangkung;50,0;37,5;1,2;1,4;5,0;0,9938
+R27;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;225,0;247,5;3,1;2,5;52,6;0,9876
+R27;responden;malam;lauk;172;FP061;Rawon, masakan;200,0;120,0;10,8;5,0;8,0;0,9952
+R27;responden;malam;sayur;120;DP057;Semur jengkol;90,0;190,8;5,4;9,0;26,2;0,9863
+R28;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R28;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;60,0;247,8;17,2;11,9;17,9;0,9974
+R28;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;50,0;16,5;0,6;0,7;2,0;0,9987
+R28;responden;siang;pokok;16;AP051;Jagung gerontol;290,0;452,4;7,8;3,8;96,6;0,9883
+R28;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;170,0;326,4;21,6;17,2;21,6;0,9957
+R28;responden;siang;sayur;108;DP044;Pelecing kangkung;90,0;67,5;2,2;2,5;9,0;0,9938
+R28;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;295,0;324,5;4,1;3,2;69,0;0,9876
+R28;responden;malam;lauk;203;GP019;Ikan Mas pepes;95,0;198,6;14,4;10,7;11,2;0,9946
+R28;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R29;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R29;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R29;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;85,0;28,1;1,0;1,1;3,5;0,9987
+R29;responden;siang;pokok;16;AP051;Jagung gerontol;305,0;475,8;8,2;4,0;101,6;0,9883
+R29;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;180,0;345,6;22,9;18,2;22,9;0,9957
+R29;responden;siang;sayur;108;DP044;Pelecing kangkung;95,0;71,2;2,4;2,7;9,5;0,9938
+R29;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;315,0;346,5;4,4;3,5;73,7;0,9876
+R29;responden;malam;lauk;203;GP019;Ikan Mas pepes;105,0;219,4;16,0;11,9;12,4;0,9946
+R29;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R30;responden;sarapan;pokok;16;AP051;Jagung gerontol;150,0;234,0;4,0;1,9;50,0;0,9883
+R30;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;40,0;165,2;11,5;7,9;11,9;0,9974
+R30;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R30;responden;siang;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R30;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;125,0;240,0;15,9;12,6;15,9;0,9957
+R30;responden;siang;sayur;108;DP044;Pelecing kangkung;50,0;37,5;1,2;1,4;5,0;0,9938
+R30;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;200,0;220,0;2,8;2,2;46,8;0,9876
+R30;responden;malam;lauk;172;FP061;Rawon, masakan;200,0;120,0;10,8;5,0;8,0;0,9952
+R30;responden;malam;sayur;120;DP057;Semur jengkol;65,0;137,8;3,9;6,5;18,9;0,9863
+R31;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R31;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R31;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;50,0;16,5;0,6;0,7;2,0;0,9987
+R31;responden;siang;pokok;16;AP051;Jagung gerontol;300,0;468,0;8,1;3,9;99,9;0,9883
+R31;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;175,0;336,0;22,2;17,7;22,2;0,9957
+R31;responden;siang;sayur;108;DP044;Pelecing kangkung;90,0;67,5;2,2;2,5;9,0;0,9938
+R31;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;305,0;335,5;4,3;3,4;71,4;0,9876
+R31;responden;malam;lauk;203;GP019;Ikan Mas pepes;100,0;209,0;15,2;11,3;11,8;0,9946
+R31;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R32;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R32;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R32;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;50,0;16,5;0,6;0,7;2,0;0,9987
+R32;responden;siang;pokok;16;AP051;Jagung gerontol;300,0;468,0;8,1;3,9;99,9;0,9883
+R32;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;175,0;336,0;22,2;17,7;22,2;0,9957
+R32;responden;siang;sayur;108;DP044;Pelecing kangkung;90,0;67,5;2,2;2,5;9,0;0,9938
+R32;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;305,0;335,5;4,3;3,4;71,4;0,9876
+R32;responden;malam;lauk;203;GP019;Ikan Mas pepes;100,0;209,0;15,2;11,3;11,8;0,9946
+R32;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R33;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R33;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R33;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;165,0;54,5;2,0;2,1;6,8;0,9987
+R33;responden;siang;pokok;16;AP051;Jagung gerontol;315,0;491,4;8,5;4,1;104,9;0,9883
+R33;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;185,0;355,2;23,5;18,7;23,5;0,9957
+R33;responden;siang;sayur;108;DP044;Pelecing kangkung;95,0;71,2;2,4;2,7;9,5;0,9938
+R33;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;330,0;363,0;4,6;3,6;77,2;0,9876
+R33;responden;malam;lauk;203;GP019;Ikan Mas pepes;110,0;229,9;16,7;12,4;13,0;0,9946
+R33;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R34;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R34;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;60,0;247,8;17,2;11,9;17,9;0,9974
+R34;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;50,0;16,5;0,6;0,7;2,0;0,9987
+R34;responden;siang;pokok;16;AP051;Jagung gerontol;290,0;452,4;7,8;3,8;96,6;0,9883
+R34;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;170,0;326,4;21,6;17,2;21,6;0,9957
+R34;responden;siang;sayur;108;DP044;Pelecing kangkung;90,0;67,5;2,2;2,5;9,0;0,9938
+R34;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;295,0;324,5;4,1;3,2;69,0;0,9876
+R34;responden;malam;lauk;203;GP019;Ikan Mas pepes;95,0;198,6;14,4;10,7;11,2;0,9946
+R34;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R35;responden;sarapan;pokok;4;AP007;Bihun goreng instan;110,0;419,1;6,7;4,3;88,3;0,9961
+R35;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;75,0;309,8;21,5;14,8;22,4;0,9974
+R35;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R35;responden;siang;pokok;16;AP051;Jagung gerontol;350,0;546,0;9,5;4,5;116,5;0,9883
+R35;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+R35;responden;siang;sayur;108;DP044;Pelecing kangkung;190,0;142,5;4,8;5,3;19,0;0,9938
+R35;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;390,0;429,0;5,5;4,3;91,3;0,9876
+R35;responden;malam;lauk;203;GP019;Ikan Mas pepes;130,0;271,7;19,8;14,7;15,3;0,9946
+R35;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R36;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R36;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R36;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R36;responden;siang;pokok;16;AP051;Jagung gerontol;340,0;530,4;9,2;4,4;113,2;0,9883
+R36;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+R36;responden;siang;sayur;108;DP044;Pelecing kangkung;105,0;78,8;2,6;2,9;10,5;0,9938
+R36;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;355,0;390,5;5,0;3,9;83,1;0,9876
+R36;responden;malam;lauk;203;GP019;Ikan Mas pepes;115,0;240,3;17,5;13,0;13,6;0,9946
+R36;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R37;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R37;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R37;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;195,0;64,3;2,3;2,5;8,0;0,9987
+R37;responden;siang;pokok;16;AP051;Jagung gerontol;320,0;499,2;8,6;4,2;106,6;0,9883
+R37;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;190,0;364,8;24,1;19,2;24,1;0,9957
+R37;responden;siang;sayur;108;DP044;Pelecing kangkung;100,0;75,0;2,5;2,8;10,0;0,9938
+R37;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;335,0;368,5;4,7;3,7;78,4;0,9876
+R37;responden;malam;lauk;203;GP019;Ikan Mas pepes;110,0;229,9;16,7;12,4;13,0;0,9946
+R37;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R38;responden;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R38;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+R38;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;130,0;42,9;1,6;1,7;5,3;0,9987
+R38;responden;siang;pokok;16;AP051;Jagung gerontol;310,0;483,6;8,4;4,0;103,2;0,9883
+R38;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;185,0;355,2;23,5;18,7;23,5;0,9957
+R38;responden;siang;sayur;108;DP044;Pelecing kangkung;95,0;71,2;2,4;2,7;9,5;0,9938
+R38;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;325,0;357,5;4,5;3,6;76,0;0,9876
+R38;responden;malam;lauk;203;GP019;Ikan Mas pepes;105,0;219,4;16,0;11,9;12,4;0,9946
+R38;responden;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+R39;responden;sarapan;pokok;16;AP051;Jagung gerontol;170,0;265,2;4,6;2,2;56,6;0,9883
+R39;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;45,0;185,8;12,9;8,9;13,4;0,9974
+R39;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R39;responden;siang;pokok;4;AP007;Bihun goreng instan;105,0;400,1;6,4;4,1;84,3;0,9961
+R39;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;150,0;288,0;19,1;15,2;19,1;0,9957
+R39;responden;siang;sayur;108;DP044;Pelecing kangkung;50,0;37,5;1,2;1,4;5,0;0,9938
+R39;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;220,0;242,0;3,1;2,4;51,5;0,9876
+R39;responden;malam;lauk;172;FP061;Rawon, masakan;200,0;120,0;10,8;5,0;8,0;0,9952
+R39;responden;malam;sayur;120;DP057;Semur jengkol;80,0;169,6;4,8;8,0;23,3;0,9863
+R40;responden;sarapan;pokok;16;AP051;Jagung gerontol;150,0;234,0;4,0;1,9;50,0;0,9883
+R40;responden;sarapan;lauk;229;GP072;Kaholeo, masakan;40,0;165,2;11,5;7,9;11,9;0,9974
+R40;responden;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+R40;responden;siang;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+R40;responden;siang;lauk;225;GP068;Gurame asem manis, masakan;125,0;240,0;15,9;12,6;15,9;0,9957
+R40;responden;siang;sayur;108;DP044;Pelecing kangkung;50,0;37,5;1,2;1,4;5,0;0,9938
+R40;responden;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;200,0;220,0;2,8;2,2;46,8;0,9876
+R40;responden;malam;lauk;172;FP061;Rawon, masakan;200,0;120,0;10,8;5,0;8,0;0,9952
+R40;responden;malam;sayur;120;DP057;Semur jengkol;65,0;137,8;3,9;6,5;18,9;0,9863
+S01;sintetis;sarapan;pokok;4;AP007;Bihun goreng instan;105,0;400,1;6,4;4,1;84,3;0,9961
+S01;sintetis;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+S01;sintetis;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+S01;sintetis;siang;pokok;16;AP051;Jagung gerontol;340,0;530,4;9,2;4,4;113,2;0,9883
+S01;sintetis;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+S01;sintetis;siang;sayur;108;DP044;Pelecing kangkung;115,0;86,2;2,9;3,2;11,5;0,9938
+S01;sintetis;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;360,0;396,0;5,0;4,0;84,2;0,9876
+S01;sintetis;malam;lauk;203;GP019;Ikan Mas pepes;120,0;250,8;18,2;13,6;14,2;0,9946
+S01;sintetis;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+S02;sintetis;sarapan;pokok;4;AP007;Bihun goreng instan;125,0;476,2;7,6;4,9;100,4;0,9961
+S02;sintetis;sarapan;lauk;229;GP072;Kaholeo, masakan;85,0;351,1;24,4;16,8;25,3;0,9974
+S02;sintetis;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+S02;sintetis;siang;pokok;16;AP051;Jagung gerontol;400,0;624,0;10,8;5,2;133,2;0,9883
+S02;sintetis;siang;lauk;225;GP068;Gurame asem manis, masakan;200,0;384,0;25,4;20,2;25,4;0,9957
+S02;sintetis;siang;sayur;108;DP044;Pelecing kangkung;250,0;187,5;6,2;7,0;25,0;0,9938
+S02;sintetis;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;400,0;440,0;5,6;4,4;93,6;0,9876
+S02;sintetis;malam;lauk;203;GP019;Ikan Mas pepes;155,0;323,9;23,6;17,5;18,3;0,9946
+S02;sintetis;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+S03;sintetis;sarapan;pokok;4;AP007;Bihun goreng instan;150,0;571,5;9,2;5,8;120,5;0,9961
+S03;sintetis;sarapan;lauk;229;GP072;Kaholeo, masakan;100,0;413,0;28,7;19,8;29,8;0,9974
+S03;sintetis;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+S03;sintetis;siang;pokok;16;AP051;Jagung gerontol;400,0;624,0;10,8;5,2;133,2;0,9883
+S03;sintetis;siang;lauk;203;GP019;Ikan Mas pepes;200,0;418,0;30,4;22,6;23,6;0,9946
+S03;sintetis;siang;sayur;120;DP057;Semur jengkol;150,0;318,0;9,0;15,0;43,6;0,9863
+S03;sintetis;malam;pokok;8;AP015;Ketan hitam, matang;295,0;534,0;11,8;3,5;110,0;0,968
+S03;sintetis;malam;lauk;225;GP068;Gurame asem manis, masakan;180,0;345,6;22,9;18,2;22,9;0,9957
+S03;sintetis;malam;sayur;108;DP044;Pelecing kangkung;250,0;187,5;6,2;7,0;25,0;0,9938
+S04;sintetis;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+S04;sintetis;sarapan;lauk;229;GP072;Kaholeo, masakan;60,0;247,8;17,2;11,9;17,9;0,9974
+S04;sintetis;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;50,0;16,5;0,6;0,7;2,0;0,9987
+S04;sintetis;siang;pokok;16;AP051;Jagung gerontol;285,0;444,6;7,7;3,7;94,9;0,9883
+S04;sintetis;siang;lauk;225;GP068;Gurame asem manis, masakan;170,0;326,4;21,6;17,2;21,6;0,9957
+S04;sintetis;siang;sayur;108;DP044;Pelecing kangkung;90,0;67,5;2,2;2,5;9,0;0,9938
+S04;sintetis;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;290,0;319,0;4,1;3,2;67,9;0,9876
+S04;sintetis;malam;lauk;203;GP019;Ikan Mas pepes;95,0;198,6;14,4;10,7;11,2;0,9946
+S04;sintetis;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+S05;sintetis;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+S05;sintetis;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+S05;sintetis;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;65,0;21,4;0,8;0,8;2,7;0,9987
+S05;sintetis;siang;pokok;16;AP051;Jagung gerontol;300,0;468,0;8,1;3,9;99,9;0,9883
+S05;sintetis;siang;lauk;225;GP068;Gurame asem manis, masakan;180,0;345,6;22,9;18,2;22,9;0,9957
+S05;sintetis;siang;sayur;108;DP044;Pelecing kangkung;95,0;71,2;2,4;2,7;9,5;0,9938
+S05;sintetis;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;310,0;341,0;4,3;3,4;72,5;0,9876
+S05;sintetis;malam;lauk;203;GP019;Ikan Mas pepes;100,0;209,0;15,2;11,3;11,8;0,9946
+S05;sintetis;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
+S06;sintetis;sarapan;pokok;4;AP007;Bihun goreng instan;190,0;723,9;11,6;7,4;152,6;0,9961
+S06;sintetis;sarapan;lauk;229;GP072;Kaholeo, masakan;130,0;536,9;37,3;25,7;38,7;0,9974
+S06;sintetis;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;250,0;82,5;3,0;3,2;10,2;0,9987
+S06;sintetis;siang;pokok;8;AP015;Ketan hitam, matang;400,0;724,0;16,0;4,8;149,2;0,968
+S06;sintetis;siang;lauk;203;GP019;Ikan Mas pepes;200,0;418,0;30,4;22,6;23,6;0,9946
+S06;sintetis;siang;sayur;120;DP057;Semur jengkol;250,0;530,0;15,0;25,0;72,8;0,9863
+S06;sintetis;malam;pokok;16;AP051;Jagung gerontol;400,0;624,0;10,8;5,2;133,2;0,9883
+S06;sintetis;malam;lauk;225;GP068;Gurame asem manis, masakan;175,0;336,0;22,2;17,7;22,2;0,9957
+S06;sintetis;malam;sayur;113;DP050;Sayur kohu-kohu;250,0;332,5;18,2;16,5;28,0;0,9726
+S07;sintetis;sarapan;pokok;4;AP007;Bihun goreng instan;100,0;381,0;6,1;3,9;80,3;0,9961
+S07;sintetis;sarapan;lauk;229;GP072;Kaholeo, masakan;65,0;268,4;18,7;12,9;19,4;0,9974
+S07;sintetis;sarapan;sayur;121;DP058;Tinira ninahu nggaluku;55,0;18,1;0,7;0,7;2,3;0,9987
+S07;sintetis;siang;pokok;16;AP051;Jagung gerontol;300,0;468,0;8,1;3,9;99,9;0,9883
+S07;sintetis;siang;lauk;225;GP068;Gurame asem manis, masakan;175,0;336,0;22,2;17,7;22,2;0,9957
+S07;sintetis;siang;sayur;108;DP044;Pelecing kangkung;90,0;67,5;2,2;2,5;9,0;0,9938
+S07;sintetis;malam;pokok;30;BP001;Batatas kelapa, ubi, bakar;310,0;341,0;4,3;3,4;72,5;0,9876
+S07;sintetis;malam;lauk;203;GP019;Ikan Mas pepes;100,0;209,0;15,2;11,3;11,8;0,9946
+S07;sintetis;malam;sayur;120;DP057;Semur jengkol;50,0;106,0;3,0;5,0;14,6;0,9863
