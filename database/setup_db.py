@@ -20,6 +20,14 @@ def create_tables():
     CREATE TABLE IF NOT EXISTS tidak mengubah tabel yang sudah ada; bila berkas
     basis data lama dibuat sebelum batasan ini ditambahkan, hapus berkas tersebut
     lalu jalankan setup_db.py lagi.
+
+    Kolom kunci utama (id_makanan, id_sesi, id_rekomendasi) dideklarasikan sebagai
+    INTEGER PRIMARY KEY tanpa AUTOINCREMENT. Pada SQLite, kolom seperti ini menjadi
+    alias rowid dan nilai barunya diambil dari (nilai terbesar yang ada + 1), atau 1
+    bila tabel kosong. Dengan demikian, setelah isi tabel sesi_pengguna dan
+    riwayat_rekomendasi dikosongkan, id berikutnya kembali mulai dari 1. Bila
+    AUTOINCREMENT dipakai, SQLite menyimpan hitungan terakhir pada tabel
+    sqlite_sequence yang tidak ikut reset ketika baris dihapus.
     """
     # Membuka koneksi ke SQLite (file akan dibuat jika belum ada)
     conn = sqlite3.connect(DB_NAME)
@@ -31,7 +39,7 @@ def create_tables():
     # 1. Membuat Tabel MAKANAN (Telah disesuaikan dengan kolom peran_menu)
     cursor.execute(f'''
     CREATE TABLE IF NOT EXISTS makanan (
-        id_makanan INTEGER PRIMARY KEY AUTOINCREMENT,
+        id_makanan INTEGER PRIMARY KEY,
         kode_tkpi TEXT,
         nama_bahan TEXT,
         kategori TEXT,
@@ -47,7 +55,7 @@ def create_tables():
     # Waktu memakai waktu lokal komputer (datetime('now', 'localtime')), bukan UTC.
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS sesi_pengguna (
-        id_sesi INTEGER PRIMARY KEY AUTOINCREMENT,
+        id_sesi INTEGER PRIMARY KEY,
         usia INTEGER,
         jenis_kelamin TEXT,
         berat_badan REAL,
@@ -66,7 +74,7 @@ def create_tables():
     # 3. Membuat Tabel RIWAYAT_REKOMENDASI
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS riwayat_rekomendasi (
-        id_rekomendasi INTEGER PRIMARY KEY AUTOINCREMENT,
+        id_rekomendasi INTEGER PRIMARY KEY,
         id_sesi INTEGER,
         id_makanan INTEGER,
         jenis_waktu_makan TEXT,
