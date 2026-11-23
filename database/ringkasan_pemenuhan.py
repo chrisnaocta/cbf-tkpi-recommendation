@@ -9,7 +9,7 @@ pada skripsi (nilai minimum, rata-rata, dan maksimum per cakupan dan zat gizi).
 Skrip ini hanya MEMBACA hasil_pemenuhan.csv yang dihasilkan uji_responden.py.
 Skrip ini tidak menjalankan sistem rekomendasi dan tidak mengubah angka apa pun.
 
-Cara menjalankan (dari folder utama proyek):
+Cara menjalankan (dari folder database):
     python ringkasan_pemenuhan.py
 """
 
@@ -20,7 +20,11 @@ import pandas as pd
 # ---------------------------------------------------------------------------
 # Konstanta (ketetapan pelaporan, bukan rumus baru)
 # ---------------------------------------------------------------------------
-FOLDER_DATA_UJI = Path(__file__).resolve().parent / "data_uji"
+# Skrip ini berada di folder database, sedangkan data_uji berada di folder utama
+# proyek (satu tingkat di atasnya). Jalur dihitung dari lokasi berkas ini sehingga
+# skrip dapat dijalankan dari folder mana pun.
+FOLDER_PROYEK = Path(__file__).resolve().parent.parent
+FOLDER_DATA_UJI = FOLDER_PROYEK / "data_uji"
 BERKAS_MASUKAN = FOLDER_DATA_UJI / "hasil_pemenuhan.csv"
 BERKAS_KELUARAN = FOLDER_DATA_UJI / "ringkasan_pemenuhan_47_profil.txt"
 

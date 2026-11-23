@@ -1,0 +1,25 @@
+RINGKASAN PEMENUHAN GIZI HARIAN MENURUT KATEGORI IMT
+====================================================================================================
+
+Sumber data   : hasil_gizi.csv dan hasil_pemenuhan.csv
+Jumlah profil : 47
+Satu angka bila kategori hanya diwakili satu profil, selain itu rentang minimum-maksimum (%).
+
+TABEL 4.20
+----------------------------------------------------------------------------------------------------
+Kategori IMT                             Profil       Energi (%)      Protein (%)        Lemak (%)  Karbohidrat (%)
+----------------------------------------------------------------------------------------------------
+Kekurangan berat badan tingkat ringan         1            99,91            97,74           100,42           100,72
+Berat badan normal                           28     95,28-101,20      95,72-99,52     98,80-102,49     92,98-102,65
+Kelebihan berat badan tingkat ringan          6     99,61-101,27      97,21-98,67    100,38-102,07     99,86-103,21
+Kelebihan berat badan tingkat berat          12     99,88-101,45      96,97-99,08     99,43-102,41     99,99-103,25
+----------------------------------------------------------------------------------------------------
+
+Kategori tanpa profil (tidak ditampilkan pada tabel):
+  Kekurangan berat badan tingkat berat: 0 profil
+
+Profil pada tiap kategori:
+  Kekurangan berat badan tingkat ringan (1): S07
+  Berat badan normal (28): R01, R02, R04, R08, R09, R10, R11, R12, R14, R15, R16, R17, R18, R19, R21, R22, R23, R24, R26, R27, R29, R32, R33, R39, S01, S02, S03, S06
+  Kelebihan berat badan tingkat ringan (6): R03, R07, R13, R20, R36, S04
+  Kelebihan berat badan tingkat berat (12): R05, R06, R25, R28, R30, R31, R34, R35, R37, R38, R40, S05
