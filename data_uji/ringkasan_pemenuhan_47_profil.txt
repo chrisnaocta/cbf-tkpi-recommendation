@@ -1,0 +1,39 @@
+RINGKASAN PEMENUHAN GIZI (rumus (13)) - SELURUH PROFIL UJI
+============================================================
+
+Sumber data     : hasil_pemenuhan.csv
+Jumlah profil   : 47 (40 responden + 7 sintetis)
+Jumlah cakupan  : 188 (profil x 4 cakupan)
+Jumlah nilai    : 752 (cakupan x 4 zat gizi)
+
+Cakupan memenuhi 90,00-110,00% pada keempat zat gizi: 188 dari 188
+
+TABEL 4.19 - Persentase pemenuhan (%), minimum / rata-rata / maksimum
+------------------------------------------------------------
+Cakupan   Zat gizi         Minimum   Rata-rata    Maksimum
+------------------------------------------------------------
+sarapan   energi             98,29      100,99      104,72
+          protein            98,70      102,17      106,14
+          lemak              91,49       97,02      100,15
+          karbohidrat        98,24      102,11      109,64
+
+siang     energi             92,46       99,75      103,22
+          protein            90,54       98,15      100,96
+          lemak              94,95      100,22      108,25
+          karbohidrat        90,52      100,13      105,73
+
+malam     energi             95,30       98,99      100,57
+          protein            90,27       93,18      102,19
+          lemak              96,85      106,49      109,46
+          karbohidrat        90,16       99,25      102,82
+
+harian    energi             95,28       99,90      101,45
+          protein            95,72       97,87       99,52
+          lemak              98,80      101,14      102,49
+          karbohidrat        92,98      100,46      103,25
+
+Nilai terendah seluruhnya : 90,16%
+Nilai tertinggi seluruhnya: 109,64%
+
+Cakupan yang belum memenuhi:
+  (tidak ada)
