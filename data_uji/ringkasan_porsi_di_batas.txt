@@ -1,0 +1,40 @@
+PORSI DI BATAS (dihitung dari hasil_menu.csv)
+==================================================================
+
+Jumlah profil: 47; menu waktu makan per peran yang diharapkan: 141
+
+Tabel utama:
+peran  batas_bawah_g  batas_atas_g  jumlah_menu  di_batas_bawah  di_batas_atas  di_batas_total  persen_di_batas  di_luar_batas  bukan_kelipatan
+pokok          100.0         400.0          141              27             16              43             30.5              0                0
+ lauk           40.0         200.0          141               2             24              26             18.4              0                0
+sayur           50.0         250.0          141              52             37              89             63.1              0                0
+
+Menurut waktu makan (di batas bawah / di batas atas / jumlah menu):
+  pokok  sarapan   24 /   0 / 47
+  pokok  siang      3 /   7 / 47
+  pokok  malam      0 /   9 / 47
+  lauk   sarapan    2 /   0 / 47
+  lauk   siang      0 /  15 / 47
+  lauk   malam      0 /   9 / 47
+  sayur  sarapan   10 /  25 / 47
+  sayur  siang      9 /   9 / 47
+  sayur  malam     33 /   3 / 47
+
+Menurut kelompok data (jumlah menu dengan porsi di batas):
+  pokok  responden   35 dari 120
+  pokok  sintetis     8 dari 21
+  lauk   responden   22 dari 120
+  lauk   sintetis     4 dari 21
+  sayur  responden   75 dari 120
+  sayur  sintetis    14 dari 21
+
+Jumlah item di batas pada satu menu waktu makan:
+  0 item di batas: 22 menu
+  1 item di batas: 86 menu
+  2 item di batas: 27 menu
+  3 item di batas: 6 menu
+
+Penyimpangan terbesar terhadap 100% (poin persen), rata-rata:
+  Menu dengan >= 1 item di batas : 5.54  (n = 119)
+  Menu tanpa item di batas       : 0.67  (n = 22)
+  Menu di luar 90-110%           : 0 dari 141

@@ -1,0 +1,30 @@
+SELISIH ENERGI TKPI TERHADAP FAKTOR ATWATER (pool siap makan)
+==================================================================
+
+Jumlah bahan: 256
+Median |selisih|: 0.3%   Rata-rata |selisih|: 4.0%
+Energi TKPI lebih rendah dari Atwater: 135 bahan; lebih tinggi: 101 bahan
+
+Bahan dengan |selisih| > 10%: 26 dari 256 (10.2%)
+Bahan dengan |selisih| > 20%: 11 dari 256 (4.3%)
+Bahan dengan |selisih| > 50%: 3 dari 256 (1.2%)
+
+Menurut peran (jumlah bahan dengan |selisih| > 10%):
+  lauk     4 dari 154
+  pokok    1 dari 44
+  sayur   21 dari 58
+
+10 selisih terbesar:
+  AP040  Bubur tinotuan (Manado)              TKPI    156  Atwater   73.4  (+113%)
+  DP042  Olah-olah                            TKPI      9  Atwater   90.8  (-90%)
+  GP071  Jukku pallu kaloa, masakan           TKPI     15  Atwater  134.7  (-89%)
+  FP011  Sapi, abon                           TKPI    212  Atwater  404.6  (-48%)
+  DP015  Paria putih, kukus                   TKPI     16  Atwater   22.6  (-29%)
+  FP040  Bulgogi, masakan                     TKPI     72  Atwater   95.3  (-24%)
+  DP016  Selada, rebus                        TKPI     19  Atwater   24.2  (-21%)
+  DP008  Daun singkong, rebus                 TKPI     31  Atwater   39.4  (-21%)
+  DP014  Kangkung, rebus                      TKPI     22  Atwater   27.8  (-21%)
+  DP013  Kangkung, kukus                      TKPI     30  Atwater   37.9  (-21%)
+
+Item pada menu uji dengan |selisih| > 10%: 0 dari 423
+  Menurut peran: lauk 0, pokok 0, sayur 0

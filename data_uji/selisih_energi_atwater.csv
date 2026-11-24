@@ -1,0 +1,257 @@
+﻿kode_tkpi;nama_bahan;kategori;energi;protein;lemak;karbohidrat;peran_menu;energi_atwater;selisih_kkal;selisih_persen
+AP001;Nasi;Serealia;180;3,0;0,3;39,8;pokok;173,9;6,1;3,51
+AP002;Nasi tim;Serealia;120;2,4;0,4;26,0;pokok;117,2;2,8;2,39
+AP005;Nasi beras merah;Serealia;149;2,8;0,4;32,5;pokok;144,8;4,2;2,9
+AP007;Bihun goreng instan;Serealia;381;6,1;3,9;80,3;pokok;380,7;0,3;0,08
+AP010;Jagung kuning muda, rebus;Serealia;142;5,0;0,7;30,3;pokok;147,5;-5,5;-3,73
+AP012;Jagung kuning pipil, rebus;Serealia;154;3,8;3,5;28,4;pokok;160,3;-6,3;-3,93
+AP014;Ketupat ketan;Serealia;212;4,0;4,6;38,6;pokok;211,8;0,2;0,09
+AP015;Ketan hitam, matang;Serealia;181;4,0;1,2;37,3;pokok;176,0;5,0;2,84
+AP017;Ketan putih, matang;Serealia;163;3,0;0,4;35,7;pokok;158,4;4,6;2,9
+AP021;Mi basah;Serealia;88;0,6;3,3;14,0;pokok;88,1;-0,1;-0,11
+AP024;Roti putih;Serealia;248;8,0;1,2;50,0;pokok;242,8;5,2;2,14
+AP031;Bakwan;Serealia;280;8,2;10,2;39,0;pokok;280,6;-0,6;-0,21
+AP040;Bubur tinotuan (Manado);Serealia;156;2,3;0,2;15,6;pokok;73,4;82,6;112,53
+AP041;Cake tape;Serealia;323;4,9;11,5;50,1;pokok;323,5;-0,5;-0,15
+AP048;Gemblong;Serealia;274;1,7;5,4;55,5;pokok;277,4;-3,4;-1,23
+AP051;Jagung gerontol;Serealia;156;2,7;1,3;33,3;pokok;155,7;0,3;0,19
+AP061;Ketupat kandangan;Serealia;109;2,2;5,2;13,4;pokok;109,2;-0,2;-0,18
+AP084;Mie Aceh rebus;Serealia;113;3,0;3,2;18,1;pokok;113,2;-0,2;-0,18
+AP085;Mie ayam;Serealia;102;6,2;3,9;10,5;pokok;101,9;0,1;0,1
+AP086;Mie bakso;Serealia;114;5,3;3,0;16,4;pokok;113,8;0,2;0,18
+AP087;Mie celon;Serealia;102;3,0;2,1;17,8;pokok;102,1;-0,1;-0,1
+AP088;Mie pangsit basah;Serealia;105;5,9;4,9;9,4;pokok;105,3;-0,3;-0,28
+AP089;Nasi gemuk;Serealia;192;3,8;8,8;24,4;pokok;192,0;0,0;0,0
+AP090;Nasi gurih;Serealia;190;4,7;7,5;26,0;pokok;190,3;-0,3;-0,16
+AP091;Nasi minyak;Serealia;207;3,5;5,0;37,1;pokok;207,4;-0,4;-0,19
+AP092;Nasi rames;Serealia;155;10,3;4,2;19,1;pokok;155,4;-0,4;-0,26
+AP098;Pundut nasi;Serealia;104;1,9;4,1;15,1;pokok;104,9;-0,9;-0,86
+AP104;Roti warna sawo matang;Serealia;249;7,9;1,5;49,7;pokok;243,9;5,1;2,09
+AP106;Spaghetti;Serealia;139;7,4;2,1;22,6;pokok;138,9;0,1;0,07
+BP001;Batatas kelapa, ubi, bakar;Umbi Berpati;110;1,4;1,1;23,4;pokok;109,1;0,9;0,82
+BP002;Batatas kelapa, ubi, kukus;Umbi Berpati;92;1,2;0,3;21,0;pokok;91,5;0,5;0,55
+BP003;Batatas tali, ubi, rebus;Umbi Berpati;182;2,4;0,4;42,2;pokok;182,0;0,0;0,0
+BP004;Belitung, talas, kukus;Umbi Berpati;145;1,2;0,4;34,2;pokok;145,2;-0,2;-0,14
+BP005;Bentul, talas, kukus;Umbi Berpati;71;2,3;0,3;15,4;pokok;73,5;-2,5;-3,4
+BP006;Gadung, ubi, kukus;Umbi Berpati;88;0,6;0,3;20,9;pokok;88,7;-0,7;-0,79
+BP007;Ganyong, rebus;Umbi Berpati;100;0,8;0,2;23,8;pokok;100,2;-0,2;-0,2
+BP008;Ketela pohon/singkong kukus;Umbi Berpati;153;1,2;0,3;36,4;pokok;153,1;-0,1;-0,07
+BP009;Suweg, talas, kukus;Umbi Berpati;93;1,5;0,1;21,9;pokok;94,5;-1,5;-1,59
+BP010;Talas bogor, kukus;Umbi Berpati;120;1,5;0,3;28,2;pokok;121,5;-1,5;-1,23
+BP011;Ubi jalar, kuning, kukus;Umbi Berpati;100;0,7;0,3;23,8;pokok;100,7;-0,7;-0,7
+BP012;Ubi jalar tinta/kemayung kukus;Umbi Berpati;165;0,9;0,2;39,8;pokok;164,6;0,4;0,24
+BP023;Bubur sagu;Umbi Berpati;167;0,2;4,0;33,0;pokok;168,8;-1,8;-1,07
+BP032;Kapurung;Umbi Berpati;41;2,0;0,3;7,8;pokok;41,9;-0,9;-2,15
+BP075;Ubi cilembu;Umbi Berpati;186;1,9;0,2;44,3;pokok;186,6;-0,6;-0,32
+CP001;Kacang belimbing, rebus;Kacang dan Biji;204;16,9;8,8;17,5;lauk;216,8;-12,8;-5,9
+CP002;Kacang bogor, goreng;Kacang dan Biji;479;12,7;23,2;58,9;lauk;495,2;-16,2;-3,27
+CP003;Kacang bogor, rebus;Kacang dan Biji;161;7,7;2,8;27,1;lauk;164,4;-3,4;-2,07
+CP004;Kacang gude, rebus;Kacang dan Biji;147;9,0;0,5;27,5;lauk;150,5;-3,5;-2,33
+CP005;kacang hijau, rebus;Kacang dan Biji;109;8,7;0,5;18,3;lauk;112,5;-3,5;-3,11
+CP006;Kacang kedelai, goreng;Kacang dan Biji;521;32,2;37,7;22,9;lauk;559,7;-38,7;-6,91
+CP007;Kacang kedelai, rebus;Kacang dan Biji;189;20,2;8,2;12,7;lauk;205,4;-16,4;-7,98
+CP008;Kacang merah kering, rebus;Kacang dan Biji;158;10,3;0,9;28,2;lauk;162,1;-4,1;-2,53
+CP009;Kacang merah segar, rebus;Kacang dan Biji;144;10,0;1,0;24,7;lauk;147,8;-3,8;-2,57
+CP010;Kacang mete/biji jambu monyet, goreng;Kacang dan Biji;629;20,4;56,3;19,8;lauk;667,5;-38,5;-5,77
+CP011;Kacang tanah rebus dg kulit;Kacang dan Biji;360;13,5;31,2;12,8;lauk;386,0;-26,0;-6,74
+CP012;Kacang tanah, goreng;Kacang dan Biji;564;25,5;44,4;25,5;lauk;603,6;-39,6;-6,56
+CP013;Kacang tanah, rebus;Kacang dan Biji;220;10,6;18,0;8,0;lauk;236,4;-16,4;-6,94
+CP014;Kacang tolo, rebus;Kacang dan Biji;138;10,7;1,1;22,6;lauk;143,1;-5,1;-3,56
+CP017;Ampas tahu kukus;Kacang dan Biji;75;4,1;2,1;10,7;lauk;78,1;-3,1;-3,97
+CP038;Kembang tahu rebus;Kacang dan Biji;90;10,7;4,0;4,7;lauk;97,6;-7,6;-7,79
+CP054;Oncom kacang tanah pepes;Kacang dan Biji;132;12,7;3,8;13,7;lauk;139,8;-7,8;-5,58
+CP058;Sayur lebui;Kacang dan Biji;64;2,1;0,6;12,5;lauk;63,8;0,2;0,31
+CP062;Tahu goreng;Kacang dan Biji;115;9,7;8,5;2,5;lauk;125,3;-10,3;-8,22
+CP063;Tahu telur;Kacang dan Biji;328;12,6;19,9;24,6;lauk;327,9;0,1;0,03
+CP076;Tempe kedelai murni, goreng;Kacang dan Biji;350;24,5;26,6;10,4;lauk;379,0;-29,0;-7,65
+CP083;Tempe pasar goreng;Kacang dan Biji;336;20,0;28,0;7,8;lauk;363,2;-27,2;-7,49
+DP001;Bayam, kukus;Sayuran;30;1,3;0,7;5,8;sayur;34,7;-4,7;-13,54
+DP002;Bayam, rebus;Sayuran;23;1,2;0,6;3,7;sayur;25,0;-2,0;-8,0
+DP003;Buncis, rebus;Sayuran;30;2,2;0,2;6,4;sayur;36,2;-6,2;-17,13
+DP004;Daun kacang panjang, kukus;Sayuran;40;3,7;0,3;8,0;sayur;49,5;-9,5;-19,19
+DP005;Daun katuk, rebus;Sayuran;53;5,3;0,9;9,1;sayur;65,7;-12,7;-19,33
+DP006;Daun kelor, rebus;Sayuran;61;6,1;0,9;10,0;sayur;72,5;-11,5;-15,86
+DP007;Daun mengkudu, kukus;Sayuran;63;3,8;1,5;11,5;sayur;74,7;-11,7;-15,66
+DP008;Daun singkong, rebus;Sayuran;31;3,7;0,6;4,8;sayur;39,4;-8,4;-21,32
+DP009;Daun talas, rebus;Sayuran;27;1,3;0,2;5,9;sayur;30,6;-3,6;-11,76
+DP010;Daun ubi merah, kukus;Sayuran;56;3,1;0,3;13,0;sayur;67,1;-11,1;-16,54
+DP011;Kacang panjang, kukus;Sayuran;39;3,0;0,6;7,6;sayur;47,8;-8,8;-18,41
+DP012;Kacang panjang, rebus;Sayuran;30;2,3;0,4;5,8;sayur;36,0;-6,0;-16,67
+DP013;Kangkung, kukus;Sayuran;30;3,2;0,7;4,7;sayur;37,9;-7,9;-20,84
+DP014;Kangkung, rebus;Sayuran;22;2,5;0,6;3,1;sayur;27,8;-5,8;-20,86
+DP015;Paria putih, kukus;Sayuran;16;1,8;0,2;3,4;sayur;22,6;-6,6;-29,2
+DP016;Selada, rebus;Sayuran;19;2,7;0,2;2,9;sayur;24,2;-5,2;-21,49
+DP017;Taoge, goreng;Sayuran;88;3,2;2,1;14,0;sayur;87,7;0,3;0,34
+DP018;Taoge, seduh;Sayuran;28;3,0;0,8;4,0;sayur;35,2;-7,2;-20,45
+DP019;Terung panjang, kukus;Sayuran;23;1,8;0,1;4,9;sayur;27,7;-4,7;-16,97
+DP020;Wortel, rebus;Sayuran;28;0,7;0,5;6,3;sayur;32,5;-4,5;-13,85
+DP021;Wortel, kukus;Sayuran;37;1,0;0,6;8,3;sayur;42,6;-5,6;-13,15
+DP023;Anyang, sayur;Sayuran;126;3,4;7,9;10,3;sayur;125,9;0,1;0,08
+DP024;Ares, sayur;Sayuran;113;0,9;7,2;11,2;sayur;113,2;-0,2;-0,18
+DP025;Arwan sirsir;Sayuran;277;2,4;25,0;10,7;sayur;277,4;-0,4;-0,14
+DP026;Beberuk;Sayuran;65;1,1;5,2;3,5;sayur;65,2;-0,2;-0,31
+DP027;Botok lamtoro;Sayuran;186;11,7;9,7;13,0;sayur;186,1;-0,1;-0,05
+DP028;Buntil daun talas;Sayuran;141;4,4;10,2;8,0;sayur;141,4;-0,4;-0,28
+DP029;Cammetutu;Sayuran;102;3,2;6,0;8,7;sayur;101,6;0,4;0,39
+DP030;Cap cai, sayur;Sayuran;97;5,8;6,3;4,2;sayur;96,7;0,3;0,31
+DP031;Gado-gado;Sayuran;137;6,1;3,2;21,0;sayur;137,2;-0,2;-0,15
+DP032;Gudeg, sayur;Sayuran;160;3,3;9,2;16,0;sayur;160,0;0,0;0,0
+DP033;Gulai pakis;Sayuran;143;4,0;11,4;6,0;sayur;142,6;0,4;0,28
+DP034;Gulai pliek;Sayuran;176;7,3;14,9;3,2;sayur;176,1;-0,1;-0,06
+DP035;Kadada katembe;Sayuran;110;4,5;6,9;7,1;sayur;108,5;1,5;1,38
+DP036;Kaparende, sayur;Sayuran;38;2,4;2,0;2,6;sayur;38,0;0,0;0,0
+DP037;Karedok, sayur;Sayuran;92;2,2;3,3;14,1;sayur;94,9;-2,9;-3,06
+DP039;Kotiu hinela tawang nggole;Sayuran;46;2,2;1,5;6,0;sayur;46,3;-0,3;-0,65
+DP040;Lema/rebung asam;Sayuran;15;1,0;0,4;1,9;sayur;15,2;-0,2;-1,32
+DP041;Lilin bungkus gedi;Sayuran;79;2,3;5,2;5,8;sayur;79,2;-0,2;-0,25
+DP042;Olah-olah;Sayuran;9;2,1;6,0;7,1;sayur;90,8;-81,8;-90,09
+DP043;Paku hinela wulelenggapaya;Sayuran;77;3,5;4,6;5,4;sayur;77,0;0,0;0,0
+DP044;Pelecing kangkung;Sayuran;75;2,5;2,8;10,0;sayur;75,2;-0,2;-0,27
+DP045;Purundawa;Sayuran;25;1,5;0,5;3,6;sayur;24,9;0,1;0,4
+DP047;Sayur asem;Sayuran;29;0,7;0,6;5,0;sayur;28,2;0,8;2,84
+DP048;Sayur bunga pepaya;Sayuran;49;1,7;0,3;9,8;sayur;48,7;0,3;0,62
+DP049;Sayur garu;Sayuran;178;2,6;13,9;10,6;sayur;177,9;0,1;0,06
+DP050;Sayur kohu-kohu;Sayuran;133;7,3;6,6;11,2;sayur;133,4;-0,4;-0,3
+DP051;Sayur lilin-terubuk;Sayuran;36;2,7;0,7;4,8;sayur;36,3;-0,3;-0,83
+DP052;Sayur ndusuk;Sayuran;49;3,1;2,5;3,6;sayur;49,3;-0,3;-0,61
+DP053;Sayur sop;Sayuran;27;1,3;2,0;1,0;sayur;27,2;-0,2;-0,74
+DP054;Sayur umbut kelapa;Sayuran;67;5,2;2,9;5,1;sayur;67,3;-0,3;-0,45
+DP055;Sayur umbut rotan;Sayuran;57;5,4;2,6;3,1;sayur;57,4;-0,4;-0,7
+DP056;Shabu-shabu;Sayuran;88;3,2;8,0;0,8;sayur;88,0;0,0;0,0
+DP057;Semur jengkol;Sayuran;212;6,0;10,0;29,1;sayur;230,4;-18,4;-7,99
+DP058;Tinira ninahu nggaluku;Sayuran;33;1,2;1,3;4,1;sayur;32,9;0,1;0,3
+DP059;Tumis bayam bersantan;Sayuran;48;1,4;4,2;2,6;sayur;53,8;-5,8;-10,78
+DP060;Waluh balamak;Sayuran;45;0,8;0,9;8,1;sayur;43,7;1,3;2,97
+DP061;Woku ubi;Sayuran;143;3,1;7,8;15,0;sayur;142,6;0,4;0,28
+FP001;Ayam, ampela, goreng;Daging;270;32,3;11,2;9,9;lauk;269,6;0,4;0,15
+FP002;Ayam, usus, goreng;Daging;473;45,2;26,3;13,9;lauk;473,1;-0,1;-0,02
+FP003;Bebek, daging, goreng;Daging;300;24,0;20,7;4,5;lauk;300,3;-0,3;-0,1
+FP009;Punai, daging, goreng;Daging;224;26,2;11,3;4,4;lauk;224,1;-0,1;-0,04
+FP011;Sapi, abon;Daging;212;18,0;10,6;59,3;lauk;404,6;-192,6;-47,6
+FP012;Sapi, abon, asli;Daging;358;14,6;16,1;38,6;lauk;357,7;0,3;0,08
+FP013;Sapi, daging, asap;Daging;182;32,0;6,0;0,0;lauk;182,0;0,0;0,0
+FP015;Sapi, daging, kornet;Daging;289;16,0;25,0;0,0;lauk;289,0;0,0;0,0
+FP016;Sapi, daging, sosis (Worst);Daging;448;14,5;42,3;2,3;lauk;447,9;0,1;0,02
+FP017;Sapi, hati, sosis (liverworst);Daging;274;16,0;22,0;3,0;lauk;274,0;0,0;0,0
+FP019;Sapi, paru, goreng;Daging;268;23,9;12,7;14,5;lauk;267,9;0,1;0,04
+FP021;Ayam goreng church texas, dada;Daging;338;35,2;20,6;0,4;lauk;327,8;10,2;3,11
+FP022;Ayam goreng church,texas paha;Daging;287;31,0;15,7;1,7;lauk;272,1;14,9;5,48
+FP023;Ayam goreng church texas, sayap;Daging;295;34,0;16,0;1,5;lauk;286,0;9,0;3,15
+FP024;Ayam goreng kalasan, paha;Daging;275;37,4;12,2;1,3;lauk;264,6;10,4;3,93
+FP025;Ayam goreng kentucky, dada;Daging;298;34,2;16,8;0,1;lauk;288,4;9,6;3,33
+FP026;Ayam goreng kentucky, paha;Daging;286;32,1;16,1;1,1;lauk;277,7;8,3;2,99
+FP027;Ayam goreng kentucky,sayap;Daging;297;35,9;15,2;1,6;lauk;286,8;10,2;3,56
+FP028;Ayam goreng mbok berek dada;Daging;295;39,2;13,6;1,0;lauk;283,2;11,8;4,17
+FP029;Ayam goreng pasundan, dada;Daging;246;37,9;9,0;0,7;lauk;235,4;10,6;4,5
+FP030;Ayam goreng pasundan, paha;Daging;245;33,1;11,4;0,3;lauk;236,2;8,8;3,73
+FP031;Ayam goreng pioneer, dada;Daging;295;37,4;14,7;0,6;lauk;284,3;10,7;3,76
+FP032;Ayam goreng sukabumi, dada;Daging;244;36,7;9,2;1,0;lauk;233,6;10,4;4,45
+FP033;Ayam goreng sukabumi, paha;Daging;283;35,7;14,3;0,5;lauk;273,5;9,5;3,47
+FP034;Ayam taliwang, masakan;Daging;264;18,2;20,1;2,7;lauk;264,5;-0,5;-0,19
+FP036;Beef burger;Daging;258;10,6;9,5;32,5;lauk;257,9;0,1;0,04
+FP037;Beef teriyaki, masakan;Daging;151;8,6;3,1;22,3;lauk;151,5;-0,5;-0,33
+FP038;Beef yakiniku, masakan;Daging;132;9,8;1,1;20,7;lauk;131,9;0,1;0,08
+FP039;Brongkos;Daging;141;15,3;3,3;12,6;lauk;141,3;-0,3;-0,21
+FP040;Bulgogi, masakan;Daging;72;11,4;4,9;1,4;lauk;95,3;-23,3;-24,45
+FP041;Chicken teriyaki, masakan;Daging;168;13,0;9,6;7,5;lauk;168,4;-0,4;-0,24
+FP042;Chikiniku, masakan;Daging;143;9,8;1,4;22,8;lauk;143,0;0,0;0,0
+FP043;Coto mangkasara, kuda, masakan;Daging;96;6,8;5,9;3,8;lauk;95,5;0,5;0,52
+FP044;Coto mangkasara, sapi, masakan;Daging;84;6,0;6,0;1,4;lauk;83,6;0,4;0,48
+FP045;Djibokum, masakan;Daging;248;10,0;2,3;40,9;lauk;224,3;23,7;10,57
+FP046;Empal (daging) Goreng, masakan;Daging;248;36,2;6,9;10,1;lauk;247,3;0,7;0,28
+FP047;Gulai kambing;Daging;126;4,2;9,4;6,2;lauk;126,2;-0,2;-0,16
+FP048;Jangang bintatoeng, masakan;Daging;107;5,3;2,2;16,5;lauk;107,0;0,0;0,0
+FP049;Kalio ayam, masakan;Daging;203;16,0;13,5;4,4;lauk;203,1;-0,1;-0,05
+FP050;Kalio jeroan, masakan;Daging;163;16,5;9,0;4,1;lauk;163,4;-0,4;-0,24
+FP051;Kalio kikil (tunjang), masakan;Daging;122;13,8;5,7;3,9;lauk;122,1;-0,1;-0,08
+FP052;Kalio otak, masakan;Daging;157;8,1;8,8;11,4;lauk;157,2;-0,2;-0,13
+FP055;Lawara jangang, masakan;Daging;159;5,0;10,9;10,1;lauk;158,5;0,5;0,32
+FP056;Naan maran sapi, masakan;Daging;478;38,3;33,9;5,1;lauk;478,7;-0,7;-0,15
+FP057;Nasu likku, masakan;Daging;196;14,5;8,3;15,9;lauk;196,3;-0,3;-0,15
+FP058;Oramu ninahu ndawa olaho, masakan;Daging;117;13,7;5,0;4,3;lauk;117,0;0,0;0,0
+FP060;Pelolah manuk, masakan;Daging;219;19,7;13,6;4,4;lauk;218,8;0,2;0,09
+FP061;Rawon, masakan;Daging;60;5,4;2,5;4,0;lauk;60,1;-0,1;-0,17
+FP062;Rendang sapi, masakan;Daging;193;22,6;7,9;7,8;lauk;192,7;0,3;0,16
+FP065;Sate pusut, masakan;Daging;274;12,9;18,6;13,6;lauk;273,4;0,6;0,22
+FP067;Sie reuboh, masakan;Daging;474;11,2;42,5;11,7;lauk;474,1;-0,1;-0,02
+FP068;Sop buntut, masakan;Daging;71;7,5;3,6;2,2;lauk;71,2;-0,2;-0,28
+FP069;Sop daging sapi, masakan;Daging;49;5,8;0,5;5,3;lauk;48,9;0,1;0,2
+FP070;Sop kaki sapi, masakan;Daging;68;9,0;1,9;3,7;lauk;67,9;0,1;0,15
+FP071;Sop kambing, masakan;Daging;34;5,5;0,8;1,1;lauk;33,6;0,4;1,19
+FP072;Sop konro, masakan;Daging;71;7,4;2,6;4,5;lauk;71,0;0,0;0,0
+FP073;Sop saudara, masakan;Daging;89;7,2;5,0;3,9;lauk;89,4;-0,4;-0,45
+FP074;Soto bandung, masakan;Daging;42;3,9;1,7;2,8;lauk;42,1;-0,1;-0,24
+FP075;Soto banjar, masakan;Daging;110;2,9;9,5;3,2;lauk;109,9;0,1;0,09
+FP076;Soto betawi, masakan;Daging;135;2,5;8,8;11,5;lauk;135,2;-0,2;-0,15
+FP077;Soto jeroan, masakan;Daging;92;11,8;4,3;1,4;lauk;91,5;0,5;0,55
+FP078;Soto kudus, masakan;Daging;38;2,6;2,3;1,8;lauk;38,3;-0,3;-0,78
+FP079;Soto madura, masakan;Daging;60;3,5;4,5;1,3;lauk;59,7;0,3;0,5
+FP080;Soto padang, masakan;Daging;127;5,9;6,6;11,0;lauk;127,0;0,0;0,0
+FP081;Soto pekalongan, masakan;Daging;94;3,0;6,8;5,1;lauk;93,6;0,4;0,43
+FP082;Soto pemalang, masakan;Daging;75;3,6;5,2;3,5;lauk;75,2;-0,2;-0,27
+FP083;Soto sukaraja, masakan;Daging;80;3,2;3,5;9,0;lauk;80,3;-0,3;-0,37
+FP084;Soto sulung, masakan;Daging;86;2,3;8,5;0,0;lauk;85,7;0,3;0,35
+FP085;Sukiyaki, masakan;Daging;75;5,6;0,4;12,2;lauk;74,8;0,2;0,27
+FP086;Tedong pallu basa, masakan;Daging;83;10,4;3,4;2,8;lauk;83,4;-0,4;-0,48
+FP088;Tinoransa, masakan;Daging;516;17,7;49,5;0,0;lauk;516,3;-0,3;-0,06
+GP002;Belut, goreng;Ikan Kerang Udang;417;25,9;19,4;32,0;lauk;406,2;10,8;2,66
+GP003;Cumi-cumi, goreng;Ikan Kerang Udang;265;40,6;10,1;0,0;lauk;253,3;11,7;4,62
+GP005;Ikan bandeng presto, masakan;Ikan Kerang Udang;296;17,1;20,3;11,3;lauk;296,3;-0,3;-0,1
+GP006;Ikan baung bakar;Ikan Kerang Udang;144;17,8;5,8;5,2;lauk;144,2;-0,2;-0,14
+GP007;Ikan belida bakar;Ikan Kerang Udang;128;18,0;3,0;7,2;lauk;127,8;0,2;0,16
+GP013;Ikan gete, goreng;Ikan Kerang Udang;267;23,1;19,4;0,2;lauk;267,8;-0,8;-0,3
+GP017;Ikan Lais bakar;Ikan Kerang Udang;147;17,5;6,5;5,4;lauk;150,1;-3,1;-2,07
+GP019;Ikan Mas pepes;Ikan Kerang Udang;209;15,2;11,3;11,8;lauk;209,7;-0,7;-0,33
+GP020;Ikan mujahir goreng;Ikan Kerang Udang;416;46,9;23,9;0,0;lauk;402,7;13,3;3,3
+GP021;Ikan mujahir pepes;Ikan Kerang Udang;121;21,7;2,8;0,8;lauk;115,2;5,8;5,03
+GP023;Ikan papuyu, bakar;Ikan Kerang Udang;152;17,6;6,1;6,7;lauk;152,1;-0,1;-0,07
+GP024;Ikan patin, bakar;Ikan Kerang Udang;144;17,5;6,3;4,3;lauk;143,9;0,1;0,07
+GP034;Ikan sanggang, masakan;Ikan Kerang Udang;240;21,7;7,7;20,7;lauk;238,9;1,1;0,46
+GP049;Sardines dalam kaleng;Ikan Kerang Udang;338;21,1;27,0;1,0;lauk;331,4;6,6;1,99
+GP053;Abon haruwan;Ikan Kerang Udang;513;23,7;37,0;21,3;lauk;513,0;0,0;0,0
+GP054;Abon ikan;Ikan Kerang Udang;435;27,2;20,2;36,1;lauk;435,0;0,0;0,0
+GP055;Betok wadi, masakan;Ikan Kerang Udang;145;16,3;7,0;4,1;lauk;144,6;0,4;0,28
+GP056;Bou ninahu ndamate, masakan;Ikan Kerang Udang;79;16,3;1,0;1,1;lauk;78,6;0,4;0,51
+GP057;Bouiki ninahu nggaluku, masakan;Ikan Kerang Udang;94;7,8;2,2;10,8;lauk;94,2;-0,2;-0,21
+GP058;Cakalang asar (asap);Ikan Kerang Udang;155;20,1;3,8;10,2;lauk;155,4;-0,4;-0,26
+GP059;Dendeng belut, goreng, masakan;Ikan Kerang Udang;382;55,7;14,1;8,0;lauk;381,7;0,3;0,08
+GP060;Dendeng mujahir, goreng, masakan;Ikan Kerang Udang;598;74,3;26,9;9,2;lauk;576,1;21,9;3,8
+GP061;Fillet o-fish;Ikan Kerang Udang;270;12,3;15,9;19,3;lauk;269,5;0,5;0,19
+GP062;Gete kuah asam, masakan;Ikan Kerang Udang;75;8,2;2,0;6,0;lauk;74,8;0,2;0,27
+GP063;Gulai asam keueung, masakan;Ikan Kerang Udang;52;10,0;0,5;1,8;lauk;51,7;0,3;0,58
+GP064;Gulai ikan paya, masakan;Ikan Kerang Udang;148;10,0;9,8;5,0;lauk;148,2;-0,2;-0,13
+GP065;Gulai ikan, masakan;Ikan Kerang Udang;106;16,5;3,3;2,5;lauk;105,7;0,3;0,28
+GP066;Gulai keumamah, masakan;Ikan Kerang Udang;110;5,9;8,2;3,2;lauk;110,2;-0,2;-0,18
+GP067;Gulai tiram, masakan;Ikan Kerang Udang;132;9,0;7,2;7,8;lauk;132,0;0,0;0,0
+GP068;Gurame asem manis, masakan;Ikan Kerang Udang;192;12,7;10,1;12,7;lauk;192,5;-0,5;-0,26
+GP069;Ikan asar merah, masakan;Ikan Kerang Udang;146;17,7;5,9;5,6;lauk;146,3;-0,3;-0,21
+GP070;Jambal goreng, masakan;Ikan Kerang Udang;286;48,5;9,2;2,3;lauk;286,0;0,0;0,0
+GP071;Jukku pallu kaloa, masakan;Ikan Kerang Udang;15;15,2;4,3;8,8;lauk;134,7;-119,7;-88,86
+GP072;Kaholeo, masakan;Ikan Kerang Udang;413;28,7;19,8;29,8;lauk;412,2;0,8;0,19
+GP073;Lawara penjah;Ikan Kerang Udang;207;7,4;15,4;9,6;lauk;206,6;0,4;0,19
+GP074;Model, masakan;Ikan Kerang Udang;79;2,2;4,0;8,6;lauk;79,2;-0,2;-0,25
+GP075;Mujahir acar kuning, masakan;Ikan Kerang Udang;330;17,8;23,4;12,1;lauk;330,2;-0,2;-0,06
+GP076;Parede baleh, masakan;Ikan Kerang Udang;87;10,5;2,5;5,5;lauk;86,5;0,5;0,58
+GP077;Pempek adaan, masakan;Ikan Kerang Udang;162;4,9;3,0;27,8;lauk;157,8;4,2;2,66
+GP078;Pempek belida, masakan;Ikan Kerang Udang;156;4,2;1,4;31,6;lauk;155,8;0,2;0,13
+GP079;Pempek kapal selam, masakan;Ikan Kerang Udang;152;4,5;2,3;28,2;lauk;151,5;0,5;0,33
+GP080;Pempek kelesan, masakan;Ikan Kerang Udang;211;12,3;6,1;26,6;lauk;210,5;0,5;0,24
+GP081;Pempek kulit, masakan;Ikan Kerang Udang;243;5,2;7,3;39,1;lauk;242,9;0,1;0,04
+GP082;Pempek telur, masakan;Ikan Kerang Udang;156;4,7;2,7;28,3;lauk;156,3;-0,3;-0,19
+GP083;Pempek tenggiri, masakan;Ikan Kerang Udang;173;7,2;1,2;33,4;lauk;173,2;-0,2;-0,12
+GP084;Pencok lele, masakan;Ikan Kerang Udang;372;7,8;36,3;3,5;lauk;371,9;0,1;0,03
+GP086;Pindang kenari, masakan;Ikan Kerang Udang;124;9,5;9,6;0,0;lauk;124,4;-0,4;-0,32
+GP087;Saboko gurita, masakan;Ikan Kerang Udang;87;15,7;1,5;2,6;lauk;86,7;0,3;0,35
+GP088;Saboko saltan, masakan;Ikan Kerang Udang;113;17,1;3,6;3,0;lauk;112,8;0,2;0,18
+GP089;Saboko sardin, masakan;Ikan Kerang Udang;110;12,9;4,3;4,9;lauk;109,9;0,1;0,09
+GP090;Sate bandeng;Ikan Kerang Udang;283;12,1;16,8;20,9;lauk;283,2;-0,2;-0,07
+GP091;Sepi, masakan;Ikan Kerang Udang;88;7,9;1,6;10,6;lauk;88,4;-0,4;-0,45
+GP092;Tekwan, masakan;Ikan Kerang Udang;53;1,9;0,9;9,4;lauk;53,3;-0,3;-0,56
+GP093;Teri belado, masakan;Ikan Kerang Udang;365;23,7;22,3;17,5;lauk;365,5;-0,5;-0,14
+GP094;Tumis bandeng, masakan;Ikan Kerang Udang;189;11,3;15,7;0,6;lauk;188,9;0,1;0,05
+GP095;Tumis keumamah;Ikan Kerang Udang;300;14,5;20,0;15,5;lauk;300,0;0,0;0,0
+HP001;Telur ayam, dadar, masakan;Telur;251;16,3;19,4;1,4;lauk;245,4;5,6;2,28
+HP003;Telur bebek, dadar, masakan;Telur;301;20,0;23,7;0,0;lauk;293,3;7,7;2,63
+HP005;Bayau mi balu, masakan;Telur;313;6,0;12,2;44,8;lauk;313,0;0,0;0,0
+HP006;Cucuru bayau, masakan;Telur;349;6,8;18,7;38,3;lauk;348,7;0,3;0,09
+HP007;Kalio telur, masakan;Telur;193;10,6;12,4;9,7;lauk;192,8;0,2;0,1

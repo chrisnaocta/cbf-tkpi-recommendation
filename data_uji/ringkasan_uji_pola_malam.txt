@@ -1,0 +1,34 @@
+UJI POLA MAKAN MALAM
+==================================================================
+
+Jumlah profil: 47
+
+Pemeriksaan validitas percobaan:
+  Target sarapan = target malam (rumus 9): 47 dari 47
+  Urutan normal sama dengan susun_menu_harian(): 47 dari 47
+  Malam tanpa pengecualian = menu sarapan: 47 dari 47
+
+Urutan normal: sarapan -> siang -> malam
+Rata-rata persentase pemenuhan (%) menurut posisi:
+posisi  waktu            energi      protein        lemak  karbohidrat     skor
+1       sarapan          100.99       102.17        97.02       102.11   0.9969
+2       siang             99.75        98.15       100.22       100.13   0.9928
+3       malam             98.99        93.18       106.49        99.25   0.9894
+Protein posisi 3 lebih rendah dari posisi 1: 46 dari 47 profil
+Lemak posisi 3 lebih tinggi dari posisi 1: 46 dari 47 profil
+Menu di luar 90-110%: 0 dari 141
+
+Urutan terbalik: malam -> siang -> sarapan
+Rata-rata persentase pemenuhan (%) menurut posisi:
+posisi  waktu            energi      protein        lemak  karbohidrat     skor
+1       malam            100.99       102.17        97.02       102.11   0.9969
+2       siang             99.75        98.15       100.22       100.13   0.9928
+3       sarapan           98.99        93.18       106.49        99.25   0.9894
+Protein posisi 3 lebih rendah dari posisi 1: 46 dari 47 profil
+Lemak posisi 3 lebih tinggi dari posisi 1: 46 dari 47 profil
+Menu di luar 90-110%: 0 dari 141
+
+Makan malam: dengan pengecualian (normal) dibanding tanpa pengecualian
+                                   energi      protein        lemak  karbohidrat     skor
+dengan pengecualian                 98.99        93.18       106.49        99.25   0.9894
+tanpa pengecualian                 100.99       102.17        97.02       102.11   0.9969

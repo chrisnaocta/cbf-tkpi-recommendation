@@ -1,0 +1,4 @@
+﻿peran;batas_bawah_g;batas_atas_g;jumlah_menu;di_batas_bawah;di_batas_atas;di_batas_total;persen_di_batas;di_luar_batas;bukan_kelipatan
+pokok;100,0;400,0;141;27;16;43;30,5;0;0
+lauk;40,0;200,0;141;2;24;26;18,4;0;0
+sayur;50,0;250,0;141;52;37;89;63,1;0;0
