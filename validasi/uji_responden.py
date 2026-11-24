@@ -9,9 +9,9 @@ berkas sementara yang dibuat dengan setup_db.py (pool bahan sama dengan basis da
 skripsi), sehingga rekomendasi_makanan.db tidak tertulis.
 
 Masukan : data_uji/responden.csv (pemisah titik koma; kolom pada KOLOM_* di bawah)
-Keluaran: data_uji/hasil_gizi.csv, hasil_menu.csv, hasil_pemenuhan.csv, ringkasan_uji.txt
+Keluaran: data_uji/hasil_gizi.csv, hasil_menu.csv, hasil_pemenuhan.csv, ringkasan_uji_responden.txt
 
-Jalankan dari folder utama:  python uji_responden.py
+Jalankan dari folder validasi:  py uji_responden.py
 """
 
 import sys
@@ -22,7 +22,8 @@ from typing import Any, Dict, List
 
 import pandas as pd
 
-FOLDER = Path(__file__).resolve().parent
+FOLDER_VALIDASI = Path(__file__).resolve().parent
+FOLDER = FOLDER_VALIDASI.parent
 sys.path.insert(0, str(FOLDER))
 sys.path.insert(0, str(FOLDER / "database"))
 
@@ -41,7 +42,7 @@ BERKAS_CSV_MAKANAN = FOLDER / "database" / "data_makanan.csv"
 BERKAS_HASIL_GIZI = FOLDER_DATA_UJI / "hasil_gizi.csv"
 BERKAS_HASIL_MENU = FOLDER_DATA_UJI / "hasil_menu.csv"
 BERKAS_HASIL_PEMENUHAN = FOLDER_DATA_UJI / "hasil_pemenuhan.csv"
-BERKAS_RINGKASAN = FOLDER_DATA_UJI / "ringkasan_uji.txt"
+BERKAS_RINGKASAN = FOLDER_DATA_UJI / "ringkasan_uji_responden.txt"
 
 # Format CSV (Excel berbahasa Indonesia: pemisah titik koma, desimal koma)
 PEMISAH_CSV = ";"
@@ -217,7 +218,7 @@ def jalankan() -> None:
         for k, u, jk, b, t, a in SINTETIS_VALID
     ]
     periksa_kewajaran(daftar)
-    FOLDER_DATA_UJI.mkdir(exist_ok=True)
+    FOLDER_DATA_UJI.mkdir(parents=True, exist_ok=True)
 
     gizi, menu, pemenuhan = [], [], []
     with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:

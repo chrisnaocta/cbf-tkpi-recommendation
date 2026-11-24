@@ -12,7 +12,7 @@ Data dibaca dari dua berkas hasil uji_responden.py:
 Skrip ini hanya MEMBACA kedua berkas tersebut. Skrip ini tidak menjalankan sistem
 rekomendasi dan tidak mengubah angka apa pun.
 
-Cara menjalankan (dari folder database):
+Cara menjalankan (dari folder validasi):
     python ringkasan_pemenuhan_imt.py
 Keluaran: data_uji/ringkasan_pemenuhan_imt.txt
 """
@@ -24,7 +24,7 @@ import pandas as pd
 # ---------------------------------------------------------------------------
 # Konstanta (ketetapan pelaporan, bukan rumus baru)
 # ---------------------------------------------------------------------------
-# Skrip berada di folder database, data_uji berada di folder utama proyek.
+# Skrip berada di folder validasi, data_uji berada di folder utama proyek.
 FOLDER_PROYEK = Path(__file__).resolve().parent.parent
 FOLDER_DATA_UJI = FOLDER_PROYEK / "data_uji"
 BERKAS_GIZI = FOLDER_DATA_UJI / "hasil_gizi.csv"

@@ -18,9 +18,10 @@ Skrip ini hanya membaca database, tidak mengubah data.
 from pathlib import Path
 import sqlite3
 
-FOLDER = Path(__file__).parent
-FILE_DB = FOLDER / "rekomendasi_makanan.db"
-FILE_REPORT = FOLDER / "laporan_audit_tabel_4_6.txt"
+FOLDER = Path(__file__).resolve().parent
+DB_FOLDER = FOLDER.parent / "database"
+FILE_DB = DB_FOLDER / "rekomendasi_makanan.db"
+FILE_REPORT = FOLDER.parent / "data_uji" / "laporan_audit_tabel_4_6.txt"
 
 # Target berdasarkan Tabel 4.6
 TARGET = {

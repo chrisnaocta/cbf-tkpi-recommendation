@@ -1,0 +1,14 @@
+RINGKASAN SKOR KEMIRIPAN (Cosine Similarity, rumus (11))
+==============================================================================
+
+Sumber data   : hasil_menu.csv
+Jumlah profil : 47
+Jumlah menu   : 141 waktu makan, masing-masing 3 item
+Jumlah item   : 423 (141 menu x 3 peran)
+
+Kelompok        Item     Minimum   Rata-rata    Maksimum
+------------------------------------------------------------------------------
+Semua item       423      0,9680      0,9930      0,9987
+pokok            141      0,9680      0,9904      0,9961
+lauk             141      0,9946      0,9959      0,9974
+sayur            141      0,9726      0,9928      0,9987

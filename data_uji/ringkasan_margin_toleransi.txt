@@ -1,0 +1,25 @@
+RINGKASAN MARGIN TERHADAP BATAS TOLERANSI
+==============================================================================
+
+Sumber data : hasil_pemenuhan.csv
+Toleransi   : 90-110% (mesin_rekomendasi.py)
+Margin      : 1 poin, yaitu nilai di bawah 91% atau di atas 109%
+
+Waktu makan (sarapan, siang, malam): 141 cakupan, 564 nilai
+  Zat gizi           < 91%    > 109%
+  energi                 0         0
+  protein                6         0
+  lemak                  0         4
+  karbohidrat            2         2
+  Jumlah dalam margin: 14
+
+Harian: 47 cakupan, 188 nilai
+  Zat gizi           < 91%    > 109%
+  energi                 0         0
+  protein                0         0
+  lemak                  0         0
+  karbohidrat            0         0
+  Jumlah dalam margin: 0
+
+------------------------------------------------------------------------------
+Total nilai dalam 1 poin dari batas: 14 dari 752 nilai

@@ -8,10 +8,11 @@ Output: laporan_audit_kurasi.txt
 from pathlib import Path
 import pandas as pd
 
-FOLDER = Path(__file__).parent
-FILE_SOURCE = FOLDER / "data_makanan.csv"
-FILE_CURATED = FOLDER / "kurasi_makanan.csv"
-FILE_REPORT = FOLDER / "laporan_audit_kurasi.txt"
+FOLDER = Path(__file__).resolve().parent
+DB_FOLDER = FOLDER.parent / "database"
+FILE_SOURCE = DB_FOLDER / "data_makanan.csv"
+FILE_CURATED = DB_FOLDER / "kurasi_makanan.csv"
+FILE_REPORT = FOLDER.parent / "data_uji" / "laporan_audit_kurasi.txt"
 
 TARGET = {
     "awal": 1146, "K0_keluar": 356, "K6_keluar": 10,

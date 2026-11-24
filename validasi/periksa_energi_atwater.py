@@ -16,8 +16,9 @@ from pathlib import Path
 
 import pandas as pd
 
-FOLDER_DATABASE = Path(__file__).resolve().parent
-FOLDER_PROYEK = FOLDER_DATABASE.parent
+FOLDER_VALIDASI = Path(__file__).resolve().parent
+FOLDER_PROYEK = FOLDER_VALIDASI.parent
+FOLDER_DATABASE = FOLDER_PROYEK / "database"
 FOLDER_DATA_UJI = FOLDER_PROYEK / "data_uji"
 sys.path.insert(0, str(FOLDER_PROYEK))
 sys.path.insert(0, str(FOLDER_DATABASE))

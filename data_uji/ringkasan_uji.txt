@@ -23,7 +23,7 @@ Kategori IMT:
 Verifikasi (responden dan sintetis):
   Cocok dengan hitung manual (IMT, BMR, TEE, target harian): 47 dari 47
   Hasil identik pada dua kali pemrosesan: 47 dari 47
-  Waktu proses (detik): rata-rata 1.21, maksimum 1.56
+  Waktu proses (detik): rata-rata 0.62, maksimum 1.12
 
 Kesesuaian gizi (rentang 90-110% pada keempat zat gizi):
   sarapan: 40 dari 40 memenuhi (100.0%)
