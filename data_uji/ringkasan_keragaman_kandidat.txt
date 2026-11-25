@@ -1,0 +1,40 @@
+RINGKASAN ANALISIS KERAGAMAN KANDIDAT KNN PADA 47 PROFIL UJI
+================================================================
+Jumlah profil uji               : 47 profil (40 responden + 7 sintetis valid)
+Total evaluasi waktu makan      : 141 waktu makan (47 x 3)
+Set 15 kandidat KNN unik        : 1 set (100% identik di seluruh 141 waktu makan)
+Total kandidat KNN per evaluasi : 15 bahan (5 pokok + 5 lauk + 5 sayur)
+Bahan unik terpilih (423 item)  : 13 dari 15 kandidat
+Kandidat tidak pernah terpilih  : Mie celon, Gulai tiram, masakan
+Kombinasi menu harian unik      : 7 kombinasi dari 47 profil
+Kombinasi (bahan + porsi) unik  : 41 variasi dari 47 profil
+
+Distribusi 5 Kombinasi Menu Harian Unik:
+  Kombinasi 1 (30 profil: R02, R03, R05, R07, R08...):
+    Sarapan : Bihun goreng instan | Kaholeo, masakan | Tinira ninahu nggaluku
+    Siang   : Jagung gerontol | Gurame asem manis, masakan | Pelecing kangkung
+    Malam   : Batatas kelapa, ubi, bakar | Ikan Mas pepes | Semur jengkol
+  Kombinasi 2 (12 profil: R01, R06, R10, R17, R18...):
+    Sarapan : Jagung gerontol | Kaholeo, masakan | Tinira ninahu nggaluku
+    Siang   : Bihun goreng instan | Gurame asem manis, masakan | Pelecing kangkung
+    Malam   : Batatas kelapa, ubi, bakar | Rawon, masakan | Semur jengkol
+  Kombinasi 3 (1 profil: R04):
+    Sarapan : Bihun goreng instan | Ikan Mas pepes | Tinira ninahu nggaluku
+    Siang   : Jagung gerontol | Kaholeo, masakan | Pelecing kangkung
+    Malam   : Batatas kelapa, ubi, bakar | Gurame asem manis, masakan | Kotiu hinela tawang nggole
+  Kombinasi 4 (1 profil: R21):
+    Sarapan : Bihun goreng instan | Gurame asem manis, masakan | Tinira ninahu nggaluku
+    Siang   : Jagung gerontol | Kaholeo, masakan | Pelecing kangkung
+    Malam   : Batatas kelapa, ubi, bakar | Ikan Mas pepes | Kotiu hinela tawang nggole
+  Kombinasi 5 (1 profil: R36):
+    Sarapan : Bihun goreng instan | Gurame asem manis, masakan | Tinira ninahu nggaluku
+    Siang   : Jagung gerontol | Kaholeo, masakan | Pelecing kangkung
+    Malam   : Batatas kelapa, ubi, bakar | Ikan Mas pepes | Semur jengkol
+  Kombinasi 6 (1 profil: S03):
+    Sarapan : Bihun goreng instan | Kaholeo, masakan | Tinira ninahu nggaluku
+    Siang   : Jagung gerontol | Ikan Mas pepes | Semur jengkol
+    Malam   : Ketan hitam, matang | Gurame asem manis, masakan | Pelecing kangkung
+  Kombinasi 7 (1 profil: S06):
+    Sarapan : Bihun goreng instan | Kaholeo, masakan | Tinira ninahu nggaluku
+    Siang   : Ketan hitam, matang | Ikan Mas pepes | Semur jengkol
+    Malam   : Jagung gerontol | Gurame asem manis, masakan | Sayur kohu-kohu

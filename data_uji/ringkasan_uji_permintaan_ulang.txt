@@ -1,0 +1,11 @@
+RINGKASAN PENGUJIAN SIKLUS PERMINTAAN ULANG ('MINTA ULANG')
+==============================================================
+Profil uji                : pria, 25 thn, 70.0 kg, 170.0 cm, aktivitas menetap
+Total permintaan diuji    : 23 permintaan (207 baris riwayat)
+Total kandidat pokok DB   : 44 bahan
+Panjang siklus unik       : 14 permintaan pertama berbeda seluruhnya
+Pengulangan pertama       : Permintaan ke-15 identik dengan permintaan ke-1 (pokok ID: 4,16,30)
+Pokok terpakai s.d. ke-14 : 42 dari 44 bahan (sisa 2 bahan < 3 bahan per hari)
+Rata-rata similarity P1   : 0.9932 (min: 0.9863)
+Rata-rata similarity P14  : 0.8794 (min: 0.7817)
+Menu memenuhi 90-110%     : 18 dari 23 permintaan
