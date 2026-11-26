@@ -2,22 +2,25 @@
 Analisis keragaman kandidat K-Nearest Neighbor (KNN) dan kombinasi menu terpilih
 pada 47 profil uji (40 responden + 7 profil sintetis valid).
 
-Membuktikan:
+Menunjukkan:
 1. Keidentikan 15 kandidat KNN (5 pokok, 5 lauk, 5 sayur) di seluruh 47 profil x 3 waktu makan.
-2. Jumlah bahan unik yang terpilih (13 bahan) dan kombinasi menu harian unik (5 kombinasi).
-3. Peran porsi gram sebagai mekanisme utama personalisasi antarprofil.
+2. Jumlah bahan unik yang terpilih dan jumlah kombinasi menu harian unik.
+3. Peran porsi gram sebagai mekanisme personalisasi antarprofil
+   (jumlah variasi kombinasi bahan dan porsi).
 
 Keluaran:
 - data_uji/uji_keragaman_kandidat.csv
 - data_uji/ringkasan_keragaman_kandidat.txt
+
+Basis data asli tidak diubah: seluruh profil diproses pada salinan sementara.
 """
 
 from pathlib import Path
-import inspect
 import shutil
 import sqlite3
 import sys
 import tempfile
+
 import pandas as pd
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -31,6 +34,28 @@ from mesin_rekomendasi import MesinRekomendasi  # noqa: E402
 from repositori_makanan import RepositoriMakanan  # noqa: E402
 
 
+# ---------------------------------------------------------------------------
+# Konstanta skrip uji
+# ---------------------------------------------------------------------------
+JUMLAH_PROFIL_UJI = 47          # 40 responden + 7 profil sintetis
+BARIS_PER_PROFIL = 9            # 3 waktu makan x (1 pokok + 1 lauk + 1 sayur)
+WAKTU_MAKAN = ("sarapan", "siang", "malam")
+PERAN_MENU = ("pokok", "lauk", "sayur")
+DESIMAL_SKOR = 6                # pembulatan skor untuk membandingkan himpunan kandidat
+
+# Pagar kewajaran data responden. Hanya untuk skrip uji ini (menangkap kesalahan
+# pengolahan data, mis. tanda desimal hilang); bukan aturan validasi sistem (Tabel 3.2).
+BERAT_MIN_KG, BERAT_MAX_KG = 30.0, 250.0
+TINGGI_MIN_CM, TINGGI_MAX_CM = 100.0, 250.0
+
+NILAI_PRIA = ("pria", "laki-laki", "laki - laki", "l")
+NILAI_WANITA = ("wanita", "perempuan", "p")
+
+# Format berkas hasil uji: pemisah titik koma, desimal koma, terbaca di Excel (lokal Indonesia).
+CSV_PEMISAH = ";"
+CSV_DESIMAL = ","
+CSV_ENCODING = "utf-8-sig"
+
 PROFIL_SINTETIS_VALID = [
     {"kode": "S01", "usia": 30, "jenis_kelamin": "pria", "berat_badan": 70.0, "tinggi_badan": 170.0, "tingkat_aktivitas": "menetap"},
     {"kode": "S02", "usia": 30, "jenis_kelamin": "pria", "berat_badan": 70.0, "tinggi_badan": 170.0, "tingkat_aktivitas": "aktif"},
@@ -42,12 +67,46 @@ PROFIL_SINTETIS_VALID = [
 ]
 
 
+# ---------------------------------------------------------------------------
+# Pemuatan profil
+# ---------------------------------------------------------------------------
 def baca_csv_fleksibel(path_csv: Path) -> pd.DataFrame:
     """Membaca CSV dengan pemisah titik koma ';' atau koma ','."""
     df = pd.read_csv(path_csv, sep=";")
     if df.shape[1] >= 5:
         return df
     return pd.read_csv(path_csv, sep=None, engine="python")
+
+
+def petakan_jenis_kelamin(nilai: str, kode: str) -> str:
+    """Memetakan isian jenis kelamin ke 'pria' atau 'wanita'; nilai lain ditolak."""
+    teks = str(nilai).strip().lower()
+    if teks in NILAI_PRIA:
+        return "pria"
+    if teks in NILAI_WANITA:
+        return "wanita"
+    raise ValueError(f"Jenis kelamin tidak dikenali pada {kode}: {nilai!r}")
+
+
+def petakan_aktivitas(nilai: str) -> str:
+    """Memetakan isian tingkat aktivitas ke kunci 'menetap', 'aktif', atau 'sangat_aktif'."""
+    teks = str(nilai).strip().lower()
+    if "sangat" in teks:
+        return "sangat_aktif"
+    if "aktif" in teks and "menetap" not in teks and "ringan" not in teks:
+        return "aktif"
+    return "menetap"
+
+
+def ubah_angka(nilai, nama: str, kode: str, batas_min: float, batas_maks: float) -> float:
+    """Mengubah teks angka (koma atau titik desimal) dan memeriksa kewajarannya."""
+    angka = float(str(nilai).strip().replace(",", "."))
+    if not batas_min <= angka <= batas_maks:
+        raise ValueError(
+            f"{nama} tidak wajar pada {kode}: {angka} (batas {batas_min}-{batas_maks}). "
+            "Periksa tanda desimal pada berkas responden."
+        )
+    return angka
 
 
 def muat_47_profil(path_responden: Path) -> list[dict]:
@@ -73,30 +132,16 @@ def muat_47_profil(path_responden: Path) -> list[dict]:
     c_akt = ambil_kolom(["tingkat aktivitas fisik harian", "tingkat_aktivitas", "aktivitas"])
 
     profil_list = []
-    for idx, row in df_resp.iterrows():
-        kode = str(row[c_kode]).strip() if c_kode else f"R{idx + 1:02d}"
-        jk_raw = str(row[c_jk]).strip().lower()
-        jk = "pria" if jk_raw in ("pria", "laki-laki", "laki - laki", "l") else "wanita"
-
-        akt_raw = str(row[c_akt]).strip().lower()
-        if "sangat" in akt_raw:
-            akt = "sangat_aktif"
-        elif "aktif" in akt_raw and "menetap" not in akt_raw and "ringan" not in akt_raw:
-            akt = "aktif"
-        else:
-            akt = "menetap"
-
-        bb_val = float(str(row[c_bb]).strip().replace(",", "."))
-        tb_val = float(str(row[c_tb]).strip().replace(",", "."))
-
+    for _, row in df_resp.iterrows():
+        kode = str(row[c_kode]).strip()
         profil_list.append(
             {
                 "kode": kode,
                 "usia": int(float(str(row[c_usia]).strip())),
-                "jenis_kelamin": jk,
-                "berat_badan": bb_val,
-                "tinggi_badan": tb_val,
-                "tingkat_aktivitas": akt,
+                "jenis_kelamin": petakan_jenis_kelamin(row[c_jk], kode),
+                "berat_badan": ubah_angka(row[c_bb], "Berat badan", kode, BERAT_MIN_KG, BERAT_MAX_KG),
+                "tinggi_badan": ubah_angka(row[c_tb], "Tinggi badan", kode, TINGGI_MIN_CM, TINGGI_MAX_CM),
+                "tingkat_aktivitas": petakan_aktivitas(row[c_akt]),
             }
         )
 
@@ -104,49 +149,25 @@ def muat_47_profil(path_responden: Path) -> list[dict]:
     return profil_list
 
 
-def buat_mesin(df_makanan: pd.DataFrame, repo: RepositoriMakanan, target_wm: dict) -> MesinRekomendasi:
-    """Inisialisasi MesinRekomendasi sesuai parameter konstruktornya."""
-    sig = inspect.signature(MesinRekomendasi.__init__)
-    params = [p for p in sig.parameters if p != "self"]
-    if params and "repo" in params[0]:
-        return MesinRekomendasi(repo, target_wm)
-    return MesinRekomendasi(df_makanan, target_wm)
-
-
-def ekstrak_5_kandidat(hasil) -> list[tuple[int, float]]:
-    """Mengekstrak 5 pasangan (id_makanan, skor_similarity) dari luaran cari_k_tetangga_terdekat."""
-    if isinstance(hasil, pd.DataFrame):
-        kol_skor = next(
-            (c for c in hasil.columns if "skor" in c.lower() or "sim" in c.lower()),
-            hasil.columns[-1],
-        )
-        if "id_makanan" in hasil.columns:
-            return [
-                (int(r["id_makanan"]), round(float(r[kol_skor]), 6))
-                for _, r in hasil.iterrows()
-            ]
-        return [
-            (int(idx), round(float(r[kol_skor]), 6))
-            for idx, r in hasil.iterrows()
-        ]
-
-    if isinstance(hasil, list) and hasil and isinstance(hasil[0], dict):
-        kol_skor = next(
-            (k for k in hasil[0].keys() if "skor" in k.lower() or "sim" in k.lower()),
-            list(hasil[0].keys())[-1],
-        )
-        return [
-            (int(r["id_makanan"]), round(float(r[kol_skor]), 6))
-            for r in hasil
-        ]
-
-    raise TypeError(f"Format keluaran cari_k_tetangga_terdekat tidak dikenali: {type(hasil)}")
+# ---------------------------------------------------------------------------
+# Kandidat KNN dan penyusunan menu
+# ---------------------------------------------------------------------------
+def ekstrak_kandidat(hasil: pd.DataFrame) -> list[tuple[int, float]]:
+    """Mengambil pasangan (id_makanan, skor_similarity) dari luaran cari_k_tetangga_terdekat."""
+    return [
+        (int(i), round(float(s), DESIMAL_SKOR))
+        for i, s in zip(hasil["id_makanan"], hasil["skor_similarity"])
+    ]
 
 
 def ambil_15_kandidat_knn(
-    df_makanan: pd.DataFrame, repo: RepositoriMakanan, profil: dict
+    df_makanan: pd.DataFrame, profil: dict
 ) -> dict[str, list[tuple[int, float]]]:
-    """Mengambil 15 kandidat KNN (5 pokok, 5 lauk, 5 sayur) untuk ketiga waktu makan."""
+    """Mengambil 15 kandidat KNN (5 pokok, 5 lauk, 5 sayur) untuk tiap waktu makan.
+
+    Pencarian dilakukan tanpa item yang dikecualikan, sehingga yang diperiksa
+    adalah himpunan kandidat murni dari vektor target.
+    """
     kalk = KalkulatorGizi(
         profil["usia"],
         profil["jenis_kelamin"],
@@ -154,92 +175,71 @@ def ambil_15_kandidat_knn(
         profil["tinggi_badan"],
         profil["tingkat_aktivitas"],
     )
-    target_wm = kalk.hitung_target_waktu_makan()
-    mesin = buat_mesin(df_makanan, repo, target_wm)
+    mesin = MesinRekomendasi(df_makanan, kalk.hitung_target_waktu_makan())
 
     kandidat_per_waktu = {}
-    for wm in ("sarapan", "siang", "malam"):
+    for wm in WAKTU_MAKAN:
         blok_15 = []
-        for peran in ("pokok", "lauk", "sayur"):
-            hasil_k5 = mesin.cari_k_tetangga_terdekat(wm, peran, set())
-            blok_15.extend(ekstrak_5_kandidat(hasil_k5))
+        for peran in PERAN_MENU:
+            blok_15.extend(ekstrak_kandidat(mesin.cari_k_tetangga_terdekat(wm, peran, set())))
         kandidat_per_waktu[wm] = blok_15
     return kandidat_per_waktu
 
 
 def buat_aplikasi_sementara(db_sementara: Path) -> AplikasiUtama:
-    sig = inspect.signature(AplikasiUtama.__init__)
-    params = [p for p in sig.parameters if p != "self"]
-    if not params:
-        app = AplikasiUtama()
-        if hasattr(app, "repositori") and hasattr(app.repositori, "koneksi"):
-            app.repositori.koneksi.close()
-            app.repositori.koneksi.db_path = str(db_sementara)
-        return app
-    if "repo" in params[0]:
-        return AplikasiUtama(RepositoriMakanan(KoneksiDatabase(str(db_sementara))))
-    if "koneksi" in params[0]:
-        return AplikasiUtama(KoneksiDatabase(str(db_sementara)))
-    return AplikasiUtama(str(db_sementara))
+    """Membuat AplikasiUtama yang terhubung ke salinan basis data (basis data asli tidak diubah)."""
+    return AplikasiUtama(RepositoriMakanan(KoneksiDatabase(str(db_sementara))))
 
 
 def jalankan_input_awal(app: AplikasiUtama, profil: dict) -> None:
-    sig = inspect.signature(app.proses_input_pengguna)
-    params = [p for p in sig.parameters if p != "self"]
-    if len(params) == 1:
-        app.proses_input_pengguna(profil)
-    else:
-        app.proses_input_pengguna(
-            usia=profil["usia"],
-            jenis_kelamin=profil["jenis_kelamin"],
-            berat_badan=profil["berat_badan"],
-            tinggi_badan=profil["tinggi_badan"],
-            tingkat_aktivitas=profil["tingkat_aktivitas"],
-        )
+    """Memproses satu profil seperti pengguna mengisi formulir."""
+    app.proses_input_pengguna(
+        usia=profil["usia"],
+        jenis_kelamin=profil["jenis_kelamin"],
+        berat_badan=profil["berat_badan"],
+        tinggi_badan=profil["tinggi_badan"],
+        tingkat_aktivitas=profil["tingkat_aktivitas"],
+    )
 
 
+# ---------------------------------------------------------------------------
+# Program utama
+# ---------------------------------------------------------------------------
 def main() -> None:
     db_asli = ROOT_DIR / "database" / "rekomendasi_makanan.db"
     folder_uji = ROOT_DIR / "data_uji"
     path_responden = folder_uji / "responden.csv"
 
     profil_47 = muat_47_profil(path_responden)
-    assert len(profil_47) == 47, f"Jumlah profil uji harus 47, ditemukan {len(profil_47)}"
+    assert len(profil_47) == JUMLAH_PROFIL_UJI, (
+        f"Jumlah profil uji harus {JUMLAH_PROFIL_UJI}, ditemukan {len(profil_47)}"
+    )
 
-    koneksi_baca = KoneksiDatabase(str(db_asli))
-    repo_baca = RepositoriMakanan(koneksi_baca)
+    conn_read = sqlite3.connect(db_asli)
     try:
-        conn_read = sqlite3.connect(db_asli)
-        try:
-            df_makanan = pd.read_sql_query("SELECT * FROM makanan ORDER BY id_makanan ASC", conn_read)
-        finally:
-            conn_read.close()
-
-        # 1. Periksa keidentikan 15 kandidat KNN pada 47 profil x 3 waktu makan (141 evaluasi)
-        himpunan_kandidat_unik = set()
-        referensi_kandidat = None
-        for p in profil_47:
-            kand_wm = ambil_15_kandidat_knn(df_makanan, repo_baca, p)
-            for _, daftar_15 in kand_wm.items():
-                tanda = tuple(daftar_15)
-                himpunan_kandidat_unik.add(tanda)
-                if referensi_kandidat is None:
-                    referensi_kandidat = daftar_15
+        df_makanan = pd.read_sql_query("SELECT * FROM makanan ORDER BY id_makanan ASC", conn_read)
     finally:
-        koneksi_baca.close()
+        conn_read.close()
 
-    # 2. Jalankan 47 profil pada salinan DB sementara untuk melihat bahan & kombinasi aktual
+    # 1. Periksa keidentikan 15 kandidat KNN pada 47 profil x 3 waktu makan (141 evaluasi)
+    himpunan_kandidat_unik = set()
+    referensi_kandidat = None
+    for p in profil_47:
+        for daftar_15 in ambil_15_kandidat_knn(df_makanan, p).values():
+            himpunan_kandidat_unik.add(tuple(daftar_15))
+            if referensi_kandidat is None:
+                referensi_kandidat = daftar_15
+
+    # 2. Proses 47 profil pada salinan basis data untuk melihat bahan dan kombinasi aktual
     with tempfile.TemporaryDirectory() as tmp_dir:
         db_sementara = Path(tmp_dir) / "rekomendasi_makanan_47.db"
         shutil.copy2(db_asli, db_sementara)
         app = buat_aplikasi_sementara(db_sementara)
-
         try:
             for p in profil_47:
                 jalankan_input_awal(app, p)
         finally:
-            if hasattr(app, "repositori") and hasattr(app.repositori, "koneksi"):
-                app.repositori.koneksi.close()
+            app.repositori.koneksi.close()
 
         conn = sqlite3.connect(db_sementara)
         try:
@@ -264,21 +264,29 @@ def main() -> None:
         finally:
             conn.close()
 
-    assert len(df_riwayat) == len(profil_47) * 9, (
-        f"Jumlah baris riwayat ({len(df_riwayat)}) tidak sesuai harapan ({len(profil_47) * 9})."
+    assert len(df_riwayat) == len(profil_47) * BARIS_PER_PROFIL, (
+        f"Jumlah baris riwayat ({len(df_riwayat)}) tidak sesuai harapan "
+        f"({len(profil_47) * BARIS_PER_PROFIL})."
     )
 
     frekuensi_item = df_riwayat["id_makanan"].value_counts().to_dict()
     bahan_unik_terpilih = sorted(df_riwayat["id_makanan"].unique().tolist())
 
+    # Seluruh bahan terpilih harus berasal dari 15 kandidat; bila tidak, kalimat
+    # "n dari 15 kandidat" pada keluaran tidak berlaku.
+    id_kandidat = {id_m for id_m, _ in referensi_kandidat}
+    assert set(bahan_unik_terpilih) <= id_kandidat, (
+        f"Ada bahan terpilih di luar 15 kandidat: {sorted(set(bahan_unik_terpilih) - id_kandidat)}"
+    )
+
     kombinasi_harian = {}
     kombinasi_dengan_porsi = set()
     for idx, p in enumerate(profil_47):
-        blok = df_riwayat.iloc[idx * 9 : (idx + 1) * 9]
-        sig_9_bahan = tuple(int(x) for x in blok["id_makanan"])
-        sig_9_porsi = tuple((int(r["id_makanan"]), float(r["porsi_gram"])) for _, r in blok.iterrows())
-        kombinasi_harian.setdefault(sig_9_bahan, []).append(p["kode"])
-        kombinasi_dengan_porsi.add(sig_9_porsi)
+        blok = df_riwayat.iloc[idx * BARIS_PER_PROFIL : (idx + 1) * BARIS_PER_PROFIL]
+        sig_bahan = tuple(int(x) for x in blok["id_makanan"])
+        sig_porsi = tuple((int(r["id_makanan"]), float(r["porsi_gram"])) for _, r in blok.iterrows())
+        kombinasi_harian.setdefault(sig_bahan, []).append(p["kode"])
+        kombinasi_dengan_porsi.add(sig_porsi)
 
     map_makanan = df_makanan.set_index("id_makanan").to_dict(orient="index")
     baris_kandidat = []
@@ -293,7 +301,7 @@ def main() -> None:
                 "id_makanan": id_m,
                 "kode_tkpi": info["kode_tkpi"],
                 "nama_bahan": info["nama_bahan"],
-                "skor_cosine_similarity": round(skor, 6),
+                "skor_cosine_similarity": round(skor, DESIMAL_SKOR),
                 "frekuensi_terpilih_47_profil": jml_pilih,
                 "status_keterpilihan": "Terpilih" if jml_pilih > 0 else "Tidak pernah terpilih",
             }
@@ -301,7 +309,9 @@ def main() -> None:
 
     df_kandidat = pd.DataFrame(baris_kandidat)
     path_csv = folder_uji / "uji_keragaman_kandidat.csv"
-    df_kandidat.to_csv(path_csv, index=False)
+    df_kandidat.to_csv(
+        path_csv, index=False, sep=CSV_PEMISAH, decimal=CSV_DESIMAL, encoding=CSV_ENCODING
+    )
 
     tidak_terpilih = df_kandidat[df_kandidat["frekuensi_terpilih_47_profil"] == 0]["nama_bahan"].tolist()
     urut_kombinasi = sorted(kombinasi_harian.items(), key=lambda x: len(x[1]), reverse=True)
@@ -311,14 +321,15 @@ def main() -> None:
         "=" * 64,
         f"Jumlah profil uji               : {len(profil_47)} profil (40 responden + 7 sintetis valid)",
         f"Total evaluasi waktu makan      : {len(profil_47) * 3} waktu makan (47 x 3)",
-        f"Set 15 kandidat KNN unik        : {len(himpunan_kandidat_unik)} set (100% identik di seluruh 141 waktu makan)",
+        f"Set 15 kandidat KNN unik        : {len(himpunan_kandidat_unik)} set "
+        f"(identik di seluruh {len(profil_47) * 3} waktu makan bila bernilai 1)",
         f"Total kandidat KNN per evaluasi : {len(referensi_kandidat)} bahan (5 pokok + 5 lauk + 5 sayur)",
         f"Bahan unik terpilih (423 item)  : {len(bahan_unik_terpilih)} dari {len(referensi_kandidat)} kandidat",
         f"Kandidat tidak pernah terpilih  : {', '.join(tidak_terpilih) if tidak_terpilih else '-'}",
-        f"Kombinasi menu harian unik      : {len(kombinasi_harian)} kombinasi dari 47 profil",
-        f"Kombinasi (bahan + porsi) unik  : {len(kombinasi_dengan_porsi)} variasi dari 47 profil",
+        f"Kombinasi menu harian unik      : {len(kombinasi_harian)} kombinasi dari {len(profil_47)} profil",
+        f"Kombinasi (bahan + porsi) unik  : {len(kombinasi_dengan_porsi)} variasi dari {len(profil_47)} profil",
         "",
-        "Distribusi 5 Kombinasi Menu Harian Unik:",
+        f"Distribusi {len(kombinasi_harian)} Kombinasi Menu Harian Unik:",
     ]
     for no_komb, (sig_9, daftar_kode) in enumerate(urut_kombinasi, start=1):
         nama_9 = [map_makanan[i]["nama_bahan"] for i in sig_9]

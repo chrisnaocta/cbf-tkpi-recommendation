@@ -1,16 +1,16 @@
-urutan_kandidat,peran_menu,peringkat_per_peran,id_makanan,kode_tkpi,nama_bahan,skor_cosine_similarity,frekuensi_terpilih_47_profil,status_keterpilihan
-1,pokok,1,4,AP007,Bihun goreng instan,0.996053,47,Terpilih
-2,pokok,2,16,AP051,Jagung gerontol,0.988258,47,Terpilih
-3,pokok,3,30,BP001,"Batatas kelapa, ubi, bakar",0.987608,45,Terpilih
-4,pokok,4,8,AP015,"Ketan hitam, matang",0.96796,2,Terpilih
-5,pokok,5,21,AP087,Mie celon,0.962636,0,Tidak pernah terpilih
-6,lauk,1,229,GP072,"Kaholeo, masakan",0.997388,47,Terpilih
-7,lauk,2,225,GP068,"Gurame asem manis, masakan",0.995724,47,Terpilih
-8,lauk,3,172,FP061,"Rawon, masakan",0.995244,12,Terpilih
-9,lauk,4,203,GP019,Ikan Mas pepes,0.994567,35,Terpilih
-10,lauk,5,224,GP067,"Gulai tiram, masakan",0.994045,0,Tidak pernah terpilih
-11,sayur,1,121,DP058,Tinira ninahu nggaluku,0.998687,47,Terpilih
-12,sayur,2,108,DP044,Pelecing kangkung,0.993806,46,Terpilih
-13,sayur,3,120,DP057,Semur jengkol,0.986292,45,Terpilih
-14,sayur,4,103,DP039,Kotiu hinela tawang nggole,0.986238,2,Terpilih
-15,sayur,5,113,DP050,Sayur kohu-kohu,0.972625,1,Terpilih
+﻿urutan_kandidat;peran_menu;peringkat_per_peran;id_makanan;kode_tkpi;nama_bahan;skor_cosine_similarity;frekuensi_terpilih_47_profil;status_keterpilihan
+1;pokok;1;4;AP007;Bihun goreng instan;0,996053;47;Terpilih
+2;pokok;2;16;AP051;Jagung gerontol;0,988258;47;Terpilih
+3;pokok;3;30;BP001;Batatas kelapa, ubi, bakar;0,987608;45;Terpilih
+4;pokok;4;8;AP015;Ketan hitam, matang;0,96796;2;Terpilih
+5;pokok;5;21;AP087;Mie celon;0,962636;0;Tidak pernah terpilih
+6;lauk;1;229;GP072;Kaholeo, masakan;0,997388;47;Terpilih
+7;lauk;2;225;GP068;Gurame asem manis, masakan;0,995724;47;Terpilih
+8;lauk;3;172;FP061;Rawon, masakan;0,995244;12;Terpilih
+9;lauk;4;203;GP019;Ikan Mas pepes;0,994567;35;Terpilih
+10;lauk;5;224;GP067;Gulai tiram, masakan;0,994045;0;Tidak pernah terpilih
+11;sayur;1;121;DP058;Tinira ninahu nggaluku;0,998687;47;Terpilih
+12;sayur;2;108;DP044;Pelecing kangkung;0,993806;46;Terpilih
+13;sayur;3;120;DP057;Semur jengkol;0,986292;45;Terpilih
+14;sayur;4;103;DP039;Kotiu hinela tawang nggole;0,986238;2;Terpilih
+15;sayur;5;113;DP050;Sayur kohu-kohu;0,972625;1;Terpilih

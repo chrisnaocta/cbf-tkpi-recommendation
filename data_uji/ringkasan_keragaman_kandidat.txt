@@ -2,14 +2,14 @@ RINGKASAN ANALISIS KERAGAMAN KANDIDAT KNN PADA 47 PROFIL UJI
 ================================================================
 Jumlah profil uji               : 47 profil (40 responden + 7 sintetis valid)
 Total evaluasi waktu makan      : 141 waktu makan (47 x 3)
-Set 15 kandidat KNN unik        : 1 set (100% identik di seluruh 141 waktu makan)
+Set 15 kandidat KNN unik        : 1 set (identik di seluruh 141 waktu makan bila bernilai 1)
 Total kandidat KNN per evaluasi : 15 bahan (5 pokok + 5 lauk + 5 sayur)
 Bahan unik terpilih (423 item)  : 13 dari 15 kandidat
 Kandidat tidak pernah terpilih  : Mie celon, Gulai tiram, masakan
 Kombinasi menu harian unik      : 7 kombinasi dari 47 profil
 Kombinasi (bahan + porsi) unik  : 41 variasi dari 47 profil
 
-Distribusi 5 Kombinasi Menu Harian Unik:
+Distribusi 7 Kombinasi Menu Harian Unik:
   Kombinasi 1 (30 profil: R02, R03, R05, R07, R08...):
     Sarapan : Bihun goreng instan | Kaholeo, masakan | Tinira ninahu nggaluku
     Siang   : Jagung gerontol | Gurame asem manis, masakan | Pelecing kangkung
